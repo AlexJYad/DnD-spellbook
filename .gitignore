@@ -1,0 +1,17 @@
+#Other
+test.js
+cards-test.json
+
+
+#Visual Studio:
+.vscode/
+*.suo
+*.cache
+*.dll
+
+# Files macOS:
+.DS_Store
+
+#Logs and temporary files:
+*.log
+*.tmp

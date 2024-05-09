@@ -1,0 +1,138 @@
+/* 
+  #2d210b 
+  #382719 
+  #f0e6d5
+  #e1d2c4
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0px;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0px;
+  color: #2d210b;
+  font-size: 16px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spell {
+  position: relative;
+  background-color: #e1d2c4;
+  border: 3px solid #382719;
+  border-radius: 6px;
+  padding: 46px 16px 16px 13px;
+  margin: 30px;
+  min-width: 300px;
+  max-width: 660px;
+}
+
+img.bookmark {
+  width: 60px;
+  position: absolute;
+  top: -16px;
+}
+
+img.mouth {
+  left: 150px;
+}
+
+img.hand {
+  left: 200px;
+}
+
+img.cristal {
+  left: 250px;
+}
+
+.headerh2 {
+  height: 46px;
+  width: 140px;
+  background-color: #f0e6d5;
+  border: 2.5px solid #382719;
+  padding: 10px 3px 6px 3px;
+  position: absolute;
+  top: -12px;
+  left: 6px;
+}
+
+p.description {
+  font-size: 16px;
+  /* text-decoration: underline dotted #382719; */
+  border-bottom: 1.5px solid #382719;
+  line-height: 1.5em; /* Высота линий */
+  background: linear-gradient(
+    to top,
+    transparent 1.4em,
+    #382719 0em
+  ); /* Цвет линий и расстояние между ними */
+  background-size: 100% 1.5em; /* Ширина и высота фонового изображения */
+  background-repeat: repeat-y; /* Повторять фон по вертикали */
+}
+
+h2 {
+  text-align: center;
+  font-size: 23px;
+  font-family: "Bulgaria Moderna Pro", sans-serif;
+}
+h3 {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Copyright House Industries", sans-serif;
+}
+
+p {
+  font-family: "Luminari";
+}
+
+.blockremark {
+  margin-top: 3px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.remark {
+  width: 45%;
+  background-color: #f0e6d5;
+  border: 2.5px solid #2d210b;
+  box-shadow: 3px 3px #382719;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.remark p {
+  font-size: 70%;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .remark p {
+    font-size: 13px;
+  }
+
+  .remark h3 {
+    font-size: 16px;
+  }
+}
