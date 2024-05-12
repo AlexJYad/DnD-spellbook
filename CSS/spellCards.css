@@ -13,7 +13,7 @@
 .nature {
   color: #0b623b;
 }
-.back {
+.black {
   color: black;
 }
 
@@ -34,5 +34,9 @@
 
   .spell {
     height: 100%;
+  }
+
+  .selector {
+    grid-auto-flow: column;
   }
 }

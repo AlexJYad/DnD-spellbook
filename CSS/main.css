@@ -31,13 +31,11 @@ body {
 
 .selector {
   padding-top: 30px;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
-}
-
-select#filterPlayers {
-  margin-right: 3%;
+  grid-gap: 15px;
+  text-align: center;
 }
 
 select {
@@ -46,17 +44,6 @@ select {
   background-color: #f0e6d5;
   height: 36px;
   font-family: "Luminari";
-}
-
-/* option.filterOption {
-  border: 2px solid #2d210b;
-  background-color: #f0e6d5;
-  height: 36px;
-  font-family: "Luminari";
-} */
-
-#back {
-  margin-left: 15px;
 }
 
 .container {
@@ -78,7 +65,6 @@ select {
   padding: 46px 16px 16px 13px;
   margin: 30px;
   min-width: 300px;
-  /* max-width: 660px; */
 }
 
 img.bookmark {

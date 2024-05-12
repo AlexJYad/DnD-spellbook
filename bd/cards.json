@@ -1,7 +1,8 @@
 [
     { 
         "title": "Телекинез",
-        "school": "white",
+        "school": "wight",
+        "aType": "other",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -15,7 +16,8 @@
     },
     { 
         "title": "Контроль Пламени",
-        "school": "white",
+        "school": "wight",
+        "aType": "other",
         "say": 1,
         "touch": 1,
         "do": 1, 
@@ -29,7 +31,8 @@
     },
     { 
         "title": "Вспышка",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -43,7 +46,8 @@
     },
     { 
         "title": "Стигмум Симпла",
-        "school": "white",
+        "school": "wight",
+        "aType": "defense",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -57,7 +61,8 @@
     },
     { 
         "title": "Вспышка света",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -71,7 +76,8 @@
     },
     { 
         "title": "Сверкающий клинок",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 1, 
@@ -85,7 +91,8 @@
     },
     { 
         "title": "Светохлыст",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -99,7 +106,8 @@
     },
     { 
         "title": "Луч света",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -113,7 +121,8 @@
     },
     { 
         "title": "Мистический заряд",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -127,7 +136,8 @@
     },
     { 
         "title": "Световой шум",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -141,7 +151,8 @@
     },
     { 
         "title": "Огненный снаряд",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -155,7 +166,8 @@
     },
     { 
         "title": "Пляшущие огоньки",
-        "school": "white",
+        "school": "wight",
+        "aType": "other",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -169,7 +181,8 @@
     },
     { 
         "title": "Починка",
-        "school": "white",
+        "school": "wight",
+        "aType": "other",
         "say": 1,
         "touch": 1,
         "do": 1, 
@@ -183,7 +196,8 @@
     },
     { 
         "title": "Починка Особая",
-        "school": "white",
+        "school": "wight",
+        "aType": "other",
         "say": 1,
         "touch": 1,
         "do": 1, 
@@ -197,7 +211,8 @@
     },
     { 
         "title": "Раскат грома",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -211,7 +226,8 @@
     },
     { 
         "title": "Свет",
-        "school": "white",
+        "school": "wight",
+        "aType": "other",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -225,7 +241,8 @@
     },
     { 
         "title": "Священное пламя",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -239,7 +256,8 @@
     },
     { 
         "title": "Слово сияния",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -253,11 +271,12 @@
     },
     { 
         "title": "Сопротивление",
-        "school": "white",
+        "school": "wight",
+        "aType": "inspiration",
         "say": 1,
         "touch": 1,
         "do": 0, 
-        "description": "Вы касаетесь одного согласного существа. Пока заклинание активно, цель может один раз бросить к4 и добавить выпавшее число к одному спасброску на свой выбор. Кость можно кидать до или после спасброска. После этого заклинание оканчивается.",
+        "description": "Вы касаетесь одного согласного существа. Пока заклинание активно, цель может один раз бросить 1к4 и добавить выпавшее число к одному спасброску на свой выбор. Кость можно кидать до или после спасброска. После этого заклинание оканчивается.",
         "type": "Компакт (Заговор)",
         "typeno": 0,
         "time": "1 действие",
@@ -267,7 +286,8 @@
     },
     { 
         "title": "Сотворение костра",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -281,7 +301,8 @@
     },
     { 
         "title": "Сотворение пламени",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -295,7 +316,8 @@
     },
     { 
         "title": "Указание",
-        "school": "white",
+        "school": "wight",
+        "aType": "inspiration",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -309,7 +331,8 @@
     },
     { 
         "title": "Фокус",
-        "school": "white",
+        "school": "wight",
+        "aType": "other",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -323,7 +346,8 @@
     },
     { 
         "title": "Формование воды",
-        "school": "white",
+        "school": "wight",
+        "aType": "other",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -337,7 +361,8 @@
     },
     { 
         "title": "Чудотворство",
-        "school": "white",
+        "school": "wight",
+        "aType": "other",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -351,7 +376,8 @@
     },
     { 
         "title": "Шквал",
-        "school": "white",
+        "school": "wight",
+        "aType": "defense",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -365,7 +391,8 @@
     },
     { 
         "title": "Электрошок",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -379,7 +406,8 @@
     },
     { 
         "title": "Брызги",
-        "school": "white",
+        "school": "wight",
+        "aType": "attack",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -394,6 +422,7 @@
     { 
         "title": "Поток",
         "school": "nature",
+        "aType": "other",
         "say": 0,
         "touch": 1,
         "do": 1, 
@@ -408,6 +437,7 @@
     { 
         "title": "Единение",
         "school": "nature",
+        "aType": "other",
         "say": 0,
         "touch": 1,
         "do": 1, 
@@ -427,6 +457,7 @@
     { 
         "title": "Дубина",
         "school": "nature",
+        "aType": "attack",
         "say": 0,
         "touch": 1,
         "do": 1, 
@@ -441,6 +472,7 @@
     { 
         "title": "Уход за умирающим",
         "school": "nature",
+        "aType": "inspiration",
         "say": 1,
         "touch": 1,
         "do": 1, 
@@ -454,7 +486,8 @@
     },
     { 
         "title": "Контроль Пламени",
-        "school": "white",
+        "school": "wight",
+        "aType": "other",
         "say": 1,
         "touch": 1,
         "do": 1, 
@@ -474,7 +507,8 @@
 
     { 
         "title": "Сверкающие брызги",
-        "school": "white",
+        "school": "wight",
+        "aType": "defense",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -488,7 +522,8 @@
     },
     { 
         "title": "Стигмум Ониум",
-        "school": "white",
+        "school": "wight",
+        "aType": "defense",
         "say": 1,
         "touch": 1,
         "do": 0, 
@@ -502,7 +537,8 @@
     },
     { 
         "title": "",
-        "school": "white",
+        "school": "wight",
+        "aType": 0,
         "say": 1,
         "touch": 1,
         "do": 0, 

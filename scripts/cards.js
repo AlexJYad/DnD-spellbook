@@ -23,14 +23,23 @@ function cards(callback){
     .then(response => response.json())
     .then(data => {
         
-        const filterSelect = document.getElementById('filterSelect');
-        const filterValue = filterSelect.value;
+        
         // Получаем контейнер для карточек
         const container = document.getElementById('main');
         // Очищаем содержимое элемента
         container.innerHTML = '';
+
+        const filterSelect = document.getElementById('filterSelect');
+        const filterValue = filterSelect.value;
+
         const filterPlayers = document.getElementById('filterPlayers');
         const filterPlayer = filterPlayers.value;
+
+        const filterSchooles = document.getElementById('filterSchooles');
+        const filterSchool = filterSchooles.value;
+        
+        const filterTypes = document.getElementById('filterTypes');
+        const filterType = filterTypes.value;
 
     if (filterValue != 'all') {
         data = (data.filter(item => item.typeno == filterValue));
@@ -41,6 +50,14 @@ function cards(callback){
             return item.player.includes(Number(filterPlayer));
             }
         );
+    }
+
+    if (filterSchool != 'all') {
+        data = data.filter(item => item.school == filterSchool);
+    }
+
+    if (filterType != 'all') {
+        data = data.filter(item => item.aType == filterType);
     }
 
     data.forEach(cardData => {
@@ -159,15 +176,21 @@ window.onload = cards(secondFunction);
 
 
 const selectElement = document.getElementById('filterSelect');
-
-// Добавляем обработчик события change
 selectElement.addEventListener('change',  function() {
     cards(secondFunction)
 });
 
 const selectPlayer = document.getElementById('filterPlayers');
-
-// Добавляем обработчик события change
 selectPlayer.addEventListener('change',  function() {
+    cards(secondFunction)
+});
+
+const selectTyeps = document.getElementById('filterTypes');
+selectTyeps.addEventListener('change',  function() {
+    cards(secondFunction)
+});
+
+const selectSchooles = document.getElementById('filterSchooles');
+selectSchooles.addEventListener('change',  function() {
     cards(secondFunction)
 });
