@@ -75,6 +75,15 @@ function cards(callback){
         cardTitle.classList.add('headerh2')
         const title = document.createElement('h2');
         title.classList.add('namespell');
+        if (cardData.school == 'nature') {
+            title.classList.add('nature');
+        }
+        if (cardData.school == 'black') {
+            title.classList.add('black');
+        }
+        if (cardData.school == 'goddess') {
+            title.classList.add('goddess');
+        }
         title.textContent = cardData.title;
         const description = document.createElement('p');
         description.classList.add('description')

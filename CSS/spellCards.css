@@ -1,3 +1,26 @@
+.green {
+  color: #017100;
+}
+.red {
+  color: #b51700;
+}
+.wight {
+  text-shadow: 1px 1px 0px #fff, 1px 1px 0px rgba(0, 0, 0, 0.15);
+}
+.big {
+  font-size: 1.2rem;
+}
+.nature {
+  color: #0b623b;
+}
+.back {
+  color: black;
+}
+
+.goddess {
+  color: #007b76;
+}
+
 @media (min-width: 1000px) {
   .container {
     padding-top: 30px;

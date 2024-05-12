@@ -172,21 +172,6 @@ a:hover {
   color: #17879b;
 }
 
-span {
-  &.green {
-    color: #017100;
-  }
-  &.red {
-    color: #b51700;
-  }
-  &.wight {
-    color: white;
-  }
-  &.big {
-    font-size: 1.2rem;
-  }
-}
-
 /* @media (min-width: 1000px) {
   .remark p {
     font-size: 13px;
