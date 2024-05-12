@@ -21,6 +21,7 @@ html {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-family: "Luminari";
 }
 
 body {
@@ -28,11 +29,45 @@ body {
   background-color: hsl(204, 43%, 93%);
 }
 
+.selector {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+select#filterPlayers {
+  margin-right: 3%;
+}
+
+select {
+  width: 160px;
+  border: 2px solid #2d210b;
+  background-color: #f0e6d5;
+  height: 36px;
+  font-family: "Luminari";
+}
+
+/* option.filterOption {
+  border: 2px solid #2d210b;
+  background-color: #f0e6d5;
+  height: 36px;
+  font-family: "Luminari";
+} */
+
+#back {
+  margin-left: 15px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.container.index {
+  height: 100vh;
 }
 
 .spell {
@@ -43,7 +78,7 @@ body {
   padding: 46px 16px 16px 13px;
   margin: 30px;
   min-width: 300px;
-  max-width: 660px;
+  /* max-width: 660px; */
 }
 
 img.bookmark {
@@ -78,10 +113,10 @@ img.cristal {
 p.description {
   font-size: 16px;
   /* text-decoration: underline dotted #382719; */
-  border-bottom: 1.5px solid #382719;
+  /* border-bottom: 1.5px solid #382719; */
   line-height: 1.5em; /* Высота линий */
   background: linear-gradient(
-    to top,
+    to bottom,
     transparent 1.4em,
     #382719 0em
   ); /* Цвет линий и расстояние между ними */
@@ -106,20 +141,21 @@ p {
 
 .blockremark {
   margin-top: 3px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 15px;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .remark {
-  width: 45%;
   background-color: #f0e6d5;
   border: 2.5px solid #2d210b;
   box-shadow: 3px 3px #382719;
   padding: 5px;
   margin-top: 10px;
+  height: 100%;
 }
 
 .remark p {
@@ -127,7 +163,31 @@ p {
   text-align: center;
 }
 
-@media (min-width: 500px) {
+a {
+  color: #520d5a;
+  font-size: 16px;
+  text-decoration: none;
+}
+a:hover {
+  color: #17879b;
+}
+
+span {
+  &.green {
+    color: #017100;
+  }
+  &.red {
+    color: #b51700;
+  }
+  &.wight {
+    color: white;
+  }
+  &.big {
+    font-size: 1.2rem;
+  }
+}
+
+/* @media (min-width: 1000px) {
   .remark p {
     font-size: 13px;
   }
@@ -135,4 +195,40 @@ p {
   .remark h3 {
     font-size: 16px;
   }
-}
+
+  .container {
+    padding-top: 30px;
+    display: grid;
+    grid-row-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: autos;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spell {
+    height: 100%;
+  }
+  
+  img.mouth {
+    left: 300px;
+  }
+
+  img.hand {
+    left: 350px;
+  }
+
+  img.cristal {
+    left: 400px;
+  }
+
+  .headerh2 {
+    width: 290px;
+    height: 100px;
+  }
+
+  p.description {
+    font-size: 30px;
+  }
+} 
+*/

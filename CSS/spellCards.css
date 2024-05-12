@@ -1,0 +1,15 @@
+@media (min-width: 1000px) {
+  .container {
+    padding-top: 30px;
+    display: grid;
+    grid-row-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: autos;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spell {
+    height: 100%;
+  }
+}

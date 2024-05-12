@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spells</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/spellCards.css" />
+    <link rel="stylesheet" href="../css/players.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/copyright-house-industries"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/bulgaria-moderna-pro"
+      rel="stylesheet"
+    />
+    <link href="../bd/cards.json" rel="" />
+    <link href="https://fonts.cdnfonts.com/css/luminari" rel="stylesheet" />
+
+    <link rel="icon" type="image/png" href="#" />
+  </head>
+  <body>
+    <div class="selector">
+      <select id="filterPlayers">
+        <option class="filterOption" value="0">Олёй</option>
+      </select>
+      <select id="filterSelect">
+        <option class="filterOption" value="all">All</option>
+        <option class="filterOption" value="0">Компакт (Заговор)</option>
+        <option class="filterOption" value="1">Субкор (1 уровень)</option>
+      </select>
+      <a id="back" href="../index.html">Back</a>
+    </div>
+    <div id="main" class="container"></div>
+    <script src="../scripts/cards.js"></script>
+  </body>
+</html>

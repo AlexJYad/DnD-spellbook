@@ -13,34 +13,58 @@ function secondFunction() {
     });
   };
 
+function database(){
+
+}
+
 function cards(callback){
 
-    fetch('cards.json')
+    fetch('../bd/cards.json')
     .then(response => response.json())
     .then(data => {
-        const container = document.getElementById('main'); // Получаем контейнер для карточек
-    
+        
+        const filterSelect = document.getElementById('filterSelect');
+        const filterValue = filterSelect.value;
+        // Получаем контейнер для карточек
+        const container = document.getElementById('main');
+        // Очищаем содержимое элемента
+        container.innerHTML = '';
+        const filterPlayers = document.getElementById('filterPlayers');
+        const filterPlayer = filterPlayers.value;
+
+    if (filterValue != 'all') {
+        data = (data.filter(item => item.typeno == filterValue));
+    }
+
+    if (filterPlayer != 'all') {
+        data = data.filter(item => {
+            return item.player.includes(Number(filterPlayer));
+            }
+        );
+    }
+
     data.forEach(cardData => {
+
         const card = document.createElement('div');
         card.classList.add('spell');
 
         if (cardData.say) {
             const say = document.createElement('img');
-            say.src = './img/bookmark/mouth.png';
+            say.src = '../img/bookmark/mouth.png';
             say.classList.add('mouth', 'bookmark');
             card.appendChild(say);
         }
 
         if (cardData.touch) {
             const touch = document.createElement('img');
-            touch.src = './img/bookmark/hand.png';
+            touch.src = '../img/bookmark/hand.png';
             touch.classList.add('hand', 'bookmark');
             card.appendChild(touch);
         }
 
         if (cardData.do) {
             const doIt = document.createElement('img');
-            doIt.src = './img/bookmark/cristal.png';
+            doIt.src = '../img/bookmark/cristal.png';
             doIt.classList.add('cristal', 'bookmark');
             card.appendChild(doIt);
         }
@@ -123,3 +147,18 @@ function cards(callback){
 };
 
 window.onload = cards(secondFunction);
+
+
+const selectElement = document.getElementById('filterSelect');
+
+// Добавляем обработчик события change
+selectElement.addEventListener('change',  function() {
+    cards(secondFunction)
+});
+
+const selectPlayer = document.getElementById('filterPlayers');
+
+// Добавляем обработчик события change
+selectPlayer.addEventListener('change',  function() {
+    cards(secondFunction)
+});
