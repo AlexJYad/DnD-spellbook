@@ -20,11 +20,8 @@ function database(){
 function cards(callback){
 
     fetch('../bd/cards.json')
-    // fetch('../test/cards.json')
     .then(response => response.json())
     .then(data => {
-        
-        
         // Получаем контейнер для карточек
         const container = document.getElementById('main');
         // Очищаем содержимое элемента
