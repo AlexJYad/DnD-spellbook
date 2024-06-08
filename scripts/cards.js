@@ -19,7 +19,7 @@ function database(){
 
 function cards(callback){
 
-    fetch('../bd/cards.json')
+    fetch('/bd/cards.json')
     .then(response => response.json())
     .then(data => {
         // Получаем контейнер для карточек
@@ -65,21 +65,21 @@ function cards(callback){
 
         if (cardData.say) {
             const say = document.createElement('img');
-            say.src = '../img/bookmark/mouth.png';
+            say.src = '/img/bookmark/mouth.png';
             say.classList.add('mouth', 'bookmark');
             card.appendChild(say);
         }
 
         if (cardData.touch) {
             const touch = document.createElement('img');
-            touch.src = '../img/bookmark/hand.png';
+            touch.src = '/img/bookmark/hand.png';
             touch.classList.add('hand', 'bookmark');
             card.appendChild(touch);
         }
 
         if (cardData.do) {
             const doIt = document.createElement('img');
-            doIt.src = '../img/bookmark/cristal.png';
+            doIt.src = '/img/bookmark/cristal.png';
             doIt.classList.add('cristal', 'bookmark');
             card.appendChild(doIt);
         }

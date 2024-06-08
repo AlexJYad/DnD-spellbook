@@ -129,7 +129,7 @@ p {
   margin-top: 3px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-gap: 15px;
 }
 
@@ -158,4 +158,13 @@ a {
 }
 a:hover {
   color: #17879b;
+}
+
+input:focus:invalid {
+  border: solid 5px #7f141a;
+}
+
+input {
+  border: solid 1px #382719;
+  border-radius: 3px;
 }

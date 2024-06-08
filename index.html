@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spells</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <link
       href="https://fonts.cdnfonts.com/css/copyright-house-industries"
       rel="stylesheet"
@@ -13,7 +13,7 @@
       href="https://fonts.cdnfonts.com/css/bulgaria-moderna-pro"
       rel="stylesheet"
     />
-    <link href="./cards.json" rel="" />
+    <link href="/scripts/go.js" rel="" />
     <link href="https://fonts.cdnfonts.com/css/luminari" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -33,24 +33,57 @@
           </h2>
         </div>
         <p class="description main">Маейк йор чеойс</p>
+        <div>
+          <form action="" method="POST" id="loginForm">
+            <div class="remark">
+              <label for="login">Login:</label>
+              <input
+                type="text"
+                id="login"
+                name="login"
+                required
+                minlength="3"
+                maxlength="10"
+              />
+            </div>
+            <div class="remark">
+              <label for="pwd">Password:</label>
+              <input
+                type="password"
+                id="pwd"
+                name="pwd"
+                required
+                minlength="5"
+              />
+            </div>
+            <div class="remark">
+              <input type="submit" value="Login" />
+              <input type="reset" value="Reset" />
+            </div>
+          </form>
+        </div>
         <div class="blockremark back">
-          <div class="remark">
+          <div class="remark" hidden>
             <p><a href="./cardsHtml/cardsDM.html">DM</a></p>
           </div>
-          <div class="remark">
+          <div class="remark" hidden>
             <p><a href="./cardsHtml/cardsOlay.html">Олёй</a></p>
           </div>
-          <div class="remark">
+          <div class="remark" hidden>
             <p><a href="./cardsHtml/cardsEugene.html">Eugene</a></p>
           </div>
-          <div class="remark">
+          <div class="remark" hidden>
             <p><a href="./cardsHtml/cardsTaliko.html">Taliko</a></p>
           </div>
-          <div class="remark back">
-            <p><a href="./lore/loreMenu.html">Лор Мира и его последствия</a></p>
+          <div class="remark">
+            <p><a href="/HTML/lore/loreMenu.html">Лор</a></p>
+          </div>
+          <div class="remark">
+            <p><a href="/HTML/other/feedback.html">Отзовы</a></p>
           </div>
         </div>
       </div>
     </div>
+    <script src="/scripts/go.js"></script>
   </body>
 </html>
