@@ -21,6 +21,25 @@
   color: #007b76;
 }
 
+.toggle-image {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.random-text {
+  font-family: "Dovahkiin", sans-serif;
+}
+
+#dop {
+  p.description {
+    height: 240px;
+    overflow: hidden;
+  }
+  .remark {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
 @media (min-width: 1000px) {
   .container {
     padding-top: 30px;
@@ -40,3 +59,13 @@
     grid-auto-flow: column;
   }
 }
+
+/* #dop {
+  padding-top: 30px;
+  display: grid;
+  grid-row-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: autos;
+  justify-content: center;
+  align-items: center;
+} */
