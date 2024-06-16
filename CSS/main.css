@@ -126,7 +126,7 @@ p {
 }
 
 .blockremark {
-  margin-top: 3px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -140,6 +140,30 @@ p {
   padding: 5px;
   margin-top: 10px;
   height: 100%;
+}
+
+.back .remark,
+form .remark {
+  display: flex;
+  justify-content: center;
+}
+
+.back .remark {
+  margin-top: 0px;
+}
+
+.remark label {
+  width: 85px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.remark input {
+  flex: 1;
+}
+
+.remark input[type="submit"] {
+  margin-right: 10px;
 }
 
 .remark.back {
