@@ -32,7 +32,7 @@ export default function LoginForm() {
       } else if (username === "Eulebia" && password === "non0D") {
          localStorage.setItem("token", "Евлебия");
          window.location.reload();
-      } else {{
+      } else {
          setError("Invalid username or password.");
       }
    };
