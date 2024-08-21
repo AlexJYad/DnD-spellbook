@@ -7,5 +7,5 @@ export default function Back() {
       navigate(-1); // Переход на предыдущую страницу
    };
 
-   return <a onClick={handleBack}>Back</a>;
+   return <button onClick={handleBack}>Back</button>;
 }

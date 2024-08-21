@@ -48,7 +48,7 @@ export default function SpellPage() {
       }
 
       if (filterSelect !== "all") {
-         filtered = filtered.filter((card) => card.typeno == filterSelect);
+         filtered = filtered.filter((card) => card.typeno === filterSelect);
       }
 
       if (filterSchooles !== "all") {
@@ -60,7 +60,14 @@ export default function SpellPage() {
       }
 
       setFilteredData(filtered);
-   }, [filterPlayers, filterSelect, filterSchooles, filterTypes, userData]);
+   }, [
+      filterPlayers,
+      filterSelect,
+      filterSchooles,
+      filterTypes,
+      userData,
+      token,
+   ]);
 
    if (!userData) {
       return <div>Loading...</div>;

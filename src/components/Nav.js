@@ -1,11 +1,8 @@
 import { useLocation } from "react-router-dom";
 import LoginForm from "./LoginForm";
-import { useState } from "react";
 import Back from "./Back";
 
 export default function Nav({ title, description, url }) {
-   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
    const location = useLocation();
    const isHomePage = location.pathname === "/";
 
@@ -58,7 +55,7 @@ export default function Nav({ title, description, url }) {
                )}
                {isToken && (
                   <div class="remark back">
-                     <a onClick={handleOut}>LogOff</a>
+                     <button onClick={handleOut}>LogOff</button>
                   </div>
                )}
             </div>
