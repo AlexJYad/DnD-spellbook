@@ -29,7 +29,10 @@ export default function LoginForm() {
       } else if (username === "Eugen" && password === "HC5sp") {
          localStorage.setItem("token", "Юджин");
          window.location.reload();
-      } else {
+      } else if (username === "Eulebia" && password === "non0D") {
+         localStorage.setItem("token", "Евлебия");
+         window.location.reload();
+      } else {{
          setError("Invalid username or password.");
       }
    };
