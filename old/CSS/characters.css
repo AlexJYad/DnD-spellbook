@@ -1,0 +1,34 @@
+.header {
+  font-size: 21px;
+}
+
+#main {
+  padding: 20px;
+}
+
+details {
+  position: relative;
+}
+
+.spell {
+  min-width: 100px;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 5px;
+}
+
+img {
+  margin-top: 30px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #2d210b;
+  background-color: #f0e6d5;
+}
+
+.headerh2 {
+  height: 68px;
+}
