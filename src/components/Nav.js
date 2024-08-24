@@ -1,16 +1,17 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import LoginForm from "./LoginForm";
 import Back from "./Back";
 
 export default function Nav({ title, description, url }) {
    const location = useLocation();
+   const navigate = useNavigate();
    const isHomePage = location.pathname === "/";
 
    const isToken = localStorage.getItem("token");
 
    const handleOut = () => {
       localStorage.removeItem("token");
-      window.location.reload();
+      navigate("/");
    };
 
    return (
@@ -35,7 +36,7 @@ export default function Nav({ title, description, url }) {
                {isHomePage && isToken && (
                   <>
                      <div class="remark">
-                        <a href={"/list"}>Лист Персонажа</a>
+                        <a href={"/sheet"}>Лист Персонажа</a>
                      </div>
                      <div class="remark">
                         <a href={"/spell"}>Заклинанния</a>

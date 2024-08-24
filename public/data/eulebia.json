@@ -1,0 +1,68 @@
+[
+   {  
+      "name" : "Евлебия",
+      "proficiencyname" : "+2"
+   },{
+      "strength" : {
+         "id" : "strength",
+         "name": "Сила",
+         "num": "+4",
+         "level": 15,
+         "safebox": true,
+         "skills": ["Атлетика"]
+      },
+      "dexterity" : {
+         "id": "dexterity",
+         "name": "Ловкость",
+         "num": "-1",
+         "level": 9,
+         "safebox": false,
+         "skills": ["Акробатика", "Ловкость рук", "Скрытность"]
+      },
+      "constitution" : {
+         "id": "strength",
+         "name": "Телосложение",
+         "num": "+5",
+         "level": 16,
+         "safebox": true,
+         "skills": []
+      },
+      "intelligence" : {
+         "id": "intelligence",
+         "name": "Интеллект",
+         "num": "+1",
+         "level": 12,
+         "safebox": false,
+         "skills": ["История", "Магия", "Природа", "Расследование", "Религия"]
+      },
+      "wisdom" : {
+         "id": "wisdom",
+         "name": "Мудрость",
+         "num": "+1",
+         "level": 12,
+         "safebox": false,
+         "skills": [
+            "Восприятие",
+            "Выживание",
+            "Медицина",
+            "Проницательность",
+            "Уход за животными"
+         ]
+      },
+      "charisma" : {
+         "id": "wisdom",
+         "name": "Харизма",
+         "num": "+2",
+         "level": 14,
+         "safebox": false,
+         "skills": ["Выступление", "Запугивание", "Обман", "Убеждение"]
+      }
+   },{
+      "age": 17,
+      "experience": 250,
+      "level": 1
+   },{
+      "num":[1,2,1,0,0,0,0,0,0]
+   }
+]
+

@@ -1,0 +1,68 @@
+[
+   {  
+      "name" : "Талико",
+      "proficiencyname" : "+2"
+   },{
+      "strength" : {
+         "id" : "strength",
+         "name": "Сила",
+         "num": "0",
+         "level": 11,
+         "safebox": false,
+         "skills": ["Атлетика"]
+      },
+      "dexterity" : {
+         "id": "dexterity",
+         "name": "Ловкость",
+         "num": "+1",
+         "level": 12,
+         "safebox": false,
+         "skills": ["Акробатика", "Ловкость рук", "Скрытность"]
+      },
+      "constitution" : {
+         "id": "strength",
+         "name": "Телосложение",
+         "num": "+1",
+         "level": 12,
+         "safebox": false,
+         "skills": []
+      },
+      "intelligence" : {
+         "id": "intelligence",
+         "name": "Интеллект",
+         "num": "+1",
+         "level": 12,
+         "safebox": false,
+         "skills": ["История", "Магия", "Природа", "Расследование", "Религия"]
+      },
+      "wisdom" : {
+         "id": "wisdom",
+         "name": "Мудрость",
+         "num": "+4",
+         "level": 15,
+         "safebox": true,
+         "skills": [
+            "Восприятие",
+            "Выживание",
+            "Медицина",
+            "Проницательность",
+            "Уход за животными"
+         ]
+      },
+      "charisma" : {
+         "id": "wisdom",
+         "name": "Харизма",
+         "num": "+5",
+         "level": 16,
+         "safebox": true,
+         "skills": ["Выступление", "Запугивание", "Обман", "Убеждение"]
+      }
+   },{
+      "age": 17,
+      "experience": 200,
+      "level": 1
+   },{
+      "num":[2,0,0,0,0,0,0,0,0]
+   }
+]
+

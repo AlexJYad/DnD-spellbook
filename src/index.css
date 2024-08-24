@@ -20,7 +20,7 @@ code {
 }
 
 body {
-   height: 100vh;
+   min-height: 100vh;
    background-color: hsl(204, 43%, 93%);
 }
 

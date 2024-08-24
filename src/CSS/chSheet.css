@@ -1,0 +1,346 @@
+.sheet {
+   background-image: url("../img/background/frame.png");
+   /* background-image: url("../img/background/sheet-background.png"); */
+   background-color: #bd9c82;
+   width: 75%;
+   aspect-ratio: 1 / 1;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   position: relative;
+
+   padding: 10px;
+   background-origin: content-box;
+}
+
+.namebox {
+   background-image: url("../img/background/name-frame.png");
+
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+
+   position: absolute;
+   width: 25%;
+   aspect-ratio: 1 / 1;
+   top: 5%;
+   left: 5%;
+   font-size: 15px;
+   .namebox_p {
+      position: absolute;
+      left: 50%;
+      top: 80%;
+      transform: translateX(-70%);
+   }
+}
+
+.abilities {
+   position: absolute;
+   display: grid;
+   top: 33%;
+   left: 7%;
+   font-size: 10px;
+   grid-gap: 10px;
+   height: 60%;
+   grid-template-rows: 1.3fr 2fr 2fr 2fr 2fr 2fr 2fr;
+   width: 20%;
+}
+
+.ability {
+   background-color: #fff2e6;
+
+   position: relative;
+   border: 3px solid #2d210b;
+   border-radius: 3px;
+
+   & .flag {
+      background-image: url("../img/background/s-flag.png");
+      width: 30%;
+      aspect-ratio: 1 / 1;
+      position: absolute;
+      top: -12%;
+      left: 0%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 5%;
+      padding-left: 3%;
+
+      .num {
+         font-weight: 700;
+         font-size: 2em;
+      }
+   }
+
+   & .level {
+      position: absolute;
+      top: 55%;
+      left: -3%;
+      background-image: url("../img/background/xs-flag.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20%;
+      aspect-ratio: 1 / 1;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 4.5%;
+
+      p {
+         font-size: 1.3em;
+      }
+   }
+}
+
+#proficiencyBonus .flag {
+   top: -20%;
+}
+
+.flag {
+   background-image: url("../img/background/m-flag.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   text-wrap: wrap;
+   text-align: center;
+   width: 100%;
+   aspect-ratio: 1 / 1;
+}
+
+.name {
+   position: absolute;
+   top: 0px;
+   left: 30%;
+   font-size: 1.5em;
+   font-weight: 700;
+}
+
+.safe {
+   position: absolute;
+   top: 20%;
+   left: 30%;
+   font-size: 7px;
+   font-weight: 700;
+   display: flex;
+   align-items: center;
+
+   & p {
+      font-size: 1.3em;
+      padding-right: 10%;
+   }
+}
+
+.safebox {
+   border: 1.5px solid #2d210b;
+   height: 10px;
+   width: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 2em;
+   color: darkolivegreen;
+}
+
+.skills {
+   position: absolute;
+   top: 26%;
+   left: 16%;
+   font-size: 0.8em;
+}
+
+.sheet ul {
+   margin: 0px;
+   margin-top: 5px;
+   padding-left: 31px;
+}
+
+.proficiencyname {
+   padding-top: 3%;
+   font-size: 1.3em;
+}
+
+.flagstop {
+   position: absolute;
+   width: 20%;
+   aspect-ratio: 3 / 1;
+   top: 3.65%;
+   right: 6%;
+   text-align: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 4px;
+
+   p {
+      font-size: 1.4em;
+   }
+}
+
+.sheet h3 {
+   font-size: 1em;
+}
+
+.spelles {
+   position: absolute;
+   top: 13%;
+   right: 15%;
+   width: 267px;
+   height: 115px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-gap: 10px;
+}
+
+.slots {
+   width: 29px;
+   position: relative;
+
+   & .slot {
+      background-image: url("../img/background/slot.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 40px;
+      aspect-ratio: 1 / 1;
+      position: relative;
+   }
+
+   & .level {
+      position: absolute;
+      top: 5%;
+      left: 65%;
+      font-size: 9px;
+   }
+
+   & .num {
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      font-size: 1em;
+   }
+
+   & ul {
+      list-style: none;
+   }
+}
+
+.sheet input {
+   border-radius: 100%;
+}
+
+.sheet span {
+   border: 1.5px solid #2d210b;
+   background-color: #bd9c82;
+   border-radius: 50%;
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   display: block;
+}
+
+.sheet input[type="checkbox"] {
+   visibility: hidden;
+   display: none;
+   opacity: 0;
+}
+
+.sheet input[type="checkbox"]:checked + span {
+   background-color: #ffa800;
+}
+
+.sheet label.inactive span {
+   border: 1.5px solid #2d210b7b;
+}
+
+.slots .label {
+   display: grid;
+   grid-gap: 2px;
+   padding-left: 26%;
+   padding-top: 10%;
+}
+
+.saves {
+   background-image: url("../img/background/saves.png");
+   border: 1px solid black;
+   width: 10%;
+   aspect-ratio: 1 / 1;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   position: absolute;
+   bottom: 20%;
+   left: 28.5%;
+   display: grid;
+   padding-top: 1%;
+   grid-template-rows: 1fr 2fr 2fr;
+
+   .saves_name {
+      font-size: 0.8em;
+      grid-row: 1/2;
+   }
+   .life,
+   .death {
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      .label {
+         /* align-items: center; */
+         justify-content: center;
+         display: grid;
+         height: 100%;
+         grid-template-columns: 1fr 1fr 1fr;
+         label {
+            justify-self: center;
+            align-self: center;
+         }
+         & span {
+            background-color: rgba(1, 1, 1, 0);
+            width: 70%;
+            height: 70%;
+            min-height: 15px;
+            min-width: 15px;
+            aspect-ratio: 1 / 1;
+         }
+      }
+   }
+   .death {
+      grid-row: 2/3;
+      .label input[type="checkbox"]:checked + span {
+         background-color: black;
+      }
+   }
+
+   & .life {
+      grid-row: 3/4;
+      & .label input[type="checkbox"]:checked + span {
+         background-color: white;
+      }
+
+      .label label {
+         align-self: start;
+      }
+   }
+}
+
+.textarea-1 {
+   position: absolute;
+   bottom: 54px;
+   left: 169px;
+
+   & textarea {
+      width: 100px;
+      height: 150px;
+      padding: 12px 10px 10px 20px;
+      font-size: 8px;
+      resize: none;
+   }
+}
+
+.sheet textarea {
+   background: none;
+   border: none;
+   font-family: "Luminari";
+   color: #2d210b;
+}

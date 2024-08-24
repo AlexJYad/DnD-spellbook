@@ -15,7 +15,6 @@ export default function SpellPage() {
 
    useEffect(() => {
       setUserData(cards);
-      setFilteredData(cards);
    }, []);
 
    const handlePlayerChange = (e) => {

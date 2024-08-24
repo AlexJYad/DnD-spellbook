@@ -23,7 +23,7 @@ select {
 }
 
 .container.index {
-   height: 100vh;
+   min-height: 100vh;
 }
 
 .spell {
@@ -166,4 +166,11 @@ input {
 .not-found {
    text-align: center;
    padding: 16px 16px 16px 16px;
+}
+
+.info {
+   background-color: #e1d2c4;
+   width: 75%;
+
+   padding: 10%;
 }
