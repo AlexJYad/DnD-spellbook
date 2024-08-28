@@ -4,7 +4,7 @@ import SpellesSlots from "../components/SpellesSlots";
 import "../CSS/chSheet.css";
 import { useEffect } from "react";
 
-export default function ChSheetPage({ props }) {
+export default function ChSheetPage(props) {
    useEffect(() => {
       document.title = "Лист Персонажа";
    }, []);
@@ -29,7 +29,7 @@ export default function ChSheetPage({ props }) {
                         {getValues(info.experience).proficiencyname}
                      </div>
                   </div>
-                  <div class="proficiencyname safe">Бонус Мастерства</div>
+                  <div class="name">Бонус Мастерства</div>
                </div>
                {Object.keys(abilities).map((key) => (
                   <Ability

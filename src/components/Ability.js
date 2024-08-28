@@ -18,7 +18,10 @@ export default function Ability({
             <p>{level}</p>
          </div>
          <div className="name">
-            {name} {safebox ? <span className="green big">&#x2618;</span> : ""}
+            <p>
+               {name}{" "}
+               {safebox ? <span className="green big">&#x2618;</span> : ""}
+            </p>
          </div>
          <div className="skills">
             <ul>

@@ -8,6 +8,9 @@ const Marquee = ({ text }) => {
             <div className="marquee-text">{text}</div>
             <div className="marquee-text">{text}</div>
             <div className="marquee-text">{text}</div>
+            <div className="marquee-text">{text}</div>
+            <div className="marquee-text">{text}</div>
+            <div className="marquee-text">{text}</div>
          </div>
       </div>
    );

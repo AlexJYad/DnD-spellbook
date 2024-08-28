@@ -161,5 +161,5 @@ function ProtectedRoute({ component: Component }) {
       return <div>Loading...</div>;
    }
 
-   return <Component props={data} />;
+   return <Component {...data} />;
 }
