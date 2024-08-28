@@ -39,6 +39,15 @@ em:after {
 .big {
    font-size: 1.2rem;
 }
+
+.bold {
+   font-weight: 700;
+}
+
+.pr {
+   padding-right: 6px;
+}
+
 .nature {
    color: #0b623b;
 }

@@ -40,7 +40,7 @@ export default function SpellesSlots({ level, num }) {
             onChange={() => handleCheckboxChange(index)}
             checked={checkedCheckboxes[index]}
          />
-         <span></span>
+         <span className="spellslot"></span>
       </label>
    ));
 
