@@ -71,7 +71,7 @@ export default function LoginForm() {
                   <p style={{ color: "red" }}>{error}</p>
                </div>
             )}
-            <div class="remark">
+            <div>
                <button type="submit" value="Login">
                   Login
                </button>

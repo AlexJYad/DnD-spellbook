@@ -36,7 +36,7 @@ export default function SpellesSlots({ level, num }) {
       <label key={index} className={index < num ? "active" : "inactive"}>
          <input
             type="checkbox"
-            disabled={index > num}
+            disabled={index >= num}
             onChange={() => handleCheckboxChange(index)}
             checked={checkedCheckboxes[index]}
          />

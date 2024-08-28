@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Back from "../components/Back";
 import Spell from "../components/Spell";
 import cards from "../data/cards.json";
 import "../CSS/spellCards.css";
@@ -33,6 +32,13 @@ export default function SpellPage() {
       setFilterTypes(e.target.value);
    };
 
+   const handleReset = () => {
+      setFilterPlayers("all");
+      setFilterSelect("all");
+      setFilterSchooles("all");
+      setFilterTypes("all");
+   };
+
    useEffect(() => {
       if (!userData) return;
 
@@ -47,7 +53,10 @@ export default function SpellPage() {
       }
 
       if (filterSelect !== "all") {
-         filtered = filtered.filter((card) => card.typeno === filterSelect);
+         console.log(typeof filterSelect);
+         filtered = filtered.filter(
+            (card) => card.typeno.toString() === filterSelect
+         );
       }
 
       if (filterSchooles !== "all") {
@@ -73,19 +82,25 @@ export default function SpellPage() {
    }
 
    return (
-      <>
+      <div className="spell-gallery">
          <div className="selector">
-            {/* Фильтр игроков отображается только если token равен "all" */}
-            {token === "all" && (
-               <select id="filterPlayers" onChange={handlePlayerChange}>
-                  <option value="all">All</option>
-                  <option value="Олёй">Олёй</option>
-                  <option value="Юджин">Юджин</option>
-                  <option value="Талико">Талико</option>
-               </select>
-            )}
+            <select
+               id="filterPlayers"
+               onChange={handlePlayerChange}
+               value={filterPlayers}
+            >
+               <option value="all">All</option>
+               <option value="Олёй">Олёй</option>
+               <option value="Юджин">Юджин</option>
+               <option value="Талико">Талико</option>
+               <option value="Евлебия">Евлебия</option>
+            </select>
 
-            <select id="filterSelect" onChange={handleSelectChange}>
+            <select
+               id="filterSelect"
+               onChange={handleSelectChange}
+               value={filterSelect}
+            >
                <option value="all">All</option>
                <option value="0">Компакт (Заговор)</option>
                <option value="1">Субкор (1 уровень)</option>
@@ -99,22 +114,28 @@ export default function SpellPage() {
                <option value="9">Нова (9 уровень)</option>
                <option value="*">СуперНова (* уровень)</option>
             </select>
-            {/* Фильтр школ также отображается только если token равен "all" */}
-            {(token === "all" || token === "Олёй") && (
-               <select id="filterSchooles" onChange={handleSchoolesChange}>
-                  <option value="all">All</option>
-                  <option value="wight">Белая</option>
-                  {token === "all" && (
-                     <>
-                        <option value="black">Черная</option>
-                        <option value="goddess">Божественная</option>
-                     </>
-                  )}
-                  <option value="nature">Природная</option>
-               </select>
-            )}
 
-            <select id="filterTypes" onChange={handleTypesChange}>
+            <select
+               id="filterSchooles"
+               onChange={handleSchoolesChange}
+               value={filterSchooles}
+            >
+               <option value="all">All</option>
+               <option value="wight">Белая</option>
+               {token === "all" && (
+                  <>
+                     <option value="black">Черная</option>
+                     <option value="goddess">Божественная</option>
+                  </>
+               )}
+               <option value="nature">Природная</option>
+            </select>
+
+            <select
+               id="filterTypes"
+               onChange={handleTypesChange}
+               value={filterTypes}
+            >
                <option value="all">All</option>
                <option value="attack">Атака</option>
                <option value="defense">Защита</option>
@@ -122,10 +143,12 @@ export default function SpellPage() {
                <option value="other">Прочее</option>
             </select>
 
-            <Back />
+            <button onClick={handleReset}>
+               <h2>Reset</h2>
+            </button>
          </div>
 
-         <div className="container">
+         <div className="container-spell">
             {filteredData.length > 0 ? (
                filteredData.map((card, index) => (
                   <Spell key={index} props={card} />
@@ -134,6 +157,6 @@ export default function SpellPage() {
                <div>No cards match the selected filters</div>
             )}
          </div>
-      </>
+      </div>
    );
 }

@@ -16,54 +16,52 @@ export default function ChSheetPage({ props }) {
 
    return (
       <>
-         <div id="main" class="container index">
-            <div class="sheet">
-               <div class="namebox">
-                  <div class="namebox_p">
-                     <p>{info.name}</p>
-                  </div>
+         <div class="sheet">
+            <div class="namebox">
+               <div class="namebox_p">
+                  <p>{info.name}</p>
                </div>
+            </div>
 
-               <div class="abilities">
-                  <div id="proficiencyBonus" class="ability">
-                     <div class="flag">
-                        <div class="num">{info.proficiencyname}</div>
-                     </div>
-                     <div class="proficiencyname safe">Бонус Мастерства</div>
+            <div class="abilities">
+               <div id="proficiencyBonus" class="ability">
+                  <div class="flag">
+                     <div class="num">{info.proficiencyname}</div>
                   </div>
-                  {Object.keys(abilities).map((key) => (
-                     <Ability key={abilities[key].id} {...abilities[key]} />
-                  ))}
+                  <div class="proficiencyname safe">Бонус Мастерства</div>
                </div>
-               <div class="flagstop">
-                  <div id="age" class="flag">
-                     <h3>Возраст</h3>
-                     <p>{flagstop.age}</p>
-                  </div>
-                  <div id="experience" class="flag m-flag">
-                     <h3>Опыт</h3>
-                     <p>{flagstop.experience}</p>
-                  </div>
-                  <div id="level" class="flag">
-                     <h3>Уровень</h3>
-                     <p>{flagstop.level}</p>
-                  </div>
+               {Object.keys(abilities).map((key) => (
+                  <Ability key={abilities[key].id} {...abilities[key]} />
+               ))}
+            </div>
+            <div class="flagstop">
+               <div id="age" class="flag">
+                  <h3>Возраст</h3>
+                  <p>{flagstop.age}</p>
                </div>
+               <div id="experience" class="flag m-flag">
+                  <h3>Опыт</h3>
+                  <p>{flagstop.experience}</p>
+               </div>
+               <div id="level" class="flag">
+                  <h3>Уровень</h3>
+                  <p>{flagstop.level}</p>
+               </div>
+            </div>
 
-               <div class="spelles">
-                  {nums.map((num, index) => (
-                     <SpellesSlots key={index} level={index + 1} num={num} />
-                  ))}
-               </div>
-               {/* 
+            <div class="spelles">
+               {nums.map((num, index) => (
+                  <SpellesSlots key={index} level={index + 1} num={num} />
+               ))}
+            </div>
+            {/* 
                <Saves /> */}
-               {/* 
+            {/* 
                <div class="textarea-1">
                   <textarea name="" id="" c>
                      Пицца с ананасами
                   </textarea>
                </div> */}
-            </div>
          </div>
       </>
    );

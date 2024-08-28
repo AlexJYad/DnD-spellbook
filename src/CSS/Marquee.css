@@ -1,0 +1,34 @@
+/* Marquee.css */
+.marquee {
+   width: 100%; /* Занимает всю ширину контейнера */
+   overflow: hidden; /* Скрывает содержимое, выходящее за пределы контейнера */
+   position: relative;
+   background-color: #f0f0f0; /* Цвет фона, может быть изменен */
+   padding: 10px 0; /* Отступы сверху и снизу */
+}
+
+.marquee-content {
+   display: flex; /* Выстраивает дочерние элементы в строку */
+   white-space: nowrap; /* Предотвращает перенос строк */
+   animation: marquee 30s linear infinite; /* Анимация для бесконечного движения текста */
+}
+
+.marquee-text {
+   flex: 0 0 auto; /* Не позволяет тексту изменять размер */
+   padding-right: 100px; /* Отступ между блоками текста */
+   font-weight: 700;
+   color: brown;
+}
+
+@keyframes marquee {
+   0% {
+      transform: translateX(
+         100%
+      ); /* Начало анимации (текст находится полностью справа) */
+   }
+   100% {
+      transform: translateX(
+         -100%
+      ); /* Конец анимации (текст уходит полностью влево) */
+   }
+}

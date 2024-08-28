@@ -1,11 +1,59 @@
-.selector {
-   padding-top: 30px;
+.App {
+   min-height: 100vh;
+   min-width: 100vw;
    display: grid;
+   grid-template-rows: auto auto 1fr auto;
+}
+
+button {
+   background-color: #f9eedc;
+   border: 2.5px solid #2d210b;
+   box-shadow: 3px 3px #382719;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #fff; /* Цвет фона кнопки при наведении */
+}
+
+h2 {
+   text-align: center;
+   font-size: 23px;
+   font-family: "Bulgaria Moderna Pro", sans-serif;
+   padding-top: 2px;
+}
+
+h3 {
+   font-size: 13px;
+   font-weight: 400;
+   font-family: "Copyright House Industries", sans-serif;
+}
+
+p {
+   font-family: "Luminari";
+}
+
+.flex {
+   display: flex;
    justify-content: center;
    align-items: center;
-   grid-gap: 15px;
-   text-align: center;
+   position: relative;
+   overflow: hidden;
 }
+
+.flex-column {
+   gap: 16px;
+   flex-direction: column;
+}
+
+.container-404 {
+   padding: 40px;
+   background-color: #fffaf3;
+   border: 2.5px solid #2d210b;
+   box-shadow: 3px 3px #382719;
+}
+
+/* -------- */
 
 select {
    width: 160px;
@@ -15,7 +63,7 @@ select {
    /* font-family: "Luminari"; */
 }
 
-.container {
+/* .container {
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -24,7 +72,7 @@ select {
 
 .container.index {
    min-height: 100vh;
-}
+} */
 
 .spell {
    position: relative;

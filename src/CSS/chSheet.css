@@ -2,7 +2,7 @@
    background-image: url("../img/background/frame.png");
    /* background-image: url("../img/background/sheet-background.png"); */
    background-color: #bd9c82;
-   width: 75%;
+   width: 100%;
    aspect-ratio: 1 / 1;
    background-position: center;
    background-repeat: no-repeat;
@@ -11,6 +11,7 @@
 
    padding: 10px;
    background-origin: content-box;
+   z-index: 5;
 }
 
 .namebox {
