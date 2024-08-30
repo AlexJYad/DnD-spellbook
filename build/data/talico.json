@@ -1,28 +1,34 @@
 [
    {  
       "name" : "Талико",
-      "proficiencyname" : "+2"
+      "age": 17,
+      "experience": 200,
+      "ACbonus": 1,
+      "HP": 9
    },{
       "strength" : {
          "id" : "strength",
          "name": "Сила",
-         "num": "0",
          "level": 11,
          "safebox": false,
-         "skills": ["Атлетика"]
+         "skills": [
+               {"name": "Атлетика", "isSafebox": true}
+           ]
       },
       "dexterity" : {
          "id": "dexterity",
          "name": "Ловкость",
-         "num": "+1",
          "level": 12,
          "safebox": false,
-         "skills": ["Акробатика", "Ловкость рук", "Скрытность"]
+         "skills": [
+               {"name": "Акробатика", "isSafebox": true},
+               {"name": "Ловкость рук", "isSafebox": false},
+               {"name": "Скрытность", "isSafebox": false}
+           ]
       },
       "constitution" : {
          "id": "strength",
          "name": "Телосложение",
-         "num": "+1",
          "level": 12,
          "safebox": false,
          "skills": []
@@ -30,24 +36,28 @@
       "intelligence" : {
          "id": "intelligence",
          "name": "Интеллект",
-         "num": "+1",
          "level": 12,
          "safebox": false,
-         "skills": ["История", "Магия", "Природа", "Расследование", "Религия"]
+         "skills": [
+               {"name": "История", "isSafebox": false},
+               {"name": "Магия", "isSafebox": false},
+               {"name": "Природа", "isSafebox": false},
+               {"name": "Расследование", "isSafebox": false},
+               {"name": "Религия", "isSafebox": false}
+           ]
       },
       "wisdom" : {
          "id": "wisdom",
          "name": "Мудрость",
-         "num": "+4",
          "level": 15,
          "safebox": true,
          "skills": [
-            "Восприятие",
-            "Выживание",
-            "Медицина",
-            "Проницательность",
-            "Уход за животными"
-         ]
+               {"name": "Восприятие", "isSafebox": false},
+               {"name": "Выживание", "isSafebox": true},
+               {"name": "Медицина", "isSafebox": false},
+               {"name": "Проницательность", "isSafebox": false},
+               {"name": "Дрессировка", "isSafebox": true}
+           ]
       },
       "charisma" : {
          "id": "wisdom",
@@ -55,12 +65,13 @@
          "num": "+5",
          "level": 16,
          "safebox": true,
-         "skills": ["Выступление", "Запугивание", "Обман", "Убеждение"]
+         "skills": [
+               {"name": "Выступление", "isSafebox": false},
+               {"name": "Запугивание", "isSafebox": false},
+               {"name": "Обман", "isSafebox": false},
+               {"name": "Убеждение", "isSafebox": false}
+           ]
       }
-   },{
-      "age": 17,
-      "experience": 200,
-      "level": 1
    },{
       "num":[2,0,0,0,0,0,0,0,0]
    }

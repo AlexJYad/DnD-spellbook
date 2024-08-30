@@ -1,4 +1,3 @@
-/* Контейнер для размытого фона */
 .background-container {
    position: absolute;
    top: -10px;
@@ -76,6 +75,25 @@
    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.6);
    position: relative;
    z-index: 0;
+}
+
+.toggleable-component,
+.content,
+.sheets {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 100%;
+   align-items: center;
+   align-self: start;
+}
+
+.sheets {
+   padding-top: 20px;
+}
+.toggleable-btn {
+   width: 150px;
+   height: 42px;
 }
 
 @media (max-width: 1000px) {

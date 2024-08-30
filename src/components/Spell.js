@@ -26,36 +26,36 @@ export default function Spell({ props }) {
    }, [props.title]);
 
    return (
-      <div class="spell">
-         {props.say && <img src={mouth} alt="" class="mouth bookmark" />}
-         {props.touch && <img src={hand} alt="" class="hand bookmark" />}
-         {props.do && <img src={cristal} alt="" class="cristal bookmark" />}
-         <div class="headerh2">
-            <h2 class="namespell" ref={titleRef}>
+      <div className="spell">
+         {props.say && <img src={mouth} alt="" className="mouth bookmark" />}
+         {props.touch && <img src={hand} alt="" className="hand bookmark" />}
+         {props.do && <img src={cristal} alt="" className="cristal bookmark" />}
+         <div className="headerh2">
+            <h2 className="namespell" ref={titleRef}>
                {props.title}
             </h2>
          </div>
          <p
-            class="description"
+            className="description"
             dangerouslySetInnerHTML={{ __html: props.description }}
          ></p>
-         <div class="how"></div>
-         <div class="blockremark">
-            <div class="remark">
+         <div className="how"></div>
+         <div className="blockremark">
+            <div className="remark">
                <h3>Type</h3>
-               <p class="random-text">{props.type}</p>
+               <p className="random-text">{props.type}</p>
             </div>
-            <div class="remark">
+            <div className="remark">
                <h3>Time</h3>
-               <p class="random-text">{props.time}</p>
+               <p className="random-text">{props.time}</p>
             </div>
-            <div class="remark">
+            <div className="remark">
                <h3>Duration</h3>
-               <p class="random-text">{props.lenght}</p>
+               <p className="random-text">{props.lenght}</p>
             </div>
-            <div class="remark">
+            <div className="remark">
                <h3>Range</h3>
-               <p class="random-text">{props.rang}</p>
+               <p className="random-text">{props.rang}</p>
             </div>
          </div>
       </div>

@@ -1,28 +1,32 @@
 [
    {  
       "name" : "Юджин",
-      "proficiencyname" : "+2"
+      "age": 17,
+      "experience": 260,
+      "ACbonus": 0,
+      "HP": 8
    },{
       "strength" : {
          "id" : "strength",
          "name": "Сила",
-         "num": -1,
          "level": 9,
          "safebox": false,
-         "skills": ["Атлетика"]
+         "skills": [{"name":"Атлетика", "isSafebox": false}]
       },
       "dexterity" : {
          "id": "dexterity",
          "name": "Ловкость",
-         "num": "+1",
          "level": 13,
          "safebox": false,
-         "skills": ["Акробатика", "Ловкость рук", "Скрытность"]
+         "skills": [
+            {"name": "Акробатика", "isSafebox": false},
+            {"name": "Ловкость рук", "isSafebox": false},
+            {"name": "Скрытность", "isSafebox": false}
+        ]
       },
       "constitution" : {
          "id": "strength",
          "name": "Телосложение",
-         "num": 0,
          "level": 11,
          "safebox": false,
          "skills": []
@@ -33,7 +37,13 @@
          "num": "+5",
          "level": 17,
          "safebox": true,
-         "skills": ["История", "Магия", "Природа", "Расследование", "Религия"]
+         "skills": [
+            {"name": "История", "isSafebox": true},
+            {"name": "Магия", "isSafebox": true},
+            {"name": "Природа", "isSafebox": false},
+            {"name": "Расследование", "isSafebox": false},
+            {"name": "Религия", "isSafebox": true}
+        ]
       },
       "wisdom" : {
          "id": "wisdom",
@@ -42,12 +52,12 @@
          "level": 13,
          "safebox": false,
          "skills": [
-            "Восприятие",
-            "Выживание",
-            "Медицина",
-            "Проницательность",
-            "Уход за животными"
-         ]
+            {"name": "Бдительность", "isSafebox": false},
+            {"name": "Выживание", "isSafebox": false},
+            {"name": "Медицина", "isSafebox": false},
+            {"name": "Проницательность", "isSafebox": false},
+            {"name": "Дрессировка", "isSafebox": false}
+        ]
       },
       "charisma" : {
          "id": "wisdom",
@@ -55,14 +65,15 @@
          "num": "+4",
          "level": 15,
          "safebox": true,
-         "skills": ["Выступление", "Запугивание", "Обман", "Убеждение"]
+         "skills": [
+            {"name": "Выступление", "isSafebox": false},
+            {"name": "Запугивание", "isSafebox": false},
+            {"name": "Обман", "isSafebox": true},
+            {"name": "Убеждение", "isSafebox": false}
+        ]
       }
-   },{
-      "age": 17,
-      "experience": 260,
-      "level": 1
-   },{
-      "num":[3,1,0,0,0,0,0,0,0]
+   }, {
+      "num":[3, 1, 0, 0, 0, 0, 0, 0, 0]
    }
 ]
 

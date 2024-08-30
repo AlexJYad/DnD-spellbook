@@ -1,27 +1,82 @@
 .sheet {
-   background-image: url("../img/background/frame.png");
-   /* background-image: url("../img/background/sheet-background.png"); */
    background-color: rgba(189, 156, 130, 0.6);
    width: 100%;
    height: 1200px;
-   /* aspect-ratio: 1 / 1; */
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: contain;
    position: relative;
-
    padding: 10px;
    background-origin: content-box;
    z-index: 5;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
+/* ------ CUSTOM BORDER ------ */
+.custom-border {
+   width: calc(100% - 42px);
+   height: calc(100% - 42px);
+   padding: 20px;
+   box-shadow: 0 0 0 3px black, /* Черная линия 3px */ 0 0 0 6px #fff2e6,
+      /* Бежевая линия 3px + интервал */ 0 0 0 12px black,
+      /* Черная линия 6px + интервал */ 0 0 0 15px #fff2e6,
+      /* Бежевая линия 3px + интервал */ 0 0 0 18px black; /* Черная линия 3px + интервал */
+}
+
+.corner-img {
+   position: absolute;
+   width: 36px; /* Ширина изображения */
+   height: 36px; /* Высота изображения */
+}
+
+.top-left {
+   top: 5px;
+   left: 5px;
+}
+
+.top-right {
+   top: 5px;
+   right: 5px;
+   transform: rotate(90deg);
+}
+
+.bottom-left {
+   bottom: 5px;
+   left: 5px;
+   transform: rotate(270deg);
+}
+
+.bottom-right {
+   bottom: 5px;
+   right: 5px;
+   transform: rotate(180deg);
+}
+
+/* -------------------------- */
+
+/* ----- Flag Stop ----- */
+
+.flagstop {
+   position: absolute;
+   width: 230px;
+   aspect-ratio: 3 / 1;
+   top: 30px;
+   right: 70px;
+   text-align: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 4px;
+
+   p {
+      font-size: 1.4em;
+   }
+}
+
+/* ------------------------ */
 .namebox {
    background-image: url("../img/background/name-frame.png");
-
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
-
    position: absolute;
    width: 300px;
    aspect-ratio: 1 / 1;
@@ -174,22 +229,6 @@ li.isSafebox::before {
    font-size: 1.3em;
 }
 
-.flagstop {
-   position: absolute;
-   width: 20%;
-   aspect-ratio: 3 / 1;
-   top: 3.65%;
-   right: 6%;
-   text-align: center;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-gap: 4px;
-
-   p {
-      font-size: 1.4em;
-   }
-}
-
 .sheet h3 {
    font-size: 1em;
 }
@@ -273,6 +312,62 @@ li.isSafebox::before {
    padding-top: 10%;
 }
 
+/* health */
+.health {
+   background-image: url("../img/background/HP.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   position: relative;
+
+   width: 300px;
+   height: 350px;
+   top: 330px;
+   left: 260px;
+
+   .AC {
+      position: absolute;
+      top: 10px;
+      left: 48px;
+      h1 {
+         position: absolute;
+         left: 40px;
+         top: 55px;
+         color: white;
+      }
+   }
+   .HP-max {
+      position: absolute;
+      top: 165px;
+      left: 212px;
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.1;
+   }
+   .HP-max-num {
+      font-size: 1.3em;
+   }
+
+   .HP {
+      position: absolute;
+      top: 186px;
+      left: 130px;
+      text-align: center;
+
+      h1 {
+         color: white;
+         padding-left: 8px;
+         font-size: 2.3em;
+      }
+      p {
+         transform: rotate(20deg);
+         font-size: 0.9em;
+      }
+   }
+}
+
+/*------*/
+
 .saves {
    background-image: url("../img/background/saves.png");
    border: 1px solid black;
@@ -355,4 +450,51 @@ li.isSafebox::before {
    border: none;
    font-family: "Luminari";
    color: #2d210b;
+}
+
+@media (max-width: 1000px) {
+   .sheet {
+      height: 10000px;
+   }
+   .flagstop {
+      right: 50%;
+      transform: translateX(
+         50%
+      ); /* Для центрирования относительно правого края */
+   }
+
+   .namebox {
+      top: 100px;
+      left: 50%;
+      transform: translateX(
+         -50%
+      ); /* Для центрирования относительно левого края */
+   }
+   .health {
+      top: 350px;
+      left: 50%;
+      transform: translateX(
+         -50%
+      ); /* Для центрирования относительно левого края */
+   }
+
+   .abilities {
+      top: 750px;
+      left: 50%;
+      transform: translateX(
+         -50%
+      ); /* Для центрирования относительно левого края */
+   }
+   .spelles {
+      position: absolute;
+      top: 1550px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 267px;
+      height: 115px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 20px;
+   }
 }

@@ -31,7 +31,7 @@ function App() {
    return (
       <div className="App">
          <TopBar />
-         <Marquee text="Следующая игра 1 августа!" />
+         <Marquee text="Следующая игра 1 августа! В 12:00 по МСК" />
          <Main />
       </div>
    );

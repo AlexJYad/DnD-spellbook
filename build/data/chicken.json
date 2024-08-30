@@ -1,67 +1,79 @@
 [
    {  
-      "proficiencyname" : 2
-   },{
-      "strength" : {
-         "id" : "strength",
-         "name": "Сила",
-         "num": 0,
-         "level": 0,
-         "safebox": true,
-         "skills": ["Атлетика"]
-      },
-      "dexterity" : {
-         "id": "dexterity",
-         "name": "Ловкость",
-         "num": 0,
-         "level": 14,
-         "safebox": false,
-         "skills": ["Акробатика", "Ловкость рук", "Скрытность"]
-      },
-      "constitution" : {
-         "id": "strength",
-         "name": "Тело сложение",
-         "num": 0,
-         "level": 0,
-         "safebox": false,
-         "skills": []
-      },
-      "intelligence" : {
-         "id": "intelligence",
-         "name": "Интеллект",
-         "num": 0,
-         "level": 0,
-         "safebox": false,
-         "skills": ["История", "Магия", "Природа", "Расследование", "Религия"]
-      },
-      "wisdom" : {
-         "id": "wisdom",
-         "name": "Мудрость",
-         "num": 0,
-         "level": 0,
-         "safebox": true,
-         "skills": [
-            "Восприятие",
-            "Выживание",
-            "Медицина",
-            "Проницательность",
-            "Уход за животными"
-         ]
-      },
-      "charisma" : {
-         "id": "wisdom",
-         "name": "Харизма",
-         "num": 0,
-         "level": 0,
-         "safebox": true,
-         "skills": ["Выступление", "Запугивание", "Обман", "Убеждение"]
-      }
-   },{
-      "age": 12,
-      "experience": 0,
-      "level": 0
-   },{
-      "num":[4,2,1,0,0,0,0,0,0]
+       "name": "Курица",
+       "age": 12,
+       "experience": 500,
+       "ACbonus": 1,
+       "HP": 15
+   },
+   {
+       "strength": {
+           "id": "strength",
+           "name": "Сила",
+           "level": 13,
+           "safebox": false,
+           "skills": [
+               {"name": "Атлетика", "isSafebox": true}
+           ]
+       },
+       "dexterity": {
+           "id": "dexterity",
+           "name": "Ловкость",
+           "level": 13,
+           "safebox": true,
+           "skills": [
+               {"name": "Акробатика", "isSafebox": true},
+               {"name": "Ловкость рук", "isSafebox": false},
+               {"name": "Скрытность", "isSafebox": false}
+           ]
+       },
+       "constitution": {
+           "id": "constitution",
+           "name": "Телосложение",
+           "level": 13,
+           "safebox": true,
+           "skills": []
+       },
+       "intelligence": {
+           "id": "intelligence",
+           "name": "Интеллект",
+           "level": 13,
+           "safebox": false,
+           "skills": [
+               {"name": "История", "isSafebox": false},
+               {"name": "Магия", "isSafebox": false},
+               {"name": "Природа", "isSafebox": false},
+               {"name": "Расследование", "isSafebox": false},
+               {"name": "Религия", "isSafebox": false}
+           ]
+       },
+       "wisdom": {
+           "id": "wisdom",
+           "name": "Мудрость",
+           "level": 13,
+           "safebox": false,
+           "skills": [
+               {"name": "Бдительность", "isSafebox": false},
+               {"name": "Выживание", "isSafebox": true},
+               {"name": "Медицина", "isSafebox": false},
+               {"name": "Проницательность", "isSafebox": false},
+               {"name": "Дрессировка", "isSafebox": true}
+           ]
+       },
+       "charisma": {
+           "id": "charisma",
+           "name": "Харизма",
+           "level": 13,
+           "safebox": false,
+           "skills": [
+               {"name": "Выступление", "isSafebox": false},
+               {"name": "Запугивание", "isSafebox": false},
+               {"name": "Обман", "isSafebox": false},
+               {"name": "Убеждение", "isSafebox": false}
+           ]
+       }
+   },
+   {
+       "num": [4, 2, 1, 0, 0, 0, 0, 0, 0]
    }
 ]
-

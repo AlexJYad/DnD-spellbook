@@ -3,72 +3,116 @@ import Ability from "../components/Ability";
 import SpellesSlots from "../components/SpellesSlots";
 import "../CSS/chSheet.css";
 import { useEffect } from "react";
+import scr from "../img/background/c-frame.png";
+import { getNum } from "../utils/getNum";
 
 export default function ChSheetPage(props) {
    useEffect(() => {
       document.title = "Лист Персонажа";
    }, []);
 
+   // console.log(props);
+
    const info = props[0];
    const abilities = props[1];
    const nums = props[2].num;
+   const HP =
+      8 +
+      getNum(abilities.constitution.level) +
+      (getValues(info.experience).level - 1) *
+         (5 + getNum(abilities.constitution.level));
+   const AC = 10 + getNum(abilities.dexterity.level) + info.ACbonus;
 
    return (
       <>
-         <div class="sheet">
-            <div class="namebox">
-               <div class="namebox_p">
-                  <p>{info.name}</p>
-               </div>
-            </div>
-
-            <div class="abilities">
-               <div id="proficiencyBonus" class="ability">
-                  <div class="flag">
-                     <div class="num">
-                        {getValues(info.experience).proficiencyname}
+         <div className="sheet">
+            <div className="custom-border">
+               <img src={scr} alt="Top Left" className="corner-img top-left" />
+               <img
+                  src={scr}
+                  alt="Top Right"
+                  className="corner-img top-right"
+               />
+               <img
+                  src={scr}
+                  alt="Bottom Left"
+                  className="corner-img bottom-left"
+               />
+               <img
+                  src={scr}
+                  alt="Bottom Right"
+                  className="corner-img bottom-right"
+               />
+               <div className="mobile-grid">
+                  <div className="flagstop">
+                     <div id="age" className="flag">
+                        <h3>Возраст</h3>
+                        <p>{info.age}</p>
+                     </div>
+                     <div className="flag m-flag">
+                        <h3>Опыт</h3>
+                        <p>{info.experience}</p>
+                     </div>
+                     <div className="flag">
+                        <h3>Уровень</h3>
+                        <p>{getValues(info.experience).level}</p>
                      </div>
                   </div>
-                  <div class="name">Бонус Мастерства</div>
-               </div>
-               {Object.keys(abilities).map((key) => (
-                  <Ability
-                     key={abilities[key].id}
-                     {...abilities[key]}
-                     proficiencyname={
-                        getValues(info.experience).proficiencyname
-                     }
-                  />
-               ))}
-            </div>
-            <div class="flagstop">
-               <div id="age" class="flag">
-                  <h3>Возраст</h3>
-                  <p>{info.age}</p>
-               </div>
-               <div id="experience" class="flag m-flag">
-                  <h3>Опыт</h3>
-                  <p>{info.experience}</p>
-               </div>
-               <div id="level" class="flag">
-                  <h3>Уровень</h3>
-                  <p>{getValues(info.experience).level}</p>
-               </div>
-            </div>
+                  <div className="namebox">
+                     <div className="namebox_p">
+                        <p>{info.name}</p>
+                     </div>
+                  </div>
 
-            <div class="spelles">
-               {nums.map((num, index) => (
-                  <SpellesSlots key={index} level={index + 1} num={num} />
-               ))}
-            </div>
-            {/* 
+                  <div className="abilities">
+                     <div className="ability">
+                        <div className="flag">
+                           <div className="num">
+                              {getValues(info.experience).proficiencyname}
+                           </div>
+                        </div>
+                        <div className="name">Бонус Мастерства</div>
+                     </div>
+                     {Object.keys(abilities).map((key) => (
+                        <Ability
+                           key={abilities[key].id}
+                           {...abilities[key]}
+                           proficiencyname={
+                              getValues(info.experience).proficiencyname
+                           }
+                        />
+                     ))}
+                  </div>
+               </div>
+               <div className="spelles">
+                  {nums.map((num, index) => (
+                     <SpellesSlots key={index} level={index + 1} num={num} />
+                  ))}
+               </div>
+               <div className="health">
+                  <div className="AC">
+                     <h4>Класс Брони</h4>
+                     <h1>{AC}</h1>
+                  </div>
+                  <div className="HP-max">
+                     <p>max</p>
+                     <p className="HP-max-num">{HP}</p>
+                  </div>
+                  <div className="HP">
+                     <h1>{info.HP}</h1>
+                     <p>Текущее</p>
+                  </div>
+               </div>
+
+               {/* 
                <Saves /> */}
-            {/* 
+               {/* 
                <div class="textarea-1">
                   <textarea name="" id="" c>
                      Пицца с ананасами
                   </textarea>
                </div> */}
+            </div>
          </div>
       </>
    );

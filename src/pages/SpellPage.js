@@ -53,7 +53,6 @@ export default function SpellPage() {
       }
 
       if (filterSelect !== "all") {
-         console.log(typeof filterSelect);
          filtered = filtered.filter(
             (card) => card.typeno.toString() === filterSelect
          );

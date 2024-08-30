@@ -2,7 +2,9 @@
    {  
       "name" : "Талико",
       "age": 17,
-      "experience": 200
+      "experience": 200,
+      "ACbonus": 1,
+      "HP": 9
    },{
       "strength" : {
          "id" : "strength",

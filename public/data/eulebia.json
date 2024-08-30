@@ -1,7 +1,10 @@
 [
    {  
       "name" : "Евлебия",
-      "proficiencyname" : "+2"
+      "age": 17,
+      "experience": 250,
+      "ACbonus": 0,
+      "HP": 11
    },{
       "strength" : {
          "id" : "strength",
@@ -9,7 +12,9 @@
          "num": "+4",
          "level": 15,
          "safebox": true,
-         "skills": ["Атлетика"]
+         "skills": [
+            {"name": "Атлетика", "isSafebox": true}
+        ]
       },
       "dexterity" : {
          "id": "dexterity",
@@ -17,7 +22,11 @@
          "num": "-1",
          "level": 9,
          "safebox": false,
-         "skills": ["Акробатика", "Ловкость рук", "Скрытность"]
+         "skills": [
+            {"name": "Акробатика", "isSafebox": false},
+            {"name": "Ловкость рук", "isSafebox": false},
+            {"name": "Скрытность", "isSafebox": false}
+        ]
       },
       "constitution" : {
          "id": "strength",
@@ -33,7 +42,13 @@
          "num": "+1",
          "level": 12,
          "safebox": false,
-         "skills": ["История", "Магия", "Природа", "Расследование", "Религия"]
+         "skills": [
+            {"name": "История", "isSafebox": true},
+            {"name": "Магия", "isSafebox": false},
+            {"name": "Природа", "isSafebox": false},
+            {"name": "Расследование", "isSafebox": false},
+            {"name": "Религия", "isSafebox": false}
+        ]
       },
       "wisdom" : {
          "id": "wisdom",
@@ -42,12 +57,12 @@
          "level": 12,
          "safebox": false,
          "skills": [
-            "Восприятие",
-            "Выживание",
-            "Медицина",
-            "Проницательность",
-            "Уход за животными"
-         ]
+            {"name": "Бдительность", "isSafebox": false},
+            {"name": "Выживание", "isSafebox": false},
+            {"name": "Медицина", "isSafebox": false},
+            {"name": "Проницательность", "isSafebox": true},
+            {"name": "Дрессировка", "isSafebox": false}
+        ]
       },
       "charisma" : {
          "id": "wisdom",
@@ -55,14 +70,15 @@
          "num": "+2",
          "level": 14,
          "safebox": false,
-         "skills": ["Выступление", "Запугивание", "Обман", "Убеждение"]
+         "skills": [
+            {"name": "Выступление", "isSafebox": false},
+            {"name": "Запугивание", "isSafebox": true},
+            {"name": "Обман", "isSafebox": false},
+            {"name": "Убеждение", "isSafebox": false}
+        ]
       }
    },{
-      "age": 17,
-      "experience": 250,
-      "level": 1
-   },{
-      "num":[1,2,1,0,0,0,0,0,0]
+      "num":[1, 2, 1, 0, 0, 0, 0, 0, 0]
    }
 ]
 

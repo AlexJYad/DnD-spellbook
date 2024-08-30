@@ -42,8 +42,8 @@ const Main = () => {
       // Создание белых ромбов на темных участках
       createRhombuses("white-rhombus");
 
-      // С вероятностью 10% добавить один красный ромб в случайное место
-      if (Math.random() < 0.1) {
+      // С вероятностью 1% добавить один красный ромб в случайное место
+      if (Math.random() < 0.01) {
          const top =
             Math.floor(Math.random() * (background.offsetHeight / 138)) * 138;
          const left =
@@ -96,49 +96,63 @@ function ProtectedRoute({ component: Component }) {
    const loadDataBasedOnToken = useCallback(
       async (token, componentPath = location.pathname) => {
          try {
-            let jsonFile = "";
+            let jsonFiles = [];
 
-            if (token === "all") {
-               if (componentPath.includes("/info")) {
-                  jsonFile = "/data/info.json";
-               } else if (componentPath.includes("/sheet")) {
-                  jsonFile = "/data/chicken.json";
-               }
+            if (token === "all" && componentPath.includes("/sheet")) {
+               // Загрузка нескольких файлов для случая "all" и "/sheet"
+               jsonFiles = [
+                  "/data/chicken.json",
+                  "/data/eugen.json",
+                  "/data/talico.json",
+                  "/data/olay.json",
+                  "/data/eulebia.json",
+               ];
             } else if (token === "Юджин") {
                if (componentPath.includes("/info")) {
-                  jsonFile = "/data/test.json";
+                  jsonFiles = ["/data/test.json"];
                } else if (componentPath.includes("/sheet")) {
-                  jsonFile = "/data/eugen.json";
+                  jsonFiles = ["/data/eugen.json"];
                }
             } else if (token === "Талико") {
                if (componentPath.includes("/info")) {
-                  jsonFile = "/data/test.json";
+                  jsonFiles = ["/data/test.json"];
                } else if (componentPath.includes("/sheet")) {
-                  jsonFile = "/data/talico.json";
+                  jsonFiles = ["/data/talico.json"];
                }
             } else if (token === "Олёй") {
                if (componentPath.includes("/info")) {
-                  jsonFile = "/data/test.json";
+                  jsonFiles = ["/data/test.json"];
                } else if (componentPath.includes("/sheet")) {
-                  jsonFile = "/data/olay.json";
+                  jsonFiles = ["/data/olay.json"];
                }
             } else if (token === "Евлебия") {
                if (componentPath.includes("/info")) {
-                  jsonFile = "/data/test.json";
+                  jsonFiles = ["/data/test.json"];
                } else if (componentPath.includes("/sheet")) {
-                  jsonFile = "/data/eulebia.json";
+                  jsonFiles = ["/data/eulebia.json"];
                }
             } else {
                navigate("/");
                return;
             }
 
-            const response = await fetch(jsonFile);
-            if (!response.ok) {
-               throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            const result = await response.json();
-            setData(result);
+            // Загрузка всех файлов параллельно
+            const responses = await Promise.all(
+               jsonFiles.map((file) => fetch(file))
+            );
+
+            // Проверка всех ответов и обработка данных
+            const results = await Promise.all(
+               responses.map((response) => {
+                  if (!response.ok) {
+                     throw new Error(`HTTP error! Status: ${response.status}`);
+                  }
+                  return response.json();
+               })
+            );
+
+            // Сохранение данных в состоянии
+            setData(results);
          } catch (error) {
             console.error("Ошибка загрузки данных:", error);
             navigate("/");
@@ -161,5 +175,44 @@ function ProtectedRoute({ component: Component }) {
       return <div>Loading...</div>;
    }
 
-   return <Component {...data} />;
+   const ToggleableComponent = ({ name, children }) => {
+      const [isOpen, setIsOpen] = useState(true);
+
+      const toggleOpen = () => {
+         setIsOpen(!isOpen);
+      };
+
+      return (
+         <div className="toggleable-component">
+            <div
+               className="header"
+               onClick={toggleOpen}
+               style={{ cursor: "pointer" }}
+            >
+               <button className="toggleable-btn">
+                  <h2>{name}</h2>
+               </button>
+            </div>
+            {!isOpen && <div className="content">{children}</div>}
+         </div>
+      );
+   };
+
+   return (
+      <>
+         {data.length === 1 ? (
+            // Если данные из одного файла, отображаем компонент стандартно
+            <Component {...data[0]} />
+         ) : (
+            // Если несколько файлов, оборачиваем их в flex-контейнер
+            <div className="sheets">
+               {data.map((item, index) => (
+                  <ToggleableComponent key={index} name={item[0].name}>
+                     <Component {...item} />
+                  </ToggleableComponent>
+               ))}
+            </div>
+         )}
+      </>
+   );
 }

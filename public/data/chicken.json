@@ -2,7 +2,9 @@
    {  
        "name": "Курица",
        "age": 12,
-       "experience": 500
+       "experience": 500,
+       "ACbonus": 1,
+       "HP": 15
    },
    {
        "strength": {
@@ -51,7 +53,7 @@
            "level": 13,
            "safebox": false,
            "skills": [
-               {"name": "Восприятие", "isSafebox": false},
+               {"name": "Бдительность", "isSafebox": false},
                {"name": "Выживание", "isSafebox": true},
                {"name": "Медицина", "isSafebox": false},
                {"name": "Проницательность", "isSafebox": false},
