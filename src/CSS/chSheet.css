@@ -16,10 +16,10 @@
    width: calc(100% - 42px);
    height: calc(100% - 42px);
    padding: 20px;
-   box-shadow: 0 0 0 3px black, /* Черная линия 3px */ 0 0 0 6px #fff2e6,
-      /* Бежевая линия 3px + интервал */ 0 0 0 12px black,
-      /* Черная линия 6px + интервал */ 0 0 0 15px #fff2e6,
-      /* Бежевая линия 3px + интервал */ 0 0 0 18px black; /* Черная линия 3px + интервал */
+   box-shadow: 0 0 0 2.75px #382719, /* Черная линия 3px */ 0 0 0 6.7px #fff2e6,
+      /* Бежевая линия 3px + интервал */ 0 0 0 12px #382719,
+      /* Черная линия 6px + интервал */ 0 0 0 15.25px #fff2e6,
+      /* Бежевая линия 3px + интервал */ 0 0 0 18.75px #382719; /* Черная линия 3px + интервал */
 }
 
 .corner-img {
@@ -49,6 +49,13 @@
    bottom: 5px;
    right: 5px;
    transform: rotate(180deg);
+}
+
+.signature {
+   position: absolute;
+   width: 200px;
+   bottom: 6px;
+   right: 20%;
 }
 
 /* -------------------------- */
@@ -277,7 +284,7 @@ li.isSafebox::before {
    }
 }
 
-.sheet input {
+.circle {
    border-radius: 100%;
 }
 
@@ -318,20 +325,22 @@ li.isSafebox::before {
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
-   position: relative;
+   position: absolute;
 
    width: 300px;
    height: 350px;
-   top: 330px;
-   left: 260px;
+   top: 360px;
+   left: 300px;
 
    .AC {
       position: absolute;
       top: 10px;
-      left: 48px;
-      h1 {
+      left: 50px;
+      text-align: center;
+      .shield {
          position: absolute;
-         left: 40px;
+         width: 100px;
+         left: 5px;
          top: 55px;
          color: white;
       }
@@ -350,23 +359,111 @@ li.isSafebox::before {
 
    .HP {
       position: absolute;
-      top: 186px;
-      left: 130px;
+      top: 185px;
+      left: 115px;
       text-align: center;
-
-      h1 {
+      .heart {
+         width: 100px;
          color: white;
-         padding-left: 8px;
-         font-size: 2.3em;
+         font-size: 1.2em;
       }
       p {
          transform: rotate(20deg);
          font-size: 0.9em;
+         color: white;
+         padding-right: 10px;
       }
    }
 }
 
 /*------*/
+
+/* ----- Sabaton ----- */
+
+.sabaton {
+   background-image: url("../img/background/sabaton.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   position: absolute;
+
+   width: 220px;
+   height: 220px;
+   top: 400px;
+   left: 580px;
+
+   .initiative {
+      writing-mode: vertical-lr; /* Вертикальное написание слева направо */
+      text-orientation: upright; /* Сохраняет символы вертикальными */
+      letter-spacing: -10px;
+      position: absolute;
+      transform: rotate(-6deg);
+      top: 40px;
+      left: 32px;
+      font-size: 0.9em;
+      text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 10px #fff;
+   }
+
+   .initiative-counter-wrapper {
+      position: absolute;
+      top: 27px;
+      left: 53px;
+      transform: rotate(-4deg);
+      display: grid;
+      grid-template-rows: auto auto auto; /* Автоматическая высота строк */
+      grid-template-columns: auto; /* Одна колонка */
+      justify-items: center; /* Центрирует элементы по горизонтали */
+      align-items: center; /* Центрирует элементы по вертикали */
+      height: 78px; /* Убедитесь, что контейнер достаточно велик */
+   }
+
+   .initiative-input {
+      width: 26px;
+      height: 26px;
+      font-size: 1.5em;
+      text-align: center;
+      border: none;
+      background-color: transparent;
+      color: black;
+      font-family: "Bulgaria Moderna Pro", sans-serif;
+      margin-top: -6px;
+   }
+
+   .initiative-input-btn {
+      width: 26px;
+      height: 26px;
+      font-size: 1.5em;
+      border: none;
+      background-color: transparent;
+      color: black;
+      cursor: pointer;
+      transition: color 0.3s;
+      box-shadow: none;
+      text-align: center;
+      font-family: "Bulgaria Moderna Pro", sans-serif;
+      font-weight: 700;
+   }
+
+   .initiative-input-btn:hover {
+      color: white;
+   }
+
+   .initiative-input-btn:disabled {
+      color: grey; /* Цвет текста для неактивной кнопки */
+      opacity: 0.5; /* Сделать кнопку полупрозрачной */
+   }
+
+   /* Отключаем изменение цвета при наведении для неактивной кнопки */
+   .initiative-input-btn:disabled:hover {
+      color: grey; /* Сохраняем цвет текста, когда кнопка неактивна */
+   }
+
+   .decrement {
+      margin-top: -13px;
+   }
+}
+
+/* ------------------- */
 
 .saves {
    background-image: url("../img/background/saves.png");

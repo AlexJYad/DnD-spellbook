@@ -2,14 +2,26 @@ import Ability from "../components/Ability";
 // import Saves from "../components/Saves";
 import SpellesSlots from "../components/SpellesSlots";
 import "../CSS/chSheet.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import scr from "../img/background/c-frame.png";
 import { getNum } from "../utils/getNum";
+import { getValues } from "../utils/ getValues";
+import sign from "../img/background/frame-signature.png";
 
 export default function ChSheetPage(props) {
    useEffect(() => {
       document.title = "Лист Персонажа";
    }, []);
+
+   const [value, setValue] = useState(0);
+
+   const increment = () => {
+      setValue((prevValue) => prevValue + 1);
+   };
+
+   const decrement = () => {
+      setValue((prevValue) => prevValue - 1);
+   };
 
    // console.log(props);
 
@@ -43,6 +55,7 @@ export default function ChSheetPage(props) {
                   alt="Bottom Right"
                   className="corner-img bottom-right"
                />
+               <img src={sign} alt="signature" className="signature" />
                <div className="mobile-grid">
                   <div className="flagstop">
                      <div id="age" className="flag">
@@ -89,19 +102,57 @@ export default function ChSheetPage(props) {
                      <SpellesSlots key={index} level={index + 1} num={num} />
                   ))}
                </div>
+
                <div className="health">
                   <div className="AC">
                      <h4>Класс Брони</h4>
-                     <h1>{AC}</h1>
+                     <div className="shield">
+                        <h1>{AC}</h1>
+                     </div>
                   </div>
                   <div className="HP-max">
                      <p>max</p>
                      <p className="HP-max-num">{HP}</p>
                   </div>
                   <div className="HP">
-                     <h1>{info.HP}</h1>
+                     <div className="heart">
+                        <h1>{info.HP}</h1>
+                     </div>
                      <p>Текущее</p>
                   </div>
+               </div>
+
+               <div className="sabaton">
+                  <p className="initiative">Инициатива</p>
+                  <div className="initiative-counter-wrapper">
+                     <button
+                        className="increment initiative-input-btn"
+                        onClick={increment}
+                        disabled={value === 15}
+                     >
+                        +
+                     </button>
+                     <input
+                        type="text"
+                        className="initiative-input"
+                        value={value}
+                        readOnly
+                     />
+
+                     <button
+                        className="decrement initiative-input-btn"
+                        onClick={decrement}
+                        disabled={value === 0}
+                     >
+                        -
+                     </button>
+                  </div>
+                  {/* <p>Скорость</p>{" "}
+                  <h2>
+                     30
+                     <br />
+                     (6к)
+                  </h2> */}
                </div>
 
                {/* 
@@ -116,50 +167,4 @@ export default function ChSheetPage(props) {
          </div>
       </>
    );
-}
-
-function getValues(experience) {
-   if (experience >= 0 && experience < 300) {
-      return { level: 1, proficiencyname: 2 };
-   } else if (experience >= 300 && experience < 900) {
-      return { level: 2, proficiencyname: 2 };
-   } else if (experience >= 900 && experience < 2700) {
-      return { level: 3, proficiencyname: 2 };
-   } else if (experience >= 2700 && experience < 6500) {
-      return { level: 4, proficiencyname: 2 };
-   } else if (experience >= 6500 && experience < 14000) {
-      return { level: 5, proficiencyname: 3 };
-   } else if (experience >= 14000 && experience < 23000) {
-      return { level: 6, proficiencyname: 3 };
-   } else if (experience >= 23000 && experience < 34000) {
-      return { level: 7, proficiencyname: 3 };
-   } else if (experience >= 34000 && experience < 48000) {
-      return { level: 8, proficiencyname: 3 };
-   } else if (experience >= 48000 && experience < 64000) {
-      return { level: 9, proficiencyname: 4 };
-   } else if (experience >= 64000 && experience < 85000) {
-      return { level: 10, proficiencyname: 4 };
-   } else if (experience >= 85000 && experience < 100000) {
-      return { level: 11, proficiencyname: 4 };
-   } else if (experience >= 100000 && experience < 120000) {
-      return { level: 12, proficiencyname: 4 };
-   } else if (experience >= 120000 && experience < 140000) {
-      return { level: 13, proficiencyname: 5 };
-   } else if (experience >= 140000 && experience < 165000) {
-      return { level: 14, proficiencyname: 5 };
-   } else if (experience >= 165000 && experience < 195000) {
-      return { level: 15, proficiencyname: 5 };
-   } else if (experience >= 195000 && experience < 225000) {
-      return { level: 16, proficiencyname: 5 };
-   } else if (experience >= 225000 && experience < 265000) {
-      return { level: 17, proficiencyname: 6 };
-   } else if (experience >= 265000 && experience < 305000) {
-      return { level: 18, proficiencyname: 6 };
-   } else if (experience >= 305000 && experience < 355000) {
-      return { level: 19, proficiencyname: 6 };
-   } else if (experience >= 355000) {
-      return { level: 20, proficiencyname: 6 };
-   } else {
-      return { level: null, proficiencyname: null }; // Возвращаем null для некорректного значения
-   }
 }

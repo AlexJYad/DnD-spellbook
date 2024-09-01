@@ -35,6 +35,7 @@ export default function SpellesSlots({ level, num }) {
    const checkboxes = Array.from({ length: totalCheckboxes }, (_, index) => (
       <label key={index} className={index < num ? "active" : "inactive"}>
          <input
+            className="circle"
             type="checkbox"
             disabled={index >= num}
             onChange={() => handleCheckboxChange(index)}
