@@ -24,8 +24,8 @@ code {
 }
 
 body {
+   background: #e1d2c4;
    min-height: 100vh;
-   background-color: hsl(204, 43%, 93%);
 }
 
 html {

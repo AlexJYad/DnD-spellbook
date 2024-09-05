@@ -16,6 +16,10 @@ button:hover {
    background-color: #fff; /* Цвет фона кнопки при наведении */
 }
 
+h1 {
+   text-align: center;
+}
+
 h2 {
    text-align: center;
    font-size: 23px;
@@ -51,6 +55,7 @@ p {
    background-color: #fffaf3;
    border: 2.5px solid #2d210b;
    box-shadow: 3px 3px #382719;
+   align-self: center;
 }
 
 /* -------- */

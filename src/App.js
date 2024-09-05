@@ -11,6 +11,7 @@ import Main from "./components/Main";
 import TopBar from "./components/TopBar";
 import Marquee from "./components/Marquee";
 import LoginPage from "./pages/LoginPage";
+import Footer from "./components/Footer";
 
 function App() {
    const navigate = useNavigate();
@@ -31,8 +32,9 @@ function App() {
    return (
       <div className="App">
          <TopBar />
-         <Marquee text="Следующая игра 1 августа! В 12:00 по МСК" />
+         <Marquee text="Следующая игра 14 сентября! В 12:00 по МСК" />
          <Main />
+         <Footer />
       </div>
    );
 }

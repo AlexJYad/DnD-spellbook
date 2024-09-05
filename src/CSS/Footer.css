@@ -1,0 +1,10 @@
+.footer {
+   height: 42px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: white;
+   margin-bottom: 20px;
+   position: relative; /* Необходимо для управления тенями */
+   box-shadow: 0 10px 0 #f0e6d5;
+}
