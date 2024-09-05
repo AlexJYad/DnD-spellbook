@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import mouth from "../img/bookmark/mouth.png";
 import hand from "../img/bookmark/hand.png";
 import cristal from "../img/bookmark/cristal.png";
@@ -11,62 +11,65 @@ export default function ToggleSpell({ props }) {
    const randomTextBackRefs = useRef([]);
    const toggleImageRefs = useRef([]);
 
-   function getRandomCharacter() {
+   const getRandomCharacter = useCallback(() => {
       const characters =
          "qwertyuiopasdfghjklzxcvbnm Q W E R T Y U I O P A S D F G H J K L Z X C V B N M Ä Ã È Ë Î Ï Ö Ù Ü Ý ä ã è ë î ï ö ù ü ý";
       return characters.charAt(Math.floor(Math.random() * characters.length));
-   }
+   }, []);
 
-   function applyRandomEffect(element) {
-      function randomize() {
+   const applyRandomEffect = useCallback(
+      (element) => {
          if (!element) return;
-         const newText = Array.from(element.textContent || "")
-            .map(() => getRandomCharacter())
-            .join("");
-         element.textContent = newText;
-         setTimeout(randomize, 200);
-      }
-      randomize();
-   }
 
-   function applyRandomEffectBack(element) {
-      const originalText = element.textContent || "";
-      let currentIndex = 0;
+         function randomize() {
+            const newText = Array.from(element.textContent || "")
+               .map(() => getRandomCharacter())
+               .join("");
+            element.textContent = newText;
+            setTimeout(randomize, 200);
+         }
+         randomize();
+      },
+      [getRandomCharacter]
+   );
 
-      function randomize() {
+   const applyRandomEffectBack = useCallback(
+      (element) => {
          if (!element) return;
-         if (currentIndex >= originalText.length) {
-            currentIndex = 0;
+         const originalText = element.textContent || "";
+         let currentIndex = 0;
+
+         function randomize() {
+            if (currentIndex >= originalText.length) {
+               currentIndex = 0;
+            }
+
+            const newText = originalText
+               .split("")
+               .map((char, index) =>
+                  index < currentIndex ? char : getRandomCharacter()
+               )
+               .join("");
+
+            element.textContent = newText;
+            currentIndex++;
+
+            setTimeout(randomize, 500);
          }
 
-         const newText = originalText
-            .split("")
-            .map((char, index) => {
-               if (index < currentIndex) {
-                  return char;
-               } else {
-                  return getRandomCharacter();
-               }
-            })
-            .join("");
+         randomize();
+      },
+      [getRandomCharacter]
+   );
 
-         element.textContent = newText;
-         currentIndex++;
-
-         setTimeout(randomize, 500);
-      }
-
-      randomize();
-   }
-
-   function applyRandomEffectImg(element) {
+   const applyRandomEffectImg = useCallback((element) => {
       function toggleImageVisibility() {
          if (!element) return;
          element.style.opacity = Math.random() < 0.5 ? "1" : "0";
          setTimeout(toggleImageVisibility, 500);
       }
       toggleImageVisibility();
-   }
+   }, []);
 
    useEffect(() => {
       if (titleRef.current) {
@@ -98,7 +101,13 @@ export default function ToggleSpell({ props }) {
       if (descriptionRef.current) {
          applyRandomEffect(descriptionRef.current);
       }
-   }, [props.title, props.description]);
+   }, [
+      props.title,
+      props.description,
+      applyRandomEffect,
+      applyRandomEffectBack,
+      applyRandomEffectImg,
+   ]);
 
    return (
       <div className="spell">
