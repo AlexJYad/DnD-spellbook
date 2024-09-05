@@ -8,3 +8,8 @@
 .random-text {
    font-family: "Dovahkiin", sans-serif;
 }
+
+.description.random-text {
+   height: 10.5em;
+   overflow: hidden;
+}
