@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Spell from "../components/Spell";
 import cards from "../data/cards.json";
 import "../CSS/spellCards.css";
+import ToggleSpell from "../components/ToggleSpell";
 
 export default function SpellPage() {
    const token = localStorage.getItem("token");
@@ -11,6 +12,22 @@ export default function SpellPage() {
    const [filterSelect, setFilterSelect] = useState("all");
    const [filterSchooles, setFilterSchooles] = useState("all");
    const [filterTypes, setFilterTypes] = useState("all");
+   const random = {
+      title: "Текст",
+      school: "wight",
+      aType: "other",
+      say: 1,
+      touch: 1,
+      do: 1,
+      description:
+         "какой-то текст текст текст  текст текст текст  текст текст текст  текст текст текст  текст текст текст  текст текст текст  текст текст текст  текст текст текст  текст текст текст  текст текст текст  текст текст текст  текст текст текст  текст текст текст  текст текст текст ",
+      type: "тип",
+      typeno: 0,
+      time: "время",
+      lenght: "продолжительность",
+      rang: "растояние",
+      player: ["Юджин"],
+   };
 
    useEffect(() => {
       setUserData(cards);
@@ -83,18 +100,19 @@ export default function SpellPage() {
    return (
       <div className="spell-gallery">
          <div className="selector">
-            <select
-               id="filterPlayers"
-               onChange={handlePlayerChange}
-               value={filterPlayers}
-            >
-               <option value="all">All</option>
-               <option value="Олёй">Олёй</option>
-               <option value="Юджин">Юджин</option>
-               <option value="Талико">Талико</option>
-               <option value="Евлебия">Евлебия</option>
-            </select>
-
+            {token === "all" && (
+               <select
+                  id="filterPlayers"
+                  onChange={handlePlayerChange}
+                  value={filterPlayers}
+               >
+                  <option value="all">All</option>
+                  <option value="Олёй">Олёй</option>
+                  <option value="Юджин">Юджин</option>
+                  <option value="Талико">Талико</option>
+                  <option value="Евлебия">Евлебия</option>
+               </select>
+            )}
             <select
                id="filterSelect"
                onChange={handleSelectChange}
@@ -114,22 +132,25 @@ export default function SpellPage() {
                <option value="*">СуперНова (* уровень)</option>
             </select>
 
-            <select
-               id="filterSchooles"
-               onChange={handleSchoolesChange}
-               value={filterSchooles}
-            >
-               <option value="all">All</option>
-               <option value="wight">Белая</option>
-               {token === "all" && (
-                  <>
-                     <option value="black">Черная</option>
-                     <option value="goddess">Божественная</option>
-                  </>
-               )}
-               <option value="nature">Природная</option>
-            </select>
+            {token === "all" ||
+               (token === "Олёй" && (
+                  <select
+                     id="filterSchooles"
+                     onChange={handleSchoolesChange}
+                     value={filterSchooles}
+                  >
+                     <option value="all">All</option>
+                     <option value="wight">Белая</option>
+                     {token === "all" && (
+                        <>
+                           <option value="black">Черная</option>
+                           <option value="goddess">Божественная</option>
+                        </>
+                     )}
 
+                     <option value="nature">Природная</option>
+                  </select>
+               ))}
             <select
                id="filterTypes"
                onChange={handleTypesChange}
@@ -148,6 +169,11 @@ export default function SpellPage() {
          </div>
 
          <div className="container-spell">
+            {token === "Юджин" || token === "all" ? (
+               <ToggleSpell props={random} />
+            ) : (
+               ""
+            )}
             {filteredData.length > 0 ? (
                filteredData.map((card, index) => (
                   <Spell key={index} props={card} />

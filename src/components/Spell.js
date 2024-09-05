@@ -43,19 +43,19 @@ export default function Spell({ props }) {
          <div className="blockremark">
             <div className="remark">
                <h3>Type</h3>
-               <p className="random-text">{props.type}</p>
+               <p className="">{props.type}</p>
             </div>
             <div className="remark">
                <h3>Time</h3>
-               <p className="random-text">{props.time}</p>
+               <p className="">{props.time}</p>
             </div>
             <div className="remark">
                <h3>Duration</h3>
-               <p className="random-text">{props.lenght}</p>
+               <p className="">{props.lenght}</p>
             </div>
             <div className="remark">
                <h3>Range</h3>
-               <p className="random-text">{props.rang}</p>
+               <p className="">{props.rang}</p>
             </div>
          </div>
       </div>
