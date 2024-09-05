@@ -24,7 +24,7 @@ export default function SpellPage() {
       type: "тип",
       typeno: 0,
       time: "время",
-      lenght: "продолжительность",
+      lenght: "длина",
       rang: "растояние",
       player: ["Юджин"],
    };
