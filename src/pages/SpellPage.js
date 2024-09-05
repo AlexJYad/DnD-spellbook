@@ -132,25 +132,24 @@ export default function SpellPage() {
                <option value="*">СуперНова (* уровень)</option>
             </select>
 
-            {token === "all" ||
-               (token === "Олёй" && (
-                  <select
-                     id="filterSchooles"
-                     onChange={handleSchoolesChange}
-                     value={filterSchooles}
-                  >
-                     <option value="all">All</option>
-                     <option value="wight">Белая</option>
-                     {token === "all" && (
-                        <>
-                           <option value="black">Черная</option>
-                           <option value="goddess">Божественная</option>
-                        </>
-                     )}
+            {(token === "all" || token === "Олёй") && (
+               <select
+                  id="filterSchooles"
+                  onChange={handleSchoolesChange}
+                  value={filterSchooles}
+               >
+                  <option value="all">All</option>
+                  <option value="wight">Белая</option>
+                  {token === "all" && (
+                     <>
+                        <option value="black">Черная</option>
+                        <option value="goddess">Божественная</option>
+                     </>
+                  )}
 
-                     <option value="nature">Природная</option>
-                  </select>
-               ))}
+                  <option value="nature">Природная</option>
+               </select>
+            )}
             <select
                id="filterTypes"
                onChange={handleTypesChange}
