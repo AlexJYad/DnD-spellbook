@@ -3,7 +3,7 @@ import "../CSS/TopBar.css"; // Импортируем CSS-файл с стиля
 import Back from "./Back";
 import LogOff from "./LogOff";
 
-const TopBar = () => {
+const TopBar = React.memo(() => {
    const token = localStorage.getItem("token");
    const [menuOpen, setMenuOpen] = useState(false);
    const [openDropdown, setOpenDropdown] = useState(null);
@@ -105,6 +105,6 @@ const TopBar = () => {
          </div>
       </div>
    );
-};
+});
 
 export default TopBar;

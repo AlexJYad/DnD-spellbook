@@ -5,7 +5,7 @@ import "../CSS/chSheet.css";
 import { useEffect, useState } from "react";
 import scr from "../img/background/c-frame.png";
 import { getNum } from "../utils/getNum";
-import { getValues } from "../utils/ getValues";
+import { getValues } from "../utils/getValues";
 import sign from "../img/background/frame-signature.png";
 
 export default function ChSheetPage(props) {

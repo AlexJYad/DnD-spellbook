@@ -1,7 +1,7 @@
 import React from "react";
 import "../CSS/Marquee.css"; // Импортируем CSS-файл со стилями
 
-const Marquee = ({ text }) => {
+const Marquee = React.memo(({ text }) => {
    return (
       <div className="marquee">
          <div className="marquee-content">
@@ -14,6 +14,6 @@ const Marquee = ({ text }) => {
          </div>
       </div>
    );
-};
+});
 
 export default Marquee;
