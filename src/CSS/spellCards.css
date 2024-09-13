@@ -33,8 +33,11 @@ em:after {
    text-shadow: 0.5px 0.5px 0px rgba(255, 0, 0, 0.3),
       1px 1px 0px rgba(165, 42, 42, 0.3);
 }
-.wight {
-   text-shadow: 1px 1px 0px #fff, 1px 1px 0px rgba(0, 0, 0, 0.15);
+.white {
+   color: white;
+   /* text-shadow: 1px 1px 0px #fff, 1px 1px 0px rgba(0, 0, 0, 0.15); */
+   text-shadow: 0.3px 0.3px 1px #4a4a4ac2, 0.5px 0.5px 1px #ffffff43,
+      0.6px 0.6px 1px #ffffff;
 }
 .big {
    font-size: 1.2rem;
@@ -53,6 +56,7 @@ em:after {
 }
 .black {
    color: black;
+   text-shadow: 0.3px 0.3px 1px #252525, 0.5px 0.5px 1px #444444;
 }
 
 .goddess {

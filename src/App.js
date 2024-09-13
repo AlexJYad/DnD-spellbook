@@ -32,7 +32,7 @@ function App() {
    return (
       <div className="App">
          <TopBar />
-         <Marquee text="Следующая игра 14 сентября! В 12:00 по МСК" />
+         <Marquee text="Следующая игра 14 сентября, суббота! В 14:00 по МСК" />
          <Main />
          <Footer />
       </div>

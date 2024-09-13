@@ -27,9 +27,11 @@ export default function Spell({ props }) {
 
    return (
       <div className="spell">
-         {props.say && <img src={mouth} alt="" className="mouth bookmark" />}
-         {props.touch && <img src={hand} alt="" className="hand bookmark" />}
-         {props.do && <img src={cristal} alt="" className="cristal bookmark" />}
+         {props.verbal && <img src={mouth} alt="" className="mouth bookmark" />}
+         {props.somatic && <img src={hand} alt="" className="hand bookmark" />}
+         {props.material && (
+            <img src={cristal} alt="" className="cristal bookmark" />
+         )}
          <div className="headerh2">
             <h2 className="namespell" ref={titleRef}>
                {props.title}
@@ -42,8 +44,8 @@ export default function Spell({ props }) {
          <div className="how"></div>
          <div className="blockremark">
             <div className="remark">
-               <h3>Type</h3>
-               <p className="">{props.type}</p>
+               <h3>Level</h3>
+               <p className="">{props.level}</p>
             </div>
             <div className="remark">
                <h3>Time</h3>
@@ -51,7 +53,7 @@ export default function Spell({ props }) {
             </div>
             <div className="remark">
                <h3>Duration</h3>
-               <p className="">{props.lenght}</p>
+               <p className="">{props.length}</p>
             </div>
             <div className="remark">
                <h3>Range</h3>

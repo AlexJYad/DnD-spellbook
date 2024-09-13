@@ -13,17 +13,27 @@ export default function ChSheetPage(props) {
       document.title = "Лист Персонажа";
    }, []);
 
-   const [value, setValue] = useState(0);
+   // Состояния для разных счетчиков
+   const [temporaryHits, setTemporaryHits] = useState(0); // Временные хиты
+   const [initiative, setInitiative] = useState(0); // Инициатива
 
-   const increment = () => {
-      setValue((prevValue) => prevValue + 1);
+   // Функции для временных хитов
+   const incrementTemporaryHits = () => {
+      setTemporaryHits((prevValue) => Math.min(prevValue + 1, 15)); // Максимум 15
    };
 
-   const decrement = () => {
-      setValue((prevValue) => prevValue - 1);
+   const decrementTemporaryHits = () => {
+      setTemporaryHits((prevValue) => Math.max(prevValue - 1, 0)); // Минимум 0
    };
 
-   // console.log(props);
+   // Функции для инициативы
+   const incrementInitiative = () => {
+      setInitiative((prevValue) => Math.min(prevValue + 1, 15)); // Максимум 15
+   };
+
+   const decrementInitiative = () => {
+      setInitiative((prevValue) => Math.max(prevValue - 1, 0)); // Минимум 0
+   };
 
    const info = props[0];
    const abilities = props[1];
@@ -102,6 +112,55 @@ export default function ChSheetPage(props) {
                      <SpellesSlots key={index} level={index + 1} num={num} />
                   ))}
                </div>
+               <div className="parameters">
+                  <div className="crown">
+                     <p>&#10022;</p>
+                  </div>
+                  <div className="crystal-ball">
+                     <div className="attentiveness">
+                        <h2>11</h2>
+                        <p>Внимение</p>
+                     </div>
+                  </div>
+                  <div className="dice white-shadow">
+                     <p>Интелект</p>
+                  </div>
+                  <div className="vision">
+                     <p>Зрение: О</p>
+                  </div>
+               </div>
+
+               <div className="health-hits">
+                  <div className="helth-hits-temporary">
+                     <div className="helth-counter-wrapper">
+                        <button
+                           className="increment count-input-btn hits"
+                           onClick={incrementTemporaryHits}
+                           disabled={temporaryHits === 15}
+                        >
+                           +
+                        </button>
+                        <input
+                           type="text"
+                           className="count-input hits"
+                           value={temporaryHits}
+                           readOnly
+                        />
+
+                        <button
+                           className="decrement count-input-btn hits"
+                           onClick={decrementTemporaryHits}
+                           disabled={temporaryHits === 0}
+                        >
+                           -
+                        </button>
+                     </div>
+                     <div className="helth-hits-temporary-text">
+                        <p>Временные Хиты</p>
+                     </div>
+                  </div>
+                  <div className="health-hits-main"></div>
+               </div>
 
                <div className="health">
                   <div className="AC">
@@ -123,36 +182,37 @@ export default function ChSheetPage(props) {
                </div>
 
                <div className="sabaton">
-                  <p className="initiative">Инициатива</p>
+                  <p className="initiative white-shadow">Инициатива</p>
                   <div className="initiative-counter-wrapper">
                      <button
-                        className="increment initiative-input-btn"
-                        onClick={increment}
-                        disabled={value === 15}
+                        className="increment count-input-btn"
+                        onClick={incrementInitiative}
+                        disabled={initiative === 15}
                      >
                         +
                      </button>
                      <input
                         type="text"
-                        className="initiative-input"
-                        value={value}
+                        className="count-input"
+                        value={initiative}
                         readOnly
                      />
 
                      <button
-                        className="decrement initiative-input-btn"
-                        onClick={decrement}
-                        disabled={value === 0}
+                        className="decrement count-input-btn in"
+                        onClick={decrementInitiative}
+                        disabled={initiative === 0}
                      >
                         -
                      </button>
                   </div>
-                  {/* <p>Скорость</p>{" "}
-                  <h2>
-                     30
-                     <br />
-                     (6к)
-                  </h2> */}
+                  <p className="speed white-shadow">Скорость</p>
+                  <div className="speed-counter-num">
+                     <h2>30</h2>
+                  </div>
+                  <div className="speed-counter-count">
+                     <h3>(6k)</h3>
+                  </div>
                </div>
 
                {/* 
