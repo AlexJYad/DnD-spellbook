@@ -331,7 +331,6 @@ li.isSafebox::before {
 
 .parameters {
    position: absolute;
-   background-color: #ffffff38;
    width: 250px;
    aspect-ratio: 1 / 1.3;
    top: 40px;
@@ -342,7 +341,8 @@ li.isSafebox::before {
 .crystal-ball,
 .dice,
 .vision,
-.helth-hits-temporary {
+.helth-hits-temporary,
+.health-hits-main {
    position: absolute;
    background-position: center;
    background-repeat: no-repeat;
@@ -398,8 +398,7 @@ li.isSafebox::before {
 
 .health-hits {
    position: absolute;
-   background-color: #ffffff4f;
-   height: 140px;
+   height: 240px;
    width: 366px;
    top: 260px;
    right: 50px;
@@ -438,6 +437,25 @@ li.isSafebox::before {
    width: 76px;
    font-size: 0.75em;
    transform: rotate(-13deg);
+}
+
+.health-hits-main {
+   background-image: url("../img/background/hits-d.png");
+   width: 200px;
+   right: -35px;
+   top: -20px;
+}
+
+.health-hits-main-dice {
+   position: absolute;
+   bottom: 6px;
+   left: 2px;
+   width: 79px;
+   p {
+      text-align: center;
+      font-size: 0.8em;
+      line-height: 1;
+   }
 }
 /* health */
 .health {

@@ -4,7 +4,8 @@
       "age": 17,
       "experience": 250,
       "ACbonus": 0,
-      "HP": 11
+      "HP": 11,
+      "main": "Телосложение"
    },{
       "strength" : {
          "id" : "strength",

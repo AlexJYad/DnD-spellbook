@@ -4,7 +4,8 @@
       "age": 17,
       "experience": 200,
       "ACbonus": 1,
-      "HP": 9
+      "HP": 9,
+      "main": "Харизма"
    },{
       "strength" : {
          "id" : "strength",

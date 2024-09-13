@@ -44,6 +44,7 @@ export default function ChSheetPage(props) {
       (getValues(info.experience).level - 1) *
          (5 + getNum(abilities.constitution.level));
    const AC = 10 + getNum(abilities.dexterity.level) + info.ACbonus;
+   const attentiveness = 10 + getNum(abilities.wisdom.level);
 
    return (
       <>
@@ -118,12 +119,12 @@ export default function ChSheetPage(props) {
                   </div>
                   <div className="crystal-ball">
                      <div className="attentiveness">
-                        <h2>11</h2>
-                        <p>Внимение</p>
+                        <h2>{attentiveness}</h2>
+                        <p>Внимание</p>
                      </div>
                   </div>
                   <div className="dice white-shadow">
-                     <p>Интелект</p>
+                     <p>{info.main}</p>
                   </div>
                   <div className="vision">
                      <p>Зрение: О</p>
@@ -159,7 +160,12 @@ export default function ChSheetPage(props) {
                         <p>Временные Хиты</p>
                      </div>
                   </div>
-                  <div className="health-hits-main"></div>
+                  <div className="health-hits-main">
+                     <div className="health-hits-main-dice">
+                        <h2>{}d8</h2>
+                        <p>кость здоровья</p>
+                     </div>
+                  </div>
                </div>
 
                <div className="health">

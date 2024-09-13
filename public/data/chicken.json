@@ -4,7 +4,8 @@
        "age": 12,
        "experience": 500,
        "ACbonus": 1,
-       "HP": 15
+       "HP": 15,
+       "main": "Ловкость"
    },
    {
        "strength": {

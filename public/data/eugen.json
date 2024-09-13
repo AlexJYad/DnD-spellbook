@@ -4,7 +4,8 @@
       "age": 17,
       "experience": 260,
       "ACbonus": 0,
-      "HP": 8
+      "HP": 8,
+      "main": "Интеллект"
    },{
       "strength" : {
          "id" : "strength",

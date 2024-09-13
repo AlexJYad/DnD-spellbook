@@ -95,7 +95,7 @@ const TopBar = React.memo(() => {
                         openDropdown === 4 ? "active" : ""
                      }`}
                   >
-                     <a href="/sheet">Лист Пресонажа</a>
+                     <a href="/sheet">Лист Персонажа</a>
                      <a href="/spell">Заклинания</a>
                   </div>
                </div>
