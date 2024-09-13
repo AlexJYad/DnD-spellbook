@@ -565,6 +565,7 @@ li.isSafebox::before {
    color: black;
    font-family: "Bulgaria Moderna Pro", sans-serif;
    margin-top: -6px;
+   padding: 0;
 }
 
 .count-input-btn {
@@ -580,6 +581,7 @@ li.isSafebox::before {
    text-align: center;
    font-family: "Bulgaria Moderna Pro", sans-serif;
    font-weight: 700;
+   padding: 0;
 }
 
 .count-input-btn:hover {
@@ -728,13 +730,12 @@ li.isSafebox::before {
       ); /* Для центрирования относительно левого края */
    }
    .health {
-      top: 350px;
+      top: 400px;
       left: 50%;
       transform: translateX(
          -50%
       ); /* Для центрирования относительно левого края */
    }
-
    .abilities {
       top: 750px;
       left: 50%;
@@ -744,7 +745,7 @@ li.isSafebox::before {
    }
    .spelles {
       position: absolute;
-      top: 1550px;
+      top: 1900px;
       left: 50%;
       transform: translateX(-50%);
       width: 267px;
@@ -753,5 +754,36 @@ li.isSafebox::before {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       grid-row-gap: 20px;
+   }
+   .parameters {
+      position: absolute;
+      top: 1550px;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .sabaton {
+      position: absolute;
+      top: 2200px;
+      left: 65%;
+      transform: translateX(-35%);
+   }
+   .health-hits {
+      position: absolute;
+      top: 2160px;
+      left: 50%;
+      transform: translateX(-50%);
+      .health-hits-main {
+         position: absolute;
+         top: -42px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+      .helth-hits-temporary {
+         position: absolute;
+         top: 160px;
+         left: 35%;
+         transform: translateX(-50%);
+      }
    }
 }
