@@ -27,10 +27,14 @@ export default function Spell({ props }) {
 
    return (
       <div className="spell">
-         {props.verbal && <img src={mouth} alt="" className="mouth bookmark" />}
-         {props.somatic && <img src={hand} alt="" className="hand bookmark" />}
+         {props.verbal && (
+            <img src={verbal} alt="" className="mouth bookmark" />
+         )}
+         {props.somatic && (
+            <img src={somatic} alt="" className="hand bookmark" />
+         )}
          {props.material && (
-            <img src={cristal} alt="" className="cristal bookmark" />
+            <img src={material} alt="" className="cristal bookmark" />
          )}
          <div className="headerh2">
             <h2 className="namespell" ref={titleRef}>
