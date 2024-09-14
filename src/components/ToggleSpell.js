@@ -115,7 +115,7 @@ export default function ToggleSpell({ props }) {
             <img
                src={verbal}
                alt=""
-               className="mouth bookmark toggle-image"
+               className="verbal bookmark toggle-image"
                ref={(el) => el && toggleImageRefs.current.push(el)}
             />
          )}
@@ -123,7 +123,7 @@ export default function ToggleSpell({ props }) {
             <img
                src={somatic}
                alt=""
-               className="hand bookmark toggle-image"
+               className="somatic bookmark toggle-image"
                ref={(el) => el && toggleImageRefs.current.push(el)}
             />
          )}
@@ -131,7 +131,7 @@ export default function ToggleSpell({ props }) {
             <img
                src={material}
                alt=""
-               className="cristal bookmark toggle-image"
+               className="material bookmark toggle-image"
                ref={(el) => el && toggleImageRefs.current.push(el)}
             />
          )}
