@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 
-import mouth from "../img/bookmark/mouth.png";
-import hand from "../img/bookmark/hand.png";
-import cristal from "../img/bookmark/cristal.png";
+import verbal from "../img/bookmark/mouth.png";
+import somatic from "../img/bookmark/hand.png";
+import material from "../img/bookmark/cristal.png";
 
 export default function Spell({ props }) {
    const titleRef = useRef(null);
@@ -28,13 +28,13 @@ export default function Spell({ props }) {
    return (
       <div className="spell">
          {props.verbal && (
-            <img src={verbal} alt="" className="mouth bookmark" />
+            <img src={verbal} alt="" className="verbal bookmark" />
          )}
          {props.somatic && (
-            <img src={somatic} alt="" className="hand bookmark" />
+            <img src={somatic} alt="" className="somatic bookmark" />
          )}
          {props.material && (
-            <img src={material} alt="" className="cristal bookmark" />
+            <img src={material} alt="" className="material bookmark" />
          )}
          <div className="headerh2">
             <h2 className="namespell" ref={titleRef}>

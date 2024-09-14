@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useCallback } from "react";
-import mouth from "../img/bookmark/mouth.png";
-import hand from "../img/bookmark/hand.png";
-import cristal from "../img/bookmark/cristal.png";
+import verbal from "../img/bookmark/mouth.png";
+import somatic from "../img/bookmark/hand.png";
+import material from "../img/bookmark/cristal.png";
 import "../CSS/ToggleSpell.css"; // Подключите ваш CSS файл
 
 export default function ToggleSpell({ props }) {
@@ -111,25 +111,25 @@ export default function ToggleSpell({ props }) {
 
    return (
       <div className="spell">
-         {props.say && (
+         {props.verbal && (
             <img
-               src={mouth}
+               src={verbal}
                alt=""
                className="mouth bookmark toggle-image"
                ref={(el) => el && toggleImageRefs.current.push(el)}
             />
          )}
-         {props.touch && (
+         {props.somatic && (
             <img
-               src={hand}
+               src={somatic}
                alt=""
                className="hand bookmark toggle-image"
                ref={(el) => el && toggleImageRefs.current.push(el)}
             />
          )}
-         {props.do && (
+         {props.material && (
             <img
-               src={cristal}
+               src={material}
                alt=""
                className="cristal bookmark toggle-image"
                ref={(el) => el && toggleImageRefs.current.push(el)}
