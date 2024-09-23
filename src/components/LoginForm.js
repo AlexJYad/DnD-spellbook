@@ -47,31 +47,33 @@ export default function LoginForm() {
       <div>
          <form onSubmit={handleSubmit} id="loginForm">
             <div class="remark">
-               <label for="login">Username:</label>
-               <input
-                  type="text"
-                  id="login"
-                  name="login"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-               />
-            </div>
-            <div class="remark">
-               <label for="pwd">Password:</label>
-               <input
-                  type="password"
-                  id="pwd"
-                  name="pwd"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-               />
+               <div className="mb-3">
+                  <label for="login">Username:</label>
+                  <input
+                     type="text"
+                     id="login"
+                     name="login"
+                     value={username}
+                     onChange={(e) => setUsername(e.target.value)}
+                  />
+               </div>
+               <div>
+                  <label for="pwd">Password:</label>
+                  <input
+                     type="password"
+                     id="pwd"
+                     name="pwd"
+                     value={password}
+                     onChange={(e) => setPassword(e.target.value)}
+                  />
+               </div>
             </div>
             {error && (
                <div class="remark">
                   <p style={{ color: "red" }}>{error}</p>
                </div>
             )}
-            <div>
+            <div className="login-buttons">
                <button type="submit" value="Login">
                   Login
                </button>

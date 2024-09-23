@@ -7,8 +7,6 @@ em {
  position: relative;
   transform: skew(2px); */
    font-size: 0.95em;
-   text-decoration: underline;
-   text-decoration-style: dotted;
    text-underline-offset: 1px;
 }
 /* 
@@ -34,11 +32,93 @@ em:after {
       1px 1px 0px rgba(165, 42, 42, 0.3);
 }
 .white {
-   color: white;
-   /* text-shadow: 1px 1px 0px #fff, 1px 1px 0px rgba(0, 0, 0, 0.15); */
+   color: rgb(255, 255, 255);
    text-shadow: 0.3px 0.3px 1px #4a4a4ac2, 0.5px 0.5px 1px #ffffff43,
       0.6px 0.6px 1px #ffffff;
 }
+
+.text-outline {
+   text-shadow: 0px 0px 0.1px black, 0px 0px 0.2px black, 0px 0px 0.3px black,
+      0px 0px 0.4px black, 0px 0px 0.5px black, 0px 0px 0.6px black,
+      0px 0px 0.7px black, 0px 0px 0.8px black, 0px 0px 0.9px black,
+      0px 0px 1px black;
+}
+
+.transparent-text {
+   background: rgba(160, 150, 140, 0.85);
+   color: white;
+   border-radius: 30px;
+   mix-blend-mode: multiply;
+   padding: 0px 5px;
+}
+
+.on-white {
+   text-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(104, 104, 104, 0.5),
+      0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.de-Alto {
+   color: rgba(255, 255, 255, 0.9);
+}
+
+.fon-Beyrer {
+   color: #d6eef2;
+}
+
+.van-Orner {
+   color: #d0e3d5;
+}
+
+.mac-Tacker {
+   color: #f4e8f8;
+}
+
+.af-Ocillia {
+   color: #f7ebc4;
+}
+
+.mac-Tacker {
+   color: #e1c9e8;
+}
+
+.af-Ocillia {
+   color: #f7ebc4;
+}
+
+.siberian-aurora-text {
+   color: #2d210b;
+   position: relative;
+   display: inline-block;
+   background: linear-gradient(
+      90deg,
+      #001d3d,
+      #007a5e,
+      #049e56,
+      #008793,
+      #4e41e3,
+      #bc4e9c,
+      #f80759
+   );
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.dimmed-siberian-aurora-text {
+   background: linear-gradient(
+      90deg,
+      #001d3d,
+      /* Очень тёмный синий */ #003a3d,
+      /* Тёмный зелёный синий */ #004e4e,
+      /* Тёмный зелёный */ #005e5b,
+      /* Тёмный болотный зелёный */ #4e3f2f,
+      /* Коричневый */ #7a4e4e,
+      /* Тёмный красновато-коричневый */ #8b3d3d
+         /* Коричневый с красным оттенком */
+   );
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
 .big {
    font-size: 1.2rem;
 }

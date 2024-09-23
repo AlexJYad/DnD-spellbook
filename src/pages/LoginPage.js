@@ -15,8 +15,8 @@ export default function LoginPage() {
    }, [navigate]);
 
    const description = `
-      Добро пожаловать на континент.<br>
-      Сегодня вы присоединяетесь к виликому путешествию,<br>
+      Добро пожаловать на континент.<br><br>
+      Сегодня вы присоединяетесь к виликому<br>путешествию, 
       что изменит этот мир навсегда!
    `;
 
@@ -29,7 +29,7 @@ export default function LoginPage() {
    const url = [adt];
 
    return (
-      <div class="container flex">
+      <div class="flex login">
          <div class="spell">
             <div class="headerh2">
                <h2 class="namespell">
@@ -45,9 +45,7 @@ export default function LoginPage() {
                   dangerouslySetInnerHTML={{ __html: description }}
                ></p>
             )}
-            <div class="blockremark back">
-               <div class="remark">{url}</div>
-            </div>
+            <div class="remark flex">{url}</div>
             <LoginForm />
          </div>
       </div>

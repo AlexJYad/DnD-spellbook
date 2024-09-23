@@ -67,7 +67,7 @@ const TopBar = React.memo(() => {
                      <a href="*">Основной</a>
                      <a href="*">Магия</a>
                      <a href="*">Религия</a>
-                     <a href="*">Хронология</a>
+                     <a href="/history">История</a>
                      <a href="*">Экономика</a>
                      <a href="*">Караваны</a>
                      <a href="*">Города</a>

@@ -8,6 +8,7 @@ import ChSheetPage from "../pages/ChSheetPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import ProtectedRoute from "./ProtectedRoute";
 import Info from "../pages/Info";
+import HistoryPage from "../pages/HistoryPage";
 import { Route, Routes } from "react-router-dom";
 
 const Main = () => {
@@ -70,6 +71,7 @@ const Main = () => {
                      <Route path="/about" element={<AboutPage />} />
                      <Route path="/rules" element={<RulesPage />} />
                      <Route path="/spell" element={<SpellPage />} />
+                     <Route path="/history" element={<HistoryPage />} />
                      <Route
                         path="/sheet"
                         element={<ProtectedRoute component={ChSheetPage} />}
