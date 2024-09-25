@@ -64,10 +64,10 @@ const TopBar = React.memo(() => {
                         openDropdown === 2 ? "active" : ""
                      }`}
                   >
-                     <a href="*">Основной</a>
-                     <a href="*">Магия</a>
+                     <a href="/lore">Основной</a>
+                     <a href="/lore/magic">Магия</a>
                      <a href="*">Религия</a>
-                     <a href="/history">История</a>
+                     <a href="/lore/history">История</a>
                      <a href="*">Экономика</a>
                      <a href="*">Караваны</a>
                      <a href="*">Города</a>

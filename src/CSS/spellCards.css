@@ -266,15 +266,15 @@ p::selection {
 ul {
    list-style: none;
    padding-left: 13px;
-}
 
-li::before {
-   font-size: 0.6em;
-   padding-right: 6px;
-   content: "\2726";
-   display: inline-block;
-   transform: translateY(-20%);
-   line-height: 1;
+   li::before {
+      font-size: 0.6em;
+      padding-right: 6px;
+      content: "\2726";
+      display: inline-block;
+      transform: translateY(-20%);
+      line-height: 1;
+   }
 }
 
 #dop {

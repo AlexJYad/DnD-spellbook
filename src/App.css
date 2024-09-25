@@ -316,3 +316,16 @@ ul.footnote {
    background-color: #c6ebedb8;
    height: 100vh;
 }
+
+ol li:last-child {
+   list-style-type: none; /* Убираем стандартную нумерацию */
+   position: relative;
+}
+
+ol li:last-child::before {
+   content: "*"; /* Добавляем звёздочку */
+   position: absolute;
+   font-size: 1.5em;
+   left: -19px; /* Смещаем символ влево (регулируй в зависимости от твоего дизайна) */
+   top: -1px;
+}
