@@ -2,13 +2,14 @@ import "../CSS/HomePage.css";
 
 export default function HomePage() {
    const news = `
-   <h4>Обновление: Beta 1.0.3</h4>
+   <h4>Обновление: Beta 1.0.4</h4>
    <p><em>Дата обновления:</em> <strong>26 сентября 2024 года</strong></p>
    <ul>
      <li>Обновлены данные в разделе <strong>Лор: История и Магия</strong> <em>(требует доработки)</em>.</li>
      <li>Исправлен дизайн формы <strong>логина</strong>.</li>
      <li>Добавлена кнопка <strong>"Наверх"</strong> в разделе <strong>Заклинания</strong>.</li>
      <li><strong>Значительно улучшена производительность сайта!</strong></li>
+     <li>Добавлены meta данные для отображения ссыдки <em>(требует доработки)</em>.</li>
    </ul>
  `;
 
