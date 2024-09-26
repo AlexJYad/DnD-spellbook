@@ -11,6 +11,7 @@ button {
    box-shadow: 3px 3px #382719;
    cursor: pointer;
    font-family: "Luminari";
+   border-radius: 10px;
 }
 
 button:hover {
@@ -328,4 +329,32 @@ ol li:last-child::before {
    font-size: 1.5em;
    left: -19px; /* Смещаем символ влево (регулируй в зависимости от твоего дизайна) */
    top: -1px;
+}
+
+.scroll-to-top {
+   font-size: 1em;
+   position: fixed;
+   bottom: 10px;
+   right: calc((100% - 1000px) / 2 - 85px);
+   border-radius: 5px;
+   cursor: pointer;
+   z-index: 1000;
+   opacity: 25%;
+}
+
+.scroll-to-top:hover {
+   opacity: 100%;
+}
+
+.scroll-to-top.show {
+   display: block;
+}
+
+@media (max-width: 1000px) {
+   .scroll-to-top {
+      right: calc(10px);
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+   }
 }

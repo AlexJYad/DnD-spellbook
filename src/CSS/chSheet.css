@@ -88,7 +88,7 @@
 
 /* ------------------------ */
 .namebox {
-   background-image: url("../img/background/name-frame.png");
+   background-image: url("../img/background/name-frame.webp");
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
@@ -126,7 +126,7 @@
    border-radius: 3px;
 
    & .flag {
-      background-image: url("../img/background/s-flag.png");
+      background-image: url("../img/background/s-flag.webp");
       width: 30%;
       aspect-ratio: 1 / 1;
       position: absolute;
@@ -148,7 +148,7 @@
       position: absolute;
       top: 55%;
       left: -3%;
-      background-image: url("../img/background/xs-flag.png");
+      background-image: url("../img/background/xs-flag.webp");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -167,7 +167,7 @@
 }
 
 .flag {
-   background-image: url("../img/background/m-flag.png");
+   background-image: url("../img/background/m-flag.webp");
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
@@ -221,7 +221,7 @@
    font-size: 0.8em;
 }
 
-li.isSafebox::before {
+.spell-inner-list li.isSafebox::before {
    font-size: 2ch;
    color: green;
    padding-right: 3px;
@@ -264,7 +264,7 @@ li.isSafebox::before {
    position: relative;
 
    & .slot {
-      background-image: url("../img/background/slot.png");
+      background-image: url("../img/background/slot.webp");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -357,7 +357,7 @@ li.isSafebox::before {
 .crown {
    top: 0;
    left: 42px;
-   background-image: url("../img/background/crown.png");
+   background-image: url("../img/background/crown.webp");
    p {
       color: white;
       margin-top: 35px;
@@ -369,7 +369,7 @@ li.isSafebox::before {
 .crystal-ball {
    top: 100px;
    right: 0;
-   background-image: url("../img/background/crystal-ball.png");
+   background-image: url("../img/background/crystal-ball.webp");
    .attentiveness {
       display: flex;
       justify-content: end;
@@ -383,7 +383,7 @@ li.isSafebox::before {
    top: 150px;
    left: -1px;
    width: 100px;
-   background-image: url("../img/background/dice.png");
+   background-image: url("../img/background/dice.webp");
 }
 
 .vision {
@@ -405,7 +405,7 @@ li.isSafebox::before {
 }
 
 .helth-hits-temporary {
-   background-image: url("../img/background/hits-temporary.png");
+   background-image: url("../img/background/hits-temporary.webp");
    top: 0px;
    left: 0px;
    width: 185px;
@@ -440,7 +440,7 @@ li.isSafebox::before {
 }
 
 .health-hits-main {
-   background-image: url("../img/background/hits-d.png");
+   background-image: url("../img/background/hits-d.webp");
    width: 200px;
    right: -35px;
    top: -20px;
@@ -459,7 +459,7 @@ li.isSafebox::before {
 }
 /* health */
 .health {
-   background-image: url("../img/background/HP.png");
+   background-image: url("../img/background/HP.webp");
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
@@ -519,7 +519,7 @@ li.isSafebox::before {
 /* ----- Sabaton ----- */
 
 .sabaton {
-   background-image: url("../img/background/sabaton.png");
+   background-image: url("../img/background/sabaton.webp");
    background-position: center;
    background-repeat: no-repeat;
    background-size: contain;
@@ -628,7 +628,7 @@ li.isSafebox::before {
 /* ------------------- */
 
 .saves {
-   background-image: url("../img/background/saves.png");
+   background-image: url("../img/background/saves.webp");
    border: 1px solid black;
    width: 10%;
    aspect-ratio: 1 / 1;

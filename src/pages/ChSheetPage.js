@@ -3,10 +3,10 @@ import Ability from "../components/Ability";
 import SpellesSlots from "../components/SpellesSlots";
 import "../CSS/chSheet.css";
 import { useEffect, useState } from "react";
-import scr from "../img/background/c-frame.png";
+import scr from "../img/background/c-frame.webp";
 import { getNum } from "../utils/getNum";
 import { getValues } from "../utils/getValues";
-import sign from "../img/background/frame-signature.png";
+import sign from "../img/background/frame-signature.webp";
 
 export default function ChSheetPage(props) {
    useEffect(() => {

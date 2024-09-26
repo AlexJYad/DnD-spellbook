@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 
-import verbal from "../img/bookmark/mouth.png";
-import somatic from "../img/bookmark/hand.png";
-import material from "../img/bookmark/cristal.png";
+import verbal from "../img/bookmark/mounth.webp";
+import somatic from "../img/bookmark/hand.webp";
+import material from "../img/bookmark/cristal.webp";
 
 export default function Spell({ props }) {
    const titleRef = useRef(null);

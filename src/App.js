@@ -17,6 +17,8 @@ function App() {
    const navigate = useNavigate();
    const token = localStorage.getItem("token");
 
+   const marqueeText = "Никто не знает когда будет игра.";
+
    // Используем useEffect для перенаправления
    useEffect(() => {
       if (!token) {
@@ -32,7 +34,7 @@ function App() {
    return (
       <div className="App">
          <TopBar />
-         <Marquee text="Никто не знает когда будет игра. Обновлена История в разделе Лор!    Исправлена форма логина! Добавлена Магия в разделе Лор - требует доработки" />
+         <Marquee text={marqueeText} />
          <Main />
          <Footer />
       </div>

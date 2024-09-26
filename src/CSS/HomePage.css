@@ -1,0 +1,73 @@
+.news-container {
+   border: 2.5px solid #2d210b;
+   box-shadow: 3px 3px #382719;
+   padding: 20px;
+   background-color: rgba(249, 238, 220, 0.6);
+   border-radius: 10px; /* Закруглённые углы */
+   margin-bottom: 30px;
+   margin-top: 20px;
+}
+
+.news-container ul {
+   padding-left: 10px;
+   list-style: none; /* Убираем стандартные маркеры списка */
+}
+
+.news-container ul li {
+   margin-top: 5px;
+}
+
+.news-container ul li:before {
+   content: "★\27A4"; /* Добавляем символ звезды перед каждым пунктом */
+   margin-right: 10px;
+   color: brown; /* Золотой цвет для символа */
+}
+
+.link-list {
+   list-style: none; /* Убираем маркеры списка */
+   padding: 0; /* Убираем внутренний отступ */
+   margin: 0; /* Убираем внешний отступ */
+   display: flex;
+   flex-direction: column;
+   gap: 15px; /* Пространство между ссылками */
+}
+
+.link-list a {
+   display: block;
+   padding: 10px;
+   border-radius: 8px;
+   text-decoration: none; /* Убираем стандартное подчёркивание ссылок */
+   position: relative;
+   transition: all 0.3s ease; /* Анимация при наведении */
+   text-align: center;
+   color: black;
+
+   background-color: #f9eedc;
+   border: 2.5px solid #2d210b;
+   box-shadow: 3px 3px #382719;
+   cursor: pointer;
+   font-family: "Luminari";
+}
+
+.link-list a:hover {
+   background-color: #fff; /* Лёгкая подсветка при наведении */
+   transform: translateY(-3px); /* Небольшое смещение вверх при наведении */
+}
+
+.link-list a::before {
+   content: attr(data-symbol); /* Добавляем символ из атрибута data-symbol */
+   font-size: 1.2em;
+   position: absolute;
+   left: 10px;
+   top: 50%;
+   transform: translateY(-50%); /* Центрируем символ по вертикали */
+}
+
+.link-list a::after {
+   content: attr(data-symbol); /* Добавляем символ из атрибута data-symbol */
+   font-size: 1.2em;
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translateY(-50%); /* Центрируем символ по вертикали */
+}

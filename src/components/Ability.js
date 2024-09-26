@@ -25,7 +25,7 @@ export default function Ability({
             </p>
          </div>
          <div className="skills">
-            <ul>
+            <ul className="spell-inner-list">
                {skills.map((skill, index) => (
                   <li
                      key={index}

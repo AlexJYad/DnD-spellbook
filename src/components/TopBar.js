@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../CSS/TopBar.css"; // Импортируем CSS-файл с стилями
 import Back from "./Back";
 import LogOff from "./LogOff";
+import { Link } from "react-router-dom";
 
 const TopBar = React.memo(() => {
    const token = localStorage.getItem("token");
@@ -23,14 +24,14 @@ const TopBar = React.memo(() => {
    return (
       <div className="topbar-container">
          <div className="topbar-content">
-            <a href="/">
+            <Link to="/">
                <img
                   src={`${process.env.PUBLIC_URL}/favicon.ico`}
                   alt="Favicon"
                   height={36}
                   className="logo"
                />
-            </a>
+            </Link>
             <div
                className={`hamburger ${menuOpen ? "active" : ""}`}
                onClick={toggleMenu}
@@ -49,10 +50,10 @@ const TopBar = React.memo(() => {
                         openDropdown === 1 ? "active" : ""
                      }`}
                   >
-                     <a href="/rules">Основные</a>
-                     <a href="*">Магия</a>
-                     <a href="*">Хронология</a>
-                     <a href="*">D&D</a>
+                     <Link to="/rules">Основные</Link>
+                     <Link to="*">Магия</Link>
+                     <Link to="*">Хронология</Link>
+                     <Link to="*">D&D</Link>
                   </div>
                </div>
                <div className="dropdown">
@@ -64,13 +65,13 @@ const TopBar = React.memo(() => {
                         openDropdown === 2 ? "active" : ""
                      }`}
                   >
-                     <a href="/lore">Основной</a>
-                     <a href="/lore/magic">Магия</a>
-                     <a href="*">Религия</a>
-                     <a href="/lore/history">История</a>
-                     <a href="*">Экономика</a>
-                     <a href="*">Караваны</a>
-                     <a href="*">Города</a>
+                     <Link to="/lore">Основной</Link>
+                     <Link to="/lore/magic">Магия</Link>
+                     <Link to="*">Религия</Link>
+                     <Link to="/lore/history">История</Link>
+                     <Link to="*">Экономика</Link>
+                     <Link to="*">Караваны</Link>
+                     <Link to="*">Города</Link>
                   </div>
                </div>
                <div className="dropdown">
@@ -82,8 +83,8 @@ const TopBar = React.memo(() => {
                         openDropdown === 3 ? "active" : ""
                      }`}
                   >
-                     <a href="*">Мира</a>
-                     <a href="*">Городов</a>
+                     <Link to="*">Мира</Link>
+                     <Link to="*">Городов</Link>
                   </div>
                </div>
                <div className="dropdown">
@@ -95,8 +96,8 @@ const TopBar = React.memo(() => {
                         openDropdown === 4 ? "active" : ""
                      }`}
                   >
-                     <a href="/sheet">Лист Персонажа</a>
-                     <a href="/spell">Заклинания</a>
+                     <Link to="/sheet">Лист Персонажа</Link>
+                     <Link to="/spell">Заклинания</Link>
                   </div>
                </div>
                <LogOff className="btn" />

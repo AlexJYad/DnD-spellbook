@@ -3,6 +3,7 @@ import Spell from "../components/Spell";
 import cards from "../data/cards.json";
 import "../CSS/spellCards.css";
 import ToggleSpell from "../components/ToggleSpell";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function SpellPage() {
    const token = localStorage.getItem("token");
@@ -182,6 +183,7 @@ export default function SpellPage() {
                <div>No cards match the selected filters</div>
             )}
          </div>
+         <ScrollToTop />
       </div>
    );
 }
