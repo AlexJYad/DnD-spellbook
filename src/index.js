@@ -6,8 +6,9 @@ import reportWebVitals from "./reportWebVitals";
 import { Helmet } from "react-helmet";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-   <>
+   <React.StrictMode>
       <Helmet>
          <meta property="og:title" content="D&D: Black And White" />
          <meta
@@ -29,14 +30,14 @@ root.render(
             name="twitter:image"
             content="https://raw.githubusercontent.com/AlexJYad/DnD-spellbook/refs/heads/main/src/img/background/HP.png"
          />
+         <meta
+            name="description"
+            content="Хранилище для игры в D&D: Black And White"
+         />
       </Helmet>
-      <React.StrictMode>
-         <App />
-      </React.StrictMode>
-   </>
+      <App />
+   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Для измерения производительности приложения
 reportWebVitals();
