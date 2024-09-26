@@ -15,7 +15,7 @@ export default function HomePage() {
    return (
       <div className="inner-main">
          <h1>LOGIN</h1>
-         <h2>&#x262F; Black And Wight &#x262F;</h2>
+         <h2>&#x262F; Black And White &#x262F;</h2>
          <div
             className="news-container"
             dangerouslySetInnerHTML={{ __html: news }}
