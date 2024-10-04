@@ -12,6 +12,10 @@ const Header = React.memo(() => {
       setMenuOpen(!menuOpen);
    };
 
+   const closeMenu = () => {
+      setMenuOpen(false);
+   };
+
    const toggleDropdown = (index) => {
       if (openDropdown === index) {
          setOpenDropdown(null);
@@ -23,7 +27,7 @@ const Header = React.memo(() => {
    return (
       <div className="header__container">
          <div className="header__content">
-            <Link to="/">
+            <Link to="/" onClick={closeMenu}>
                <img
                   src={`${process.env.PUBLIC_URL}/favicon.ico`}
                   alt="Favicon"
@@ -54,10 +58,18 @@ const Header = React.memo(() => {
                         openDropdown === 1 ? "active" : ""
                      }`}
                   >
-                     <Link to="/rules">Основные</Link>
-                     <Link to="*">Магия</Link>
-                     <Link to="*">Хронология</Link>
-                     <Link to="*">D&D</Link>
+                     <Link to="/rules" onClick={toggleMenu}>
+                        Основные
+                     </Link>
+                     <Link to="*" onClick={toggleMenu}>
+                        Магия
+                     </Link>
+                     <Link to="*" onClick={toggleMenu}>
+                        Хронология
+                     </Link>
+                     <Link to="*" onClick={toggleMenu}>
+                        D&D
+                     </Link>
                   </div>
                </div>
                <div className="header__nav__dropdown">
@@ -74,13 +86,27 @@ const Header = React.memo(() => {
                         openDropdown === 2 ? "active" : ""
                      }`}
                   >
-                     <Link to="/lore">Основной</Link>
-                     <Link to="/lore/magic">Магия</Link>
-                     <Link to="*">Религия</Link>
-                     <Link to="/lore/history">История</Link>
-                     <Link to="*">Экономика</Link>
-                     <Link to="*">Караваны</Link>
-                     <Link to="*">Города</Link>
+                     <Link to="/lore" onClick={toggleMenu}>
+                        Основной
+                     </Link>
+                     <Link to="/lore/magic" onClick={toggleMenu}>
+                        Магия
+                     </Link>
+                     <Link to="*" onClick={toggleMenu}>
+                        Религия
+                     </Link>
+                     <Link to="/lore/history" onClick={toggleMenu}>
+                        История
+                     </Link>
+                     <Link to="*" onClick={toggleMenu}>
+                        Экономика
+                     </Link>
+                     <Link to="*" onClick={toggleMenu}>
+                        Караваны
+                     </Link>
+                     <Link to="*" onClick={toggleMenu}>
+                        Города
+                     </Link>
                   </div>
                </div>
                <div className="header__nav__dropdown">
@@ -97,8 +123,12 @@ const Header = React.memo(() => {
                         openDropdown === 3 ? "active" : ""
                      }`}
                   >
-                     <Link to="*">Мира</Link>
-                     <Link to="*">Городов</Link>
+                     <Link to="*" onClick={toggleMenu}>
+                        Мира
+                     </Link>
+                     <Link to="*" onClick={toggleMenu}>
+                        Городов
+                     </Link>
                   </div>
                </div>
                <div className="header__nav__dropdown">
@@ -115,8 +145,12 @@ const Header = React.memo(() => {
                         openDropdown === 4 ? "active" : ""
                      }`}
                   >
-                     <Link to="/sheet">Лист Персонажа</Link>
-                     <Link to="/spell">Заклинания</Link>
+                     <Link to="/sheet" onClick={toggleMenu}>
+                        Лист Персонажа
+                     </Link>
+                     <Link to="/spell" onClick={toggleMenu}>
+                        Заклинания
+                     </Link>
                   </div>
                </div>
                <LogOff className="btn header__nav__btn" />
