@@ -7,18 +7,19 @@ import {
 import { useEffect } from "react";
 
 import "./App.css";
-import Main from "./components/Main";
-import TopBar from "./components/TopBar";
+
+import Header from "./components/Header/Header";
 import Marquee from "./components/Marquee";
+import MainFrame from "./components/MainFrame/MainFrame";
+import Footer from "./components/Footer/Footer";
+
 import LoginPage from "./pages/LoginPage";
-import Footer from "./components/Footer";
 
 function App() {
    const navigate = useNavigate();
    const token = localStorage.getItem("token");
 
-   const marqueeText = "Никто не знает когда будет игра.";
-
+   const marqueeText = "5 октября эта суббота. 14:00 - 19:00";
    // Используем useEffect для перенаправления
    useEffect(() => {
       if (!token) {
@@ -33,9 +34,9 @@ function App() {
 
    return (
       <div className="App">
-         <TopBar />
+         <Header />
          <Marquee text={marqueeText} />
-         <Main />
+         <MainFrame />
          <Footer />
       </div>
    );

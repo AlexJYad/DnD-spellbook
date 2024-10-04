@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Spell from "../components/Spell";
-import cards from "../data/cards.json";
-import "../CSS/spellCards.css";
-import ToggleSpell from "../components/ToggleSpell";
-import ScrollToTop from "../components/ScrollToTop";
+import Spell from "../../components/Spell";
+import cards from "../../data/cards.json";
+import "../../CSS/spellCards.css";
+import ToggleSpell from "../../components/Spells/ToggleSpell/ToggleSpell";
+import ScrollToTop from "../../components/ScrollToTop";
 
-export default function SpellPage() {
+export default function ProfileSpellPage() {
    const token = localStorage.getItem("token");
    const [userData, setUserData] = useState(null);
    const [filteredData, setFilteredData] = useState([]);
@@ -164,7 +164,7 @@ export default function SpellPage() {
                <option value="other">Прочее</option>
             </select>
 
-            <button onClick={handleReset}>
+            <button onClick={handleReset} className="btn">
                <h2>Reset</h2>
             </button>
          </div>

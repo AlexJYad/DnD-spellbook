@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import "../CSS/TopBar.css"; // Импортируем CSS-файл с стилями
-import Back from "./Back";
-import LogOff from "./LogOff";
+import "./Header.css";
+import LogOff from "../LogOff";
 import { Link } from "react-router-dom";
 
-const TopBar = React.memo(() => {
+const Header = React.memo(() => {
    const token = localStorage.getItem("token");
    const [menuOpen, setMenuOpen] = useState(false);
    const [openDropdown, setOpenDropdown] = useState(null);
@@ -15,38 +14,43 @@ const TopBar = React.memo(() => {
 
    const toggleDropdown = (index) => {
       if (openDropdown === index) {
-         setOpenDropdown(null); // Закрыть если уже открыт
+         setOpenDropdown(null);
       } else {
-         setOpenDropdown(index); // Открыть новый
+         setOpenDropdown(index);
       }
    };
 
    return (
-      <div className="topbar-container">
-         <div className="topbar-content">
+      <div className="header__container">
+         <div className="header__content">
             <Link to="/">
                <img
                   src={`${process.env.PUBLIC_URL}/favicon.ico`}
                   alt="Favicon"
-                  height={36}
-                  className="logo"
+                  className="btn header__logo"
                />
             </Link>
-            <div
-               className={`hamburger ${menuOpen ? "active" : ""}`}
+            <button
+               className={`header__hamburger ${menuOpen ? "active" : ""} btn`}
                onClick={toggleMenu}
             >
-               <div></div>
-               <div></div>
-               <div></div>
-            </div>
-            <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
-               <div className="dropdown">
-                  <button className="dropbtn" onClick={() => toggleDropdown(1)}>
+               <span className="header__hamburger-line"></span>
+               <span className="header__hamburger-line"></span>
+               <span className="header__hamburger-line"></span>
+            </button>
+
+            <nav className={`header__nav ${menuOpen ? "active" : ""}`}>
+               <div className="header__nav__dropdown">
+                  <button
+                     className={`btn header__nav__btn ${
+                        openDropdown === 1 ? "active" : ""
+                     }`}
+                     onClick={() => toggleDropdown(1)}
+                  >
                      <h2>Правила</h2>
                   </button>
                   <div
-                     className={`dropdown-content ${
+                     className={`header__nav__btn__drop ${
                         openDropdown === 1 ? "active" : ""
                      }`}
                   >
@@ -56,12 +60,17 @@ const TopBar = React.memo(() => {
                      <Link to="*">D&D</Link>
                   </div>
                </div>
-               <div className="dropdown">
-                  <button className="dropbtn" onClick={() => toggleDropdown(2)}>
+               <div className="header__nav__dropdown">
+                  <button
+                     className={`btn header__nav__btn ${
+                        openDropdown === 2 ? "active" : ""
+                     }`}
+                     onClick={() => toggleDropdown(2)}
+                  >
                      <h2>Лор</h2>
                   </button>
                   <div
-                     className={`dropdown-content ${
+                     className={`header__nav__btn__drop ${
                         openDropdown === 2 ? "active" : ""
                      }`}
                   >
@@ -74,12 +83,17 @@ const TopBar = React.memo(() => {
                      <Link to="*">Города</Link>
                   </div>
                </div>
-               <div className="dropdown">
-                  <button className="dropbtn" onClick={() => toggleDropdown(3)}>
+               <div className="header__nav__dropdown">
+                  <button
+                     className={`btn header__nav__btn ${
+                        openDropdown === 3 ? "active" : ""
+                     }`}
+                     onClick={() => toggleDropdown(3)}
+                  >
                      <h2>Карта</h2>
                   </button>
                   <div
-                     className={`dropdown-content ${
+                     className={`header__nav__btn__drop ${
                         openDropdown === 3 ? "active" : ""
                      }`}
                   >
@@ -87,12 +101,17 @@ const TopBar = React.memo(() => {
                      <Link to="*">Городов</Link>
                   </div>
                </div>
-               <div className="dropdown">
-                  <button className="dropbtn" onClick={() => toggleDropdown(4)}>
+               <div className="header__nav__dropdown">
+                  <button
+                     className={`btn header__nav__btn ${
+                        openDropdown === 4 ? "active" : ""
+                     }`}
+                     onClick={() => toggleDropdown(4)}
+                  >
                      <h2>{token}</h2>
                   </button>
                   <div
-                     className={`dropdown-content ${
+                     className={`header__nav__btn__drop ${
                         openDropdown === 4 ? "active" : ""
                      }`}
                   >
@@ -100,12 +119,11 @@ const TopBar = React.memo(() => {
                      <Link to="/spell">Заклинания</Link>
                   </div>
                </div>
-               <LogOff className="btn" />
-               <Back className="btn" />
+               <LogOff className="btn header__nav__btn" />
             </nav>
          </div>
       </div>
    );
 });
 
-export default TopBar;
+export default Header;

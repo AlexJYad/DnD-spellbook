@@ -1,6 +1,6 @@
 import React from "react";
 
-const HistoryPage = () => {
+const LoreHistoryPage = () => {
    return (
       <div className="container">
          <h1>История Мира</h1>
@@ -180,4 +180,4 @@ const HistoryPage = () => {
    );
 };
 
-export default HistoryPage;
+export default LoreHistoryPage;

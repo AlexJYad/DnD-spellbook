@@ -2,6 +2,14 @@ import "../CSS/HomePage.css";
 
 export default function HomePage() {
    const news = `
+   <h4>Обновление: Beta 1.0.5</h4>
+   <p><em>Дата обновления:</em> <strong>4 октября 2024 года</strong></p>
+   <ul>
+     <li>Начат процесс реструктуризации CSS.</li>
+     <li>Изменен <strong>hamburger</strong> в мобильной версии меню.</li>
+     <li>Доработано <strong>верхнее меню</strong>.</li>
+   </ul>
+   <br>
    <h4>Обновление: Beta 1.0.4</h4>
    <p><em>Дата обновления:</em> <strong>26 сентября 2024 года</strong></p>
    <ul>
@@ -17,10 +25,6 @@ export default function HomePage() {
       <div className="inner-main">
          <h1>LOGIN</h1>
          <h2>&#x262F; Black And White &#x262F;</h2>
-         <div
-            className="news-container"
-            dangerouslySetInnerHTML={{ __html: news }}
-         />
          <ul className="link-list">
             <li>
                <a
@@ -60,6 +64,10 @@ export default function HomePage() {
                </a>
             </li>
          </ul>
+         <div
+            className="news-container"
+            dangerouslySetInnerHTML={{ __html: news }}
+         />
       </div>
    );
 }

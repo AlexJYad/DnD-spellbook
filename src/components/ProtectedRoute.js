@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from "react";
-import "../CSS/Main.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export default function ProtectedRoute({ component: Component }) {
@@ -103,7 +102,7 @@ export default function ProtectedRoute({ component: Component }) {
                onClick={toggleOpen}
                style={{ cursor: "pointer" }}
             >
-               <button className="toggleable-btn">
+               <button className="btn toggleable-btn">
                   <h2>{name}</h2>
                </button>
             </div>

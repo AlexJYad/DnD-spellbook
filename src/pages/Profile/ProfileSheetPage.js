@@ -1,14 +1,14 @@
-import Ability from "../components/Ability";
+import Ability from "../../components/Ability";
 // import Saves from "../components/Saves";
-import SpellesSlots from "../components/SpellesSlots";
-import "../CSS/chSheet.css";
+import SpellesSlots from "../../components/SpellesSlots";
+import "../../CSS/chSheet.css";
 import { useEffect, useState } from "react";
-import scr from "../img/background/c-frame.webp";
-import { getNum } from "../utils/getNum";
-import { getValues } from "../utils/getValues";
-import sign from "../img/background/frame-signature.webp";
+import scr from "../../img/background/c-frame.webp";
+import { getNum } from "../../utils/getNum";
+import { getValues } from "../../utils/getValues";
+import sign from "../../img/background/frame-signature.webp";
 
-export default function ChSheetPage(props) {
+export default function ProfileSheetPage(props) {
    useEffect(() => {
       document.title = "Лист Персонажа";
    }, []);
@@ -135,7 +135,7 @@ export default function ChSheetPage(props) {
                   <div className="helth-hits-temporary">
                      <div className="helth-counter-wrapper">
                         <button
-                           className="increment count-input-btn hits"
+                           className="btn increment count-input-btn hits"
                            onClick={incrementTemporaryHits}
                            disabled={temporaryHits === 15}
                         >
@@ -149,7 +149,7 @@ export default function ChSheetPage(props) {
                         />
 
                         <button
-                           className="decrement count-input-btn hits"
+                           className="btn decrement count-input-btn hits"
                            onClick={decrementTemporaryHits}
                            disabled={temporaryHits === 0}
                         >
@@ -191,7 +191,7 @@ export default function ChSheetPage(props) {
                   <p className="initiative white-shadow">Инициатива</p>
                   <div className="initiative-counter-wrapper">
                      <button
-                        className="increment count-input-btn"
+                        className="btn increment count-input-btn"
                         onClick={incrementInitiative}
                         disabled={initiative === 15}
                      >
@@ -205,7 +205,7 @@ export default function ChSheetPage(props) {
                      />
 
                      <button
-                        className="decrement count-input-btn in"
+                        className="btn decrement count-input-btn in"
                         onClick={decrementInitiative}
                         disabled={initiative === 0}
                      >

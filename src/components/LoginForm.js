@@ -74,10 +74,15 @@ export default function LoginForm() {
                </div>
             )}
             <div className="login-buttons">
-               <button type="submit" value="Login">
+               <button className="btn btn--sharp" type="submit" value="Login">
                   Login
                </button>
-               <button type="reset" value="Reset" onClick={handleReset}>
+               <button
+                  className="btn btn--sharp"
+                  type="reset"
+                  value="Reset"
+                  onClick={handleReset}
+               >
                   Reset
                </button>
             </div>

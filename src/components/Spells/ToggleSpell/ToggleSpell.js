@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useCallback } from "react";
-import verbal from "../img/bookmark/mounth.webp";
-import somatic from "../img/bookmark/hand.webp";
-import material from "../img/bookmark/cristal.webp";
-import "../CSS/ToggleSpell.css"; // Подключите ваш CSS файл
+import verbal from "../../../img/bookmark/mounth.webp";
+import somatic from "../../../img/bookmark/hand.webp";
+import material from "../../../img/bookmark/cristal.webp";
+import "./ToggleSpell.css"; // Подключите ваш CSS файл
 
 export default function ToggleSpell({ props }) {
    const titleRef = useRef(null);
