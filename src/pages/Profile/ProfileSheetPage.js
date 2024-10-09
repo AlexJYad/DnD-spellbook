@@ -1,7 +1,7 @@
-import Ability from "../../components/Ability";
+import Ability from "../../components/ProfileSheet/Ability";
 // import Saves from "../components/Saves";
-import SpellesSlots from "../../components/SpellesSlots";
-import "../../CSS/chSheet.css";
+import SpellesSlots from "../../components/ProfileSheet/SpellesSlots";
+import "../../components/ProfileSheet/chSheet.css";
 import { useEffect, useState } from "react";
 import scr from "../../img/background/c-frame.webp";
 import { getNum } from "../../utils/getNum";

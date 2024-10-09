@@ -1,4 +1,4 @@
-import { getNum } from "../utils/getNum";
+import { getNum } from "../../utils/getNum";
 
 export default function Ability({
    id,

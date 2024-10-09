@@ -31,6 +31,7 @@ export default function HomePage() {
                <a
                   href="https://docs.google.com/document/d/1NhxL-2-UMzHXZroaGdHpmkQ82hommwAuRfTjHw4xkOE/edit?tab=t.0#heading=h.6c63uivas3pd"
                   data-symbol="📜"
+                  target="_blank"
                >
                   Правила
                </a>
@@ -39,12 +40,17 @@ export default function HomePage() {
                <a
                   href=" https://drive.google.com/drive/folders/1CNGQq8Rxdielqe_IJ5XP_kt_q3XPxNDb"
                   data-symbol="📂"
+                  target="_blank"
                >
                   Файлы игры
                </a>
             </li>
             <li>
-               <a href="https://w2g.tv/?r=16dtz6alo4ag9jdxby" data-symbol="🎶">
+               <a
+                  href="https://w2g.tv/?r=16dtz6alo4ag9jdxby"
+                  data-symbol="🎶"
+                  target="_blank"
+               >
                   Атмосферная музыка для игры
                </a>
             </li>
@@ -52,6 +58,7 @@ export default function HomePage() {
                <a
                   href="https://rolldicewithfriends.com/rooms/blackandwight"
                   data-symbol="🎲"
+                  target="_blank"
                >
                   Dice roll
                </a>
@@ -60,6 +67,7 @@ export default function HomePage() {
                <a
                   href="https://docs.google.com/spreadsheets/d/14M-Oa3vs3zgYOY1gd_GiPmWjKFX5l1TY3aZdPUdcfDM/edit?usp=drive_link"
                   data-symbol="📅"
+                  target="_blank"
                >
                   Dating App
                </a>

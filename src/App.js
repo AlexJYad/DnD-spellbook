@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import "./App.css";
 
 import Header from "./components/Header/Header";
-import Marquee from "./components/Marquee";
+import Marquee from "./components/Marquee/Marquee";
 import MainFrame from "./components/MainFrame/MainFrame";
 import Footer from "./components/Footer/Footer";
 
@@ -19,7 +19,8 @@ function App() {
    const navigate = useNavigate();
    const token = localStorage.getItem("token");
 
-   const marqueeText = "5 октября эта суббота. 14:00 - 19:00";
+   const marqueeText = "AAAAAAAAAAAAA"; //"Magic doesn't have Morality";
+
    // Используем useEffect для перенаправления
    useEffect(() => {
       if (!token) {

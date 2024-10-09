@@ -1,0 +1,30 @@
+.marquee {
+   width: 100vw; /* Занимает всю ширину контейнера */
+   overflow: hidden; /* Скрывает содержимое, выходящее за пределы контейнера */
+   position: relative;
+   background-color: #f0f0f0; /* Цвет фона */
+   padding: 10px 0; /* Отступы сверху и снизу */
+}
+
+.marquee__container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.marquee__text {
+   flex: 0 0 auto;
+   font-weight: 700;
+   color: brown;
+   white-space: nowrap; /* Предотвращает перенос внутри текста */
+   padding-right: 50px; /* Отступ между текстом и краем контейнера */
+}
+
+/* @keyframes marquee {
+   0% {
+      transform: translateX(0%);
+   }
+   100% {
+      transform: translateX(-100%);
+   }
+} */

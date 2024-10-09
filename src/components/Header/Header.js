@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import LogOff from "../LogOff";
+import LogOff from "../LogInLogOut/LogOff";
 import { Link } from "react-router-dom";
 
 const Header = React.memo(() => {

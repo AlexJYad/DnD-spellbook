@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Spell from "../../components/Spell";
+import Spell from "../../components/Spells/Spell";
 import cards from "../../data/cards.json";
-import "../../CSS/spellCards.css";
+import "../../components/Spells/spellCards.css";
 import ToggleSpell from "../../components/Spells/ToggleSpell/ToggleSpell";
 import ScrollToTop from "../../components/ScrollToTop";
 

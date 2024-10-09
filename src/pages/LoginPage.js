@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import imageAdtUrl from "../img/announcement.png";
 import { useNavigate } from "react-router-dom";
-import LoginForm from "../components/LoginForm";
+import LoginForm from "../components/LogInLogOut/LoginForm";
 
 export default function LoginPage() {
    const navigate = useNavigate();
