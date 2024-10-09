@@ -4,8 +4,6 @@
    padding: 20px;
    background-color: rgba(249, 238, 220, 0.6);
    border-radius: 10px; /* Закруглённые углы */
-   margin-bottom: 30px;
-   margin-top: 20px;
 }
 
 .news-container ul {
@@ -23,9 +21,16 @@
    color: brown; /* Золотой цвет для символа */
 }
 
+.news-container ul > ul {
+   padding-left: 16px;
+   li:before {
+      content: "\27A4"; /* Добавляем символ звезды перед каждым пунктом */
+      color: darkred; /* Золотой цвет для символа */
+   }
+}
 .link-list {
    list-style: none; /* Убираем маркеры списка */
-   padding: 0; /* Убираем внутренний отступ */
+   padding: 1em 0; /* Убираем внутренний отступ */
    margin: 0; /* Убираем внешний отступ */
    display: flex;
    flex-direction: column;

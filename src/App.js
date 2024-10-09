@@ -19,7 +19,7 @@ function App() {
    const navigate = useNavigate();
    const token = localStorage.getItem("token");
 
-   const marqueeText = "AAAAAAAAAAAAA"; //"Magic doesn't have Morality";
+   const marqueeText = "Magic doesn't have Morality";
 
    // Используем useEffect для перенаправления
    useEffect(() => {

@@ -2,6 +2,17 @@ import "../CSS/HomePage.css";
 
 export default function HomePage() {
    const news = `
+   <h4>Обновление: Beta 1.0.6</h4>
+   <p><em>Дата обновления:</em> <strong>9 октября 2024 года</strong></p>
+   <ul>
+     <li>Исправлена <strong>бегущая строка</strong></li>
+     <ul>
+      <li>Бегущая строка останавливается <em>при наведении</em></li>
+      <li>Бегущая строка меняет состояние <em>при нажатии</em></li>
+     </ul>
+     <li>Ссылки из домашней страницы открываются в новых вкладках <strong>автоматически</strong></li>
+   </ul>
+   <br>
    <h4>Обновление: Beta 1.0.5</h4>
    <p><em>Дата обновления:</em> <strong>4 октября 2024 года</strong></p>
    <ul>
@@ -32,6 +43,7 @@ export default function HomePage() {
                   href="https://docs.google.com/document/d/1NhxL-2-UMzHXZroaGdHpmkQ82hommwAuRfTjHw4xkOE/edit?tab=t.0#heading=h.6c63uivas3pd"
                   data-symbol="📜"
                   target="_blank"
+                  rel="noreferrer"
                >
                   Правила
                </a>
@@ -41,6 +53,7 @@ export default function HomePage() {
                   href=" https://drive.google.com/drive/folders/1CNGQq8Rxdielqe_IJ5XP_kt_q3XPxNDb"
                   data-symbol="📂"
                   target="_blank"
+                  rel="noreferrer"
                >
                   Файлы игры
                </a>
@@ -50,6 +63,7 @@ export default function HomePage() {
                   href="https://w2g.tv/?r=16dtz6alo4ag9jdxby"
                   data-symbol="🎶"
                   target="_blank"
+                  rel="noreferrer"
                >
                   Атмосферная музыка для игры
                </a>
@@ -59,6 +73,7 @@ export default function HomePage() {
                   href="https://rolldicewithfriends.com/rooms/blackandwight"
                   data-symbol="🎲"
                   target="_blank"
+                  rel="noreferrer"
                >
                   Dice roll
                </a>
@@ -68,6 +83,7 @@ export default function HomePage() {
                   href="https://docs.google.com/spreadsheets/d/14M-Oa3vs3zgYOY1gd_GiPmWjKFX5l1TY3aZdPUdcfDM/edit?usp=drive_link"
                   data-symbol="📅"
                   target="_blank"
+                  rel="noreferrer"
                >
                   Dating App
                </a>
