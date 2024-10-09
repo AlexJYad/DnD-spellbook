@@ -9,7 +9,10 @@ const Marquee = React.memo(({ text }) => {
    };
 
    return (
-      <div onClick={toggleMarquee} style={{ cursor: "pointer" }}>
+      <div
+         onClick={toggleMarquee}
+         style={{ cursor: "pointer", width: "100vw" }}
+      >
          <ReactMarquee
             className="marquee"
             autoFill="true"
