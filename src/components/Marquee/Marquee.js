@@ -1,4 +1,4 @@
-// import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactMarquee from "react-fast-marquee";
 import "./Marquee.css";
 
