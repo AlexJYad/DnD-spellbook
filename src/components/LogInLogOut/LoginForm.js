@@ -15,10 +15,7 @@ export default function LoginForm() {
 
       // Отправка данных на сервер или проверка логина (этот код просто для примера)
       if (username === "admin" && password === "admin") {
-         localStorage.setItem("token", "all");
-         window.location.reload();
-      } else if (username === "admin" && password === "admin") {
-         localStorage.setItem("token", "all");
+         localStorage.setItem("token", "Admin");
          window.location.reload();
       } else if (username === "Talico" && password === "C2aGY") {
          localStorage.setItem("token", "Талико");
@@ -31,6 +28,9 @@ export default function LoginForm() {
          window.location.reload();
       } else if (username === "Eulebia" && password === "non0D") {
          localStorage.setItem("token", "Евлебия");
+         window.location.reload();
+      } else if (username === "test" && password === "test") {
+         localStorage.setItem("token", "test");
          window.location.reload();
       } else {
          setError("Invalid username or password.");

@@ -11,7 +11,7 @@ export default function ProtectedRoute({ component: Component }) {
          try {
             let jsonFiles = [];
 
-            if (token === "all" && componentPath.includes("/sheet")) {
+            if (token === "Admin" && componentPath.includes("/sheet")) {
                // Загрузка нескольких файлов для случая "all" и "/sheet"
                jsonFiles = [
                   "/data/chicken.json",
@@ -43,6 +43,12 @@ export default function ProtectedRoute({ component: Component }) {
                   jsonFiles = ["/data/test.json"];
                } else if (componentPath.includes("/sheet")) {
                   jsonFiles = ["/data/eulebia.json"];
+               }
+            } else if (token === "test") {
+               if (componentPath.includes("/info")) {
+                  jsonFiles = ["/data/test.json"];
+               } else if (componentPath.includes("/sheet")) {
+                  jsonFiles = ["/data/test.json"];
                }
             } else {
                navigate("/");

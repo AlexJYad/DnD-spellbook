@@ -13,6 +13,7 @@ export default function ProfileSpellPage() {
    const [filterSelect, setFilterSelect] = useState("all");
    const [filterSchooles, setFilterSchooles] = useState("all");
    const [filterTypes, setFilterTypes] = useState("all");
+
    const random = {
       title: "Кара",
       school: "goddess",
@@ -51,7 +52,7 @@ export default function ProfileSpellPage() {
    };
 
    const handleReset = () => {
-      setFilterPlayers("all");
+      setFilterPlayers("Admin");
       setFilterSelect("all");
       setFilterSchooles("all");
       setFilterTypes("all");
@@ -62,9 +63,9 @@ export default function ProfileSpellPage() {
 
       let filtered = userData;
 
-      if (token !== "all") {
+      if (token !== "Admin") {
          filtered = filtered.filter((card) => card.player.includes(token));
-      } else if (filterPlayers !== "all") {
+      } else if (filterPlayers !== "Admin") {
          filtered = filtered.filter((card) =>
             card.player.includes(filterPlayers)
          );
@@ -101,13 +102,13 @@ export default function ProfileSpellPage() {
    return (
       <div className="spell-gallery">
          <div className="selector">
-            {token === "all" && (
+            {token === "Admin" && (
                <select
                   id="filterPlayers"
                   onChange={handlePlayerChange}
                   value={filterPlayers}
                >
-                  <option value="all">All</option>
+                  <option value="Admin">All</option>
                   <option value="Олёй">Олёй</option>
                   <option value="Юджин">Юджин</option>
                   <option value="Талико">Талико</option>
@@ -133,7 +134,7 @@ export default function ProfileSpellPage() {
                <option value="*">СуперНова (* уровень)</option>
             </select>
 
-            {(token === "all" || token === "Олёй") && (
+            {(token === "Admin" || token === "Олёй") && (
                <select
                   id="filterSchooles"
                   onChange={handleSchoolesChange}
@@ -141,7 +142,7 @@ export default function ProfileSpellPage() {
                >
                   <option value="all">All</option>
                   <option value="white">Белая</option>
-                  {token === "all" && (
+                  {token === "Admin" && (
                      <>
                         <option value="black">Черная</option>
                         <option value="goddess">Божественная</option>
@@ -170,7 +171,7 @@ export default function ProfileSpellPage() {
          </div>
 
          <div className="container-spell">
-            {token === "Юджин" || token === "all" ? (
+            {token === "Юджин" || token === "Admin" ? (
                <ToggleSpell props={random} />
             ) : (
                ""
