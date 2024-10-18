@@ -19,6 +19,19 @@
       1px -1px 1.3px #fff, -1px 1px 1.3px #fff, 1px 1px 1.3px #fff;
 }
 
+.sheet--styled-container {
+   background-color: #fff2e6;
+   position: relative;
+   border: 3px solid #2d210b;
+   border-radius: 3px;
+}
+
+.sheet--img-bg {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
 /* ------ CUSTOM BORDER ------ */
 .custom-border {
    width: calc(100% - 42px);
@@ -119,14 +132,8 @@
 }
 
 .ability {
-   background-color: #fff2e6;
-
-   position: relative;
-   border: 3px solid #2d210b;
-   border-radius: 3px;
-
    & .flag {
-      background-image: url("../../img/background/s-flag.webp");
+      background-image: url("../../img/background/flag--S.webp");
       width: 30%;
       aspect-ratio: 1 / 1;
       position: absolute;
@@ -148,7 +155,7 @@
       position: absolute;
       top: 55%;
       left: -3%;
-      background-image: url("../../img/background/xs-flag.webp");
+      background-image: url("../../img/background/flag--XS.webp");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -167,14 +174,15 @@
 }
 
 .flag {
-   background-image: url("../../img/background/m-flag.webp");
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: contain;
+   background-image: url("../../img/background/flag--M.webp");
    text-wrap: wrap;
    text-align: center;
    width: 100%;
    aspect-ratio: 1 / 1;
+}
+
+.flag__second {
+   background-image: url("../../img/background/flag--M__2.webp");
 }
 
 .name {
@@ -625,68 +633,94 @@
    left: 107px;
 }
 
-/* ------------------- */
+/* -------------------------- */
+/* -------- SAVES ----------- */
 
-.saves {
-   background-image: url("../../img/background/saves.webp");
-   border: 1px solid black;
-   width: 10%;
-   aspect-ratio: 1 / 1;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: contain;
+.sheet--saves {
+   width: 150px;
+   height: 124px;
    position: absolute;
-   bottom: 20%;
-   left: 28.5%;
-   display: grid;
-   padding-top: 1%;
-   grid-template-rows: 1fr 2fr 2fr;
+   bottom: 333px;
+   left: 345px;
+   display: flex;
+   justify-content: center;
 
-   .saves_name {
+   .saves--name {
+      width: 100px;
+      height: 50px;
+      background-image: url("../../img/background/flag--L.png");
       font-size: 0.8em;
-      grid-row: 1/2;
-   }
-   .life,
-   .death {
-      align-items: center;
+      position: absolute;
+      top: -14.5px;
+      left: 5px;
+      display: flex;
       justify-content: center;
-      height: 100%;
-      .label {
-         /* align-items: center; */
-         justify-content: center;
-         display: grid;
-         height: 100%;
-         grid-template-columns: 1fr 1fr 1fr;
-         label {
-            justify-self: center;
-            align-self: center;
-         }
-         & span {
-            background-color: rgba(1, 1, 1, 0);
-            width: 70%;
-            height: 70%;
-            min-height: 15px;
-            min-width: 15px;
-            aspect-ratio: 1 / 1;
-         }
-      }
-   }
-   .death {
-      grid-row: 2/3;
-      .label input[type="checkbox"]:checked + span {
-         background-color: black;
-      }
+      padding-top: 10px;
    }
 
-   & .life {
-      grid-row: 3/4;
-      & .label input[type="checkbox"]:checked + span {
-         background-color: white;
-      }
+   .sheet--saves-container {
+      width: calc(100% - 25px);
+      height: calc(100% - 45px);
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 5px;
+   }
 
-      .label label {
-         align-self: start;
-      }
+   /* Фоновый градиент для активных чекбоксов */
+   .saves--death-bg,
+   .saves--life-bg {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      cursor: pointer;
+      background: none;
+   }
+
+   /* Градиент для активного состояния */
+   .saves--death-bg.active,
+   .saves--life-bg.active {
+      background: radial-gradient(
+         circle,
+         rgb(125, 7, 7) 0%,
+         rgb(225, 18, 18) 42%,
+         rgb(120, 20, 20) 72%,
+         rgb(221, 74, 74) 100%
+      );
+      background-size: 200% 200%; /* To allow gradient animation */
+      background-position: 0% 50%; /* Initial position */
+   }
+
+   .saves--life-bg.active {
+      background: radial-gradient(
+         circle,
+         rgb(142, 190, 197) 0%,
+         rgb(100, 139, 121) 42%,
+         rgb(21, 94, 57) 72%,
+         rgb(74, 221, 138) 100%
+      );
+   }
+
+   /* Статические изображения для чекбоксов */
+   .saves--death-coin,
+   .saves--life-coin {
+      background-image: url("../../img/background/scull.webp");
+      width: 39px;
+      height: 39px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%); /* Compatibility */
+   }
+
+   .saves--life-coin {
+      background-image: url("../../img/background/heart.webp");
    }
 }
 

@@ -1,5 +1,5 @@
 import Ability from "../../components/ProfileSheet/Ability";
-// import Saves from "../components/Saves";
+import Saves from "../../components/ProfileSheet/Saves";
 import SpellesSlots from "../../components/ProfileSheet/SpellesSlots";
 import "../../components/ProfileSheet/chSheet.css";
 import { useEffect, useState } from "react";
@@ -69,15 +69,15 @@ export default function ProfileSheetPage(props) {
                <img src={sign} alt="signature" className="signature" />
                <div className="mobile-grid">
                   <div className="flagstop">
-                     <div id="age" className="flag">
+                     <div id="age" className="flag sheet--img-bg">
                         <h3>Возраст</h3>
                         <p>{info.age}</p>
                      </div>
-                     <div className="flag m-flag">
+                     <div className="flag flag__second sheet--img-bg">
                         <h3>Опыт</h3>
                         <p>{info.experience}</p>
                      </div>
-                     <div className="flag">
+                     <div className="flag sheet--img-bg">
                         <h3>Уровень</h3>
                         <p>{getValues(info.experience).level}</p>
                      </div>
@@ -89,8 +89,8 @@ export default function ProfileSheetPage(props) {
                   </div>
 
                   <div className="abilities">
-                     <div className="ability">
-                        <div className="flag">
+                     <div className="ability sheet--styled-container">
+                        <div className="flag sheet--img-bg">
                            <div className="num">
                               {getValues(info.experience).proficiencyname}
                            </div>
@@ -135,25 +135,25 @@ export default function ProfileSheetPage(props) {
                   <div className="helth-hits-temporary">
                      <div className="helth-counter-wrapper">
                         <button
-                           className="btn increment count-input-btn hits"
-                           onClick={incrementTemporaryHits}
-                           disabled={temporaryHits === 15}
+                           className="btn decrement count-input-btn hits"
+                           onClick={decrementTemporaryHits}
+                           disabled={temporaryHits === 0}
                         >
-                           +
+                           -
                         </button>
+
                         <input
                            type="text"
                            className="count-input hits"
                            value={temporaryHits}
                            readOnly
                         />
-
                         <button
-                           className="btn decrement count-input-btn hits"
-                           onClick={decrementTemporaryHits}
-                           disabled={temporaryHits === 0}
+                           className="btn increment count-input-btn hits"
+                           onClick={incrementTemporaryHits}
+                           disabled={temporaryHits === 15}
                         >
-                           -
+                           +
                         </button>
                      </div>
                      <div className="helth-hits-temporary-text">
@@ -220,15 +220,7 @@ export default function ProfileSheetPage(props) {
                      <h3>(6k)</h3>
                   </div>
                </div>
-
-               {/* 
-               <Saves /> */}
-               {/* 
-               <div class="textarea-1">
-                  <textarea name="" id="" c>
-                     Пицца с ананасами
-                  </textarea>
-               </div> */}
+               <Saves />
             </div>
          </div>
       </>

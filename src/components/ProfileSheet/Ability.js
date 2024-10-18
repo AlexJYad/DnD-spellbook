@@ -9,8 +9,8 @@ export default function Ability({
    proficiencyname,
 }) {
    return (
-      <div id={id} className="ability">
-         <div className="flag">
+      <div id={id} className="ability sheet--styled-container">
+         <div className="flag sheet--img-bg">
             <div className="num">
                {safebox ? proficiencyname + getNum(level) : getNum(level)}
             </div>
