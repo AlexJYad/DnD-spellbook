@@ -7,8 +7,32 @@ import scr from "../../img/background/c-frame.webp";
 import { getNum } from "../../utils/getNum";
 import { getValues } from "../../utils/getValues";
 import sign from "../../img/background/frame-signature.webp";
+import ItemList from "../../components/ProfileSheet/ItemList";
 
 export default function ProfileSheetPage(props) {
+   const initialItems = [
+      "Элемент 1",
+      "Элемент 2",
+      "Элемент 3",
+      "Элемент 4",
+      "Элемент 5",
+      "Элемент 6",
+      "Элемент 7",
+      "Элемент 8",
+      "Элемент 9",
+      "Элемент 10",
+      "Элемент 11",
+      "Элемент 12",
+      "Элемент 13",
+      "Элемент 14",
+      "Элемент 15",
+      "Элемент 16",
+      "Элемент 17",
+      "Элемент 18",
+      "Элемент 19",
+      "Элемент 20",
+   ];
+
    useEffect(() => {
       document.title = "Лист Персонажа";
    }, []);
@@ -221,6 +245,11 @@ export default function ProfileSheetPage(props) {
                   </div>
                </div>
                <Saves />
+               <ItemList
+                  initialItems={initialItems}
+                  // containerClass="sheet--container-sth"
+                  // ulAreaClass="sheet--ularea-sth"
+               />
             </div>
          </div>
       </>

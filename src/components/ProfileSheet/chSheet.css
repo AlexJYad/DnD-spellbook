@@ -724,25 +724,73 @@
    }
 }
 
-.textarea-1 {
-   position: absolute;
-   bottom: 54px;
-   left: 169px;
+/* ------------------------------ */
 
-   & textarea {
-      width: 100px;
-      height: 150px;
-      padding: 12px 10px 10px 20px;
-      font-size: 8px;
-      resize: none;
-   }
+.sheet--container-scroll {
+   position: absolute;
+   bottom: 63px;
+   left: 330px;
+   background-image: url("../../img/background/scroll.webp");
+   width: 250px;
+   height: 250px;
 }
 
-.sheet textarea {
-   background: none;
+.sheet--ularea-scroll:focus {
+   outline: none;
+}
+
+.sheet--ularea::-webkit-scrollbar {
+   width: 3px; /* Ширина скролла */
+}
+
+.sheet--ularea::-webkit-scrollbar-track {
+   background: transparent; /* Цвет фона скролла */
+   border-radius: 4px; /* Закругление углов трека */
+}
+
+.sheet--ularea::-webkit-scrollbar-thumb {
+   background: rgb(230, 219, 199); /* Цвет ползунка скролла */
+   border-radius: 2px; /* Закругление углов ползунка */
+}
+
+.sheet--ularea::-webkit-scrollbar-thumb:hover {
+   background: brown; /* Цвет ползунка при наведении */
+}
+
+.sheet--ularea {
+   position: relative;
+   top: 15px;
+   left: 25px;
+   width: 126px;
+   height: 180px;
+   background: transparent;
    border: none;
-   font-family: "Luminari";
-   color: #2d210b;
+   white-space: pre-wrap;
+   word-wrap: break-word;
+   overflow: auto;
+   resize: none;
+   overflow-x: hidden;
+
+   input {
+      border: none;
+      border-top: 6px double #382719;
+      background-color: rgba(236, 224, 215, 0.3);
+      border-radius: 0;
+      margin-left: 13px;
+      width: 88%;
+      box-sizing: border-box;
+      &:focus {
+         outline: none;
+      }
+   }
+
+   button {
+      border: none;
+      color: brown;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 800;
+   }
 }
 
 @media (max-width: 1000px) {
