@@ -21,16 +21,6 @@ export default function ProfileSheetPage(props) {
       "Элемент 8",
       "Элемент 9",
       "Элемент 10",
-      "Элемент 11",
-      "Элемент 12",
-      "Элемент 13",
-      "Элемент 14",
-      "Элемент 15",
-      "Элемент 16",
-      "Элемент 17",
-      "Элемент 18",
-      "Элемент 19",
-      "Элемент 20",
    ];
 
    useEffect(() => {
@@ -138,25 +128,25 @@ export default function ProfileSheetPage(props) {
                   ))}
                </div>
                <div className="parameters">
-                  <div className="crown">
+                  <div className="crown sheet--img-bg flex">
                      <p>&#10022;</p>
                   </div>
-                  <div className="crystal-ball">
+                  <div className="crystal-ball sheet--img-bg flex">
                      <div className="attentiveness">
                         <h2>{attentiveness}</h2>
                         <p>Внимание</p>
                      </div>
                   </div>
-                  <div className="dice white-shadow">
+                  <div className="dice white-shadow sheet--img-bg flex">
                      <p>{info.main}</p>
                   </div>
-                  <div className="vision">
-                     <p>Зрение: О</p>
+                  <div className="vision sheet--img-bg flex">
+                     <p>&#10022;</p>
                   </div>
                </div>
 
                <div className="health-hits">
-                  <div className="helth-hits-temporary">
+                  <div className="helth-hits-temporary sheet--img-bg">
                      <div className="helth-counter-wrapper">
                         <button
                            className="btn decrement count-input-btn hits"
@@ -184,7 +174,7 @@ export default function ProfileSheetPage(props) {
                         <p>Временные Хиты</p>
                      </div>
                   </div>
-                  <div className="health-hits-main">
+                  <div className="health-hits-main sheet--img-bg">
                      <div className="health-hits-main-dice">
                         <h2>{}d8</h2>
                         <p>кость здоровья</p>
@@ -250,6 +240,26 @@ export default function ProfileSheetPage(props) {
                   // containerClass="sheet--container-sth"
                   // ulAreaClass="sheet--ularea-sth"
                />
+
+               <div className="sheet--coins sheet--img-bg">
+                  <div className="sheet--coins-grid">
+                     <div className="sheet--coin sheet--coin__cp flex">1k</div>
+                     <div className="sheet--coin sheet--coin__sp flex">100</div>
+                     <div className="sheet--coin sheet--coin__ep flex">50</div>
+                     <div className="sheet--coin sheet--coin__gp flex">10</div>
+                     <div className="sheet--coin sheet--coin__pp flex">1</div>
+                  </div>
+               </div>
+               <div className="sheet--styled-container sheet--weapon flex">
+                  <div className="sheet--weapon-name sheet--img-bg flex">
+                     Оружие
+                  </div>
+               </div>
+               <div className="sheet--styled-container sheet--inventory flex">
+                  <div className="sheet--inventory-name sheet--img-bg flex">
+                     Инвентарь
+                  </div>
+               </div>
             </div>
          </div>
       </>
