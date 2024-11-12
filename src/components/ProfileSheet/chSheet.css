@@ -361,11 +361,28 @@
    left: 42px;
    background-image: url("../../img/background/crown.webp");
    p {
-      color: white;
+      position: absolute;
       margin-top: 35px;
       transform: rotate(6deg);
       font-size: 100px;
       line-height: 0;
+      &.second {
+         font-size: 42px;
+         right: 22px;
+         bottom: 22px;
+         text-shadow: none;
+      }
+      &.third {
+         font-size: 63px;
+         right: 23.7px;
+         bottom: 26.5px;
+         text-shadow: none;
+      }
+      &.fourth {
+         font-size: 54px;
+         right: 23px;
+         bottom: 23px;
+      }
    }
 }
 .crystal-ball {
@@ -395,11 +412,15 @@
    width: 150px;
    background-image: url("../../img/background/eye.webp");
    p {
-      color: white;
-      font-size: 42px;
+      font-size: 53px;
       position: absolute;
-      top: 60px;
+      top: 49px;
       right: 42px;
+      &.second {
+         font-size: 40px;
+         top: 58px;
+         right: 47px;
+      }
    }
 }
 
@@ -652,7 +673,6 @@
       width: 100px;
       height: 50px;
       background-image: url("../../img/background/flag--L.png");
-      font-size: 0.8em;
       top: -14.5px;
       left: 5px;
       display: flex;
@@ -738,6 +758,12 @@
    height: 250px;
 }
 
+.sheet--scroll-name {
+   position: absolute;
+   top: 10px;
+   left: 36px;
+}
+
 .sheet--ularea-scroll:focus {
    outline: none;
 }
@@ -762,8 +788,8 @@
 
 .sheet--ularea {
    position: relative;
-   top: 15px;
-   left: 25px;
+   top: 46px;
+   left: 20px;
    width: 126px;
    height: 180px;
    background: transparent;
@@ -861,7 +887,8 @@
    height: 250px;
    bottom: 65px;
    left: 530px;
-   align-items: end;
+   align-items: start;
+   justify-content: space-between;
    overflow: visible;
 
    .sheet--inventory-name {
@@ -872,6 +899,10 @@
       width: 200px;
       height: 50px;
    }
+   .sheet--inventory-list {
+      margin-top: 35px;
+      margin-right: 10px;
+   }
 }
 
 .sheet--weapon {
@@ -880,7 +911,7 @@
    height: 160px;
    bottom: 334px;
    left: 530px;
-   align-items: end;
+   align-items: start;
    overflow: visible;
 
    .sheet--weapon-name {
@@ -891,6 +922,31 @@
       width: 200px;
       height: 39px;
    }
+   .sheet--weapon-list {
+      margin-top: 30px;
+      font-size: 13px;
+   }
+   .sheet--weapon-list table {
+      width: 400px;
+      border-collapse: collapse;
+   }
+
+   .sheet--weapon-list th,
+   .sheet--weapon-list td {
+      border-right: 5px solid #fff2e6;
+      border-bottom: 1.5px solid #2d210b;
+      padding: 3px;
+      text-align: center;
+   }
+
+   .sheet--weapon-list td:last-child,
+   .sheet--weapon-list th:last-child {
+      border-right: none; /* Убираем правую границу у последнего элемента */
+   }
+}
+
+.name-small {
+   font-size: 12px;
 }
 
 @media (max-width: 1000px) {

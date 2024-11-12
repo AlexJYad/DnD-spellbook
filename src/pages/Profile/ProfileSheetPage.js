@@ -7,22 +7,8 @@ import scr from "../../img/background/c-frame.webp";
 import { getNum } from "../../utils/getNum";
 import { getValues } from "../../utils/getValues";
 import sign from "../../img/background/frame-signature.webp";
-import ItemList from "../../components/ProfileSheet/ItemList";
 
 export default function ProfileSheetPage(props) {
-   const initialItems = [
-      "Элемент 1",
-      "Элемент 2",
-      "Элемент 3",
-      "Элемент 4",
-      "Элемент 5",
-      "Элемент 6",
-      "Элемент 7",
-      "Элемент 8",
-      "Элемент 9",
-      "Элемент 10",
-   ];
-
    useEffect(() => {
       document.title = "Лист Персонажа";
    }, []);
@@ -59,6 +45,41 @@ export default function ProfileSheetPage(props) {
          (5 + getNum(abilities.constitution.level));
    const AC = 10 + getNum(abilities.dexterity.level) + info.ACbonus;
    const attentiveness = 10 + getNum(abilities.wisdom.level);
+
+   const scroll = props[3].scroll;
+   const weapon = props[3].weapon;
+   const inventory = props[3].inventory;
+
+   const getVision = () => {
+      if (!props[4].color[1]) {
+         return <p className={props[4].color[0]}>&#10022;</p>;
+      } else if (props[4].color[1]) {
+         return (
+            <>
+               <p className={props[4].color[0]}>&#10022;</p>
+               <p className={`${props[4].color[1]} second`}>&#10022;</p>
+            </>
+         );
+      }
+      return "none";
+   };
+
+   const getMagic = () => {
+      if (!props[5].magic[1]) {
+         return <p className={props[5].magic[0]}>&#10022;</p>;
+      } else if (props[5].magic[1]) {
+         return (
+            <>
+               <p className={props[5].magic[0]}>&#10022;</p>
+               <p className={`${props[5].magic[1]} second`}>&#9852;</p>
+               <p className={`${props[5].magic[1]} third`}>&#9762;</p>
+               <p className={`${props[5].magic[0]} fourth`}>&#10057;</p>
+            </>
+         );
+      }
+      return "none";
+   };
+   const money = props[6]?.money || {};
 
    return (
       <>
@@ -128,9 +149,7 @@ export default function ProfileSheetPage(props) {
                   ))}
                </div>
                <div className="parameters">
-                  <div className="crown sheet--img-bg flex">
-                     <p>&#10022;</p>
-                  </div>
+                  <div className="crown sheet--img-bg flex">{getMagic()}</div>
                   <div className="crystal-ball sheet--img-bg flex">
                      <div className="attentiveness">
                         <h2>{attentiveness}</h2>
@@ -140,9 +159,7 @@ export default function ProfileSheetPage(props) {
                   <div className="dice white-shadow sheet--img-bg flex">
                      <p>{info.main}</p>
                   </div>
-                  <div className="vision sheet--img-bg flex">
-                     <p>&#10022;</p>
-                  </div>
+                  <div className="vision sheet--img-bg flex">{getVision()}</div>
                </div>
 
                <div className="health-hits">
@@ -235,29 +252,86 @@ export default function ProfileSheetPage(props) {
                   </div>
                </div>
                <Saves />
-               <ItemList
-                  initialItems={initialItems}
-                  // containerClass="sheet--container-sth"
-                  // ulAreaClass="sheet--ularea-sth"
-               />
+               <div className="sheet--container-scroll sheet--img-bg">
+                  <div className="sheet--scroll-name bold name-small">
+                     Навыки и<br />
+                     Способности
+                  </div>
+                  <div className="sheet--ularea sheet--ularea-scroll">
+                     <ul>
+                        {scroll.map((item, index) => (
+                           <li key={index}>{item}</li>
+                        ))}
+                     </ul>
+                  </div>
+               </div>
 
                <div className="sheet--coins sheet--img-bg">
                   <div className="sheet--coins-grid">
-                     <div className="sheet--coin sheet--coin__cp flex">1k</div>
-                     <div className="sheet--coin sheet--coin__sp flex">100</div>
-                     <div className="sheet--coin sheet--coin__ep flex">50</div>
-                     <div className="sheet--coin sheet--coin__gp flex">10</div>
-                     <div className="sheet--coin sheet--coin__pp flex">1</div>
+                     <div className="sheet--coin sheet--coin__cp flex">
+                        {money.cp || 0} {/* Показывает 0, если money.cp нет */}
+                     </div>
+                     <div className="sheet--coin sheet--coin__sp flex">
+                        {money.sp || 0} {/* Показывает 0, если money.sp нет */}
+                     </div>
+                     <div className="sheet--coin sheet--coin__ep flex">
+                        {money.ep || 0} {/* Показывает 0, если money.ep нет */}
+                     </div>
+                     <div className="sheet--coin sheet--coin__gp flex">
+                        {money.gp || 0} {/* Показывает 0, если money.gp нет */}
+                     </div>
+                     <div className="sheet--coin sheet--coin__pp flex">
+                        {money.pp || 0} {/* Показывает 0, если money.pp нет */}
+                     </div>
                   </div>
                </div>
                <div className="sheet--styled-container sheet--weapon flex">
-                  <div className="sheet--weapon-name sheet--img-bg flex">
+                  <div className="sheet--weapon-name sheet--img-bg flex bold">
                      Оружие
+                  </div>
+                  <div className="sheet--weapon-list">
+                     <table>
+                        <thead>
+                           <tr>
+                              <th>Название</th>
+                              <th>Урон</th>
+                              <th>Тип</th>
+                              <th>Дистанция</th>
+                              <th>БП</th>
+                              <th>Свойства</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           {weapon.map((items, index) => (
+                              <tr key={index}>
+                                 {items.map((item, itemIndex) => (
+                                    <td key={itemIndex}>{item}</td>
+                                 ))}
+                              </tr>
+                           ))}
+                        </tbody>
+                     </table>
                   </div>
                </div>
                <div className="sheet--styled-container sheet--inventory flex">
-                  <div className="sheet--inventory-name sheet--img-bg flex">
+                  <div className="sheet--inventory-name sheet--img-bg flex bold">
                      Инвентарь
+                  </div>
+                  <div className="sheet--inventory-list flex">
+                     <ul>
+                        {inventory
+                           .slice(0, Math.ceil(inventory.length / 2))
+                           .map((item, index) => (
+                              <li key={index}>{item}</li>
+                           ))}
+                     </ul>
+                     <ul>
+                        {inventory
+                           .slice(Math.ceil(inventory.length / 2))
+                           .map((item, index) => (
+                              <li key={index}>{item}</li>
+                           ))}
+                     </ul>
                   </div>
                </div>
             </div>

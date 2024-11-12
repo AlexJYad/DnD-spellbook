@@ -27,7 +27,9 @@ export default function Saves() {
 
    return (
       <div className="sheet--saves sheet--styled-container">
-         <div className="saves--name sheet--img-bg">Спасброски</div>
+         <div className="saves--name sheet--img-bg bold name-small">
+            Спасброски
+         </div>
          <div className="sheet--saves-container">
             {deathCoins.map((type, index) => (
                <SaveCheckbox key={`death-${index}`} type={type} />
