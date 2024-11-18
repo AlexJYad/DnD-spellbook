@@ -951,7 +951,7 @@
 
 @media (max-width: 1000px) {
    .sheet {
-      height: 10000px;
+      height: 3600px;
    }
    .flagstop {
       right: 50%;
@@ -961,21 +961,21 @@
    }
 
    .namebox {
-      top: 100px;
+      top: 463px;
       left: 50%;
       transform: translateX(
          -50%
       ); /* Для центрирования относительно левого края */
    }
    .health {
-      top: 400px;
-      left: 50%;
+      top: 763px;
+      left: 48%;
       transform: translateX(
          -50%
       ); /* Для центрирования относительно левого края */
    }
    .abilities {
-      top: 750px;
+      top: 1100px;
       left: 50%;
       transform: translateX(
          -50%
@@ -984,7 +984,7 @@
    .spelles {
       position: absolute;
       top: 1900px;
-      left: 50%;
+      left: 50.5%;
       transform: translateX(-50%);
       width: 267px;
       height: 115px;
@@ -995,7 +995,7 @@
    }
    .parameters {
       position: absolute;
-      top: 1550px;
+      top: 100px;
       left: 50%;
       transform: translateX(-50%);
    }
@@ -1023,5 +1023,43 @@
          left: 35%;
          transform: translateX(-50%);
       }
+   }
+
+   .sheet--coins {
+      top: 2335px;
+      left: 56%;
+      transform: translateX(-50%);
+   }
+
+   .sheet--container-scroll {
+      top: 2742px;
+      left: 55%;
+      transform: translateX(-50%);
+      z-index: -1;
+   }
+
+   .sheet--saves {
+      top: 2606px;
+      left: 40%;
+      transform: translateX(-50%);
+   }
+
+   .sheet--weapon {
+      top: 3010px;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .sheet--inventory {
+      top: 3210px;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+}
+@media (max-width: 600px) {
+   .sheet--saves {
+      top: 2606px;
+      left: 31%;
+      transform: translateX(-50%);
    }
 }

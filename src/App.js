@@ -12,6 +12,7 @@ import Header from "./components/Header/Header";
 import Marquee from "./components/Marquee/Marquee";
 import MainFrame from "./components/MainFrame/MainFrame";
 import Footer from "./components/Footer/Footer";
+import ImageHelmet from "./components/ImageHelmet";
 
 import LoginPage from "./pages/LoginPage";
 
@@ -35,6 +36,7 @@ function App() {
 
    return (
       <div className="App">
+         <ImageHelmet />
          <Header />
          <Marquee text={marqueeText} />
          <MainFrame />
