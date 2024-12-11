@@ -108,7 +108,7 @@ select {
    justify-content: center;
    align-items: center;
    margin: 25px 10% 10% 10%;
-   width: 100%;
+   /* width: 100%; */
    p {
       margin-top: 20px; /* Увеличивает расстояние между абзацами */
       text-align: justify;
@@ -297,6 +297,7 @@ hr {
    position: relative;
    background-image: linear-gradient(to right, white, black, white);
    overflow: visible;
+   width: 100%;
 }
 
 hr:before {
@@ -393,6 +394,39 @@ ol li:last-child::before {
    display: flex;
    flex-direction: column;
    width: 100%;
+}
+
+blockquote {
+   position: relative;
+   justify-self: center;
+   margin-top: 10px;
+   border-radius: 10px;
+   max-width: 75%;
+   p {
+      margin-top: 0px !important;
+   }
+}
+
+blockquote:before,
+blockquote:after {
+   font-family: cursive;
+   position: absolute;
+   color: #382719;
+   font-size: 8rem;
+   width: 4rem;
+   height: 4rem;
+}
+
+blockquote:before {
+   content: "“";
+   left: -5rem;
+   bottom: 66%;
+}
+
+blockquote:after {
+   content: "”";
+   right: -5rem;
+   bottom: 66%;
 }
 
 @media (max-width: 1000px) {

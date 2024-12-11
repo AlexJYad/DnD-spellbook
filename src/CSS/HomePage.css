@@ -76,3 +76,13 @@
    top: 50%;
    transform: translateY(-50%); /* Центрируем символ по вертикали */
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Inter:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+.slavic {
+   font-family: "Noto Serif", serif;
+   font-optical-sizing: auto;
+   font-weight: 700;
+   font-style: normal;
+   font-variation-settings: "wdth" 100;
+}

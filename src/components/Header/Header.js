@@ -151,6 +151,9 @@ const Header = React.memo(() => {
                      <Link to="/spell" onClick={toggleMenu}>
                         Заклинания
                      </Link>
+                     <Link to="/character" onClick={toggleMenu}>
+                        {token}
+                     </Link>
                   </div>
                </div>
                <LogOff className="btn header__nav__btn" />

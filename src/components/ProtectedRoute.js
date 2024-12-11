@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { transliterate } from "transliteration";
 
 export default function ProtectedRoute({ component: Component }) {
    const navigate = useNavigate();
@@ -8,51 +9,61 @@ export default function ProtectedRoute({ component: Component }) {
 
    const loadDataBasedOnToken = useCallback(
       async (token, componentPath = location.pathname) => {
+         console.log(transliterate(token));
          try {
             let jsonFiles = [];
 
-            if (token === "Admin" && componentPath.includes("/sheet")) {
-               // Загрузка нескольких файлов для случая "all" и "/sheet"
-               jsonFiles = [
-                  "/data/chicken.json",
-                  "/data/eugen.json",
-                  "/data/talico.json",
-                  "/data/olay.json",
-                  "/data/eulebia.json",
-               ];
-            } else if (token === "Юджин") {
-               if (componentPath.includes("/info")) {
-                  jsonFiles = ["/data/test.json"];
-               } else if (componentPath.includes("/sheet")) {
-                  jsonFiles = ["/data/eugen.json"];
-               }
-            } else if (token === "Талико") {
-               if (componentPath.includes("/info")) {
-                  jsonFiles = ["/data/test.json"];
-               } else if (componentPath.includes("/sheet")) {
-                  jsonFiles = ["/data/talico.json"];
-               }
-            } else if (token === "Олёй") {
-               if (componentPath.includes("/info")) {
-                  jsonFiles = ["/data/test.json"];
-               } else if (componentPath.includes("/sheet")) {
-                  jsonFiles = ["/data/olay.json"];
-               }
-            } else if (token === "Евлебия") {
-               if (componentPath.includes("/info")) {
-                  jsonFiles = ["/data/test.json"];
-               } else if (componentPath.includes("/sheet")) {
-                  jsonFiles = ["/data/eulebia.json"];
-               }
-            } else if (token === "test") {
-               if (componentPath.includes("/info")) {
-                  jsonFiles = ["/data/test.json"];
-               } else if (componentPath.includes("/sheet")) {
-                  jsonFiles = ["/data/test.json"];
-               }
-            } else {
-               navigate("/");
-               return;
+            switch (token) {
+               case "Admin":
+                  if (componentPath.includes("/sheet")) {
+                     jsonFiles = [
+                        "/data/sheet/chicken.json",
+                        "/data/sheet/yudzhin.json",
+                        "/data/sheet/taliko.json",
+                        "/data/sheet/olyoy.json",
+                        "/data/sheet/evlebiya.json",
+                        "/data/sheet/test.json",
+                     ];
+                  } else if (componentPath.includes("/character")) {
+                     jsonFiles = [
+                        "/data/story/yudzhin.json",
+                        "/data/story/olyoy.json",
+                        "/data/story/taliko.json",
+                        "/data/story/evlebiya.json",
+                        "/data/story/test.json",
+                     ];
+                  }
+                  break;
+
+               case "Юджин":
+               case "Талико":
+               case "Олёй":
+               case "Евлебия":
+               case "test":
+                  switch (true) {
+                     case componentPath.includes("/character"):
+                        jsonFiles = [
+                           `/data/story/${transliterate(
+                              token
+                           ).toLowerCase()}.json`,
+                        ];
+                        break;
+                     case componentPath.includes("/sheet"):
+                        jsonFiles = [
+                           `/data/sheet/${transliterate(
+                              token
+                           ).toLowerCase()}.json`,
+                        ];
+                        break;
+                     default:
+                        navigate("/");
+                        return;
+                  }
+                  break;
+
+               default:
+                  navigate("/");
+                  return;
             }
 
             // Загрузка всех файлов параллельно

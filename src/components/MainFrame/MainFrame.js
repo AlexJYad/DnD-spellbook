@@ -8,6 +8,7 @@ import NotFoundPage from "../../pages/NotFoundPage";
 import ProtectedRoute from "../ProtectedRoute";
 import HistoryPage from "../../pages/Lore/LoreHistoryPage";
 import LoreMagicPage from "../../pages/Lore/LoreMagicPage";
+import ProfileStoryPage from "../../pages/Profile/ProfileStoryPage";
 import { Route, Routes } from "react-router-dom";
 
 const MainFrame = () => {
@@ -69,6 +70,10 @@ const MainFrame = () => {
                   <Route
                      path="/sheet"
                      element={<ProtectedRoute component={ChSheetPage} />}
+                  />
+                  <Route
+                     path="/character"
+                     element={<ProtectedRoute component={ProfileStoryPage} />}
                   />
                   <Route path="*" element={<NotFoundPage />} />
                </Routes>
