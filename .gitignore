@@ -2,7 +2,6 @@
 test.js
 cards-test.json
 test/
-sheet*
 .gitignore
 
 /build
