@@ -429,11 +429,88 @@ blockquote:after {
    bottom: 66%;
 }
 
+details {
+   width: 100%;
+   border: 1px solid rgb(45, 33, 11, 1);
+   border-radius: 10px;
+   margin: 10px;
+   padding: 0;
+   overflow: hidden;
+}
+
+summary {
+   padding: 10px 15px;
+   font-size: 16px;
+   cursor: pointer;
+   list-style: none;
+   cursor: pointer;
+   font-family: "Luminari";
+}
+
+summary::-webkit-details-marker {
+   display: none; /* Убираем стандартный треугольник */
+}
+
+.lore-religion-page .gods {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+   padding: 20px;
+   img {
+      width: 50%;
+      height: auto;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.6);
+      &.black {
+         background-color: rgba(0, 0, 0, 0.6);
+         color: white;
+      }
+   }
+   div {
+      width: 50%;
+      height: 100%;
+   }
+}
+
+p.l {
+   text-align: left;
+   width: 100%;
+}
+p.r {
+   text-align: right;
+   width: 100%;
+}
+
 @media (max-width: 1000px) {
    .scroll-to-top {
       right: calc(10px);
       border-radius: 5px;
       cursor: pointer;
       z-index: 1000;
+   }
+
+   .lore-religion-page .gods {
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      text-align: center;
+      grid-template-rows: auto auto;
+      grid-template-columns: 100%;
+      grid-template-areas:
+         "img"
+         "div";
+      img {
+         max-width: 80%;
+         grid-area: img;
+      }
+      div {
+         width: 100%;
+         height: 100%;
+         grid-area: div;
+         p {
+            text-align: center;
+         }
+      }
    }
 }
