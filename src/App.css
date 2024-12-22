@@ -316,6 +316,7 @@ ul.footnote {
       margin-left: 10px;
       margin-right: 30px;
       margin-bottom: 10px;
+      list-style: none;
    }
    li:last-child {
       margin-bottom: 0; /* Убираем маргин у последнего элемента */
@@ -331,6 +332,9 @@ ul.footnote {
       color: white;
       -webkit-text-stroke: 1px black; /* Обводка текста */
    }
+   li.dark::before {
+      color: black;
+   }
 }
 
 .login {
@@ -344,11 +348,12 @@ ol li:last-child {
 }
 
 ol li:last-child::before {
-   content: "*"; /* Добавляем звёздочку */
+   content: "\22C8"; /* Добавляем звёздочку */
    position: absolute;
-   font-size: 1.5em;
-   left: -19px; /* Смещаем символ влево (регулируй в зависимости от твоего дизайна) */
-   top: -1px;
+   font-size: 1.6em;
+   left: -23px; /* Смещаем символ влево (регулируй в зависимости от твоего дизайна) */
+   top: -6px;
+   font-weight: bold;
 }
 
 .scroll-to-top {

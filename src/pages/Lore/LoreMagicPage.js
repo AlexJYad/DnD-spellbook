@@ -52,7 +52,7 @@ const LoreMagicPage = () => {
             нельзя скрыть, все вокруг поймут, какого она цвета, а кто не увидит,
             тот почувствует.
          </p>
-
+         <p></p>
          <h2>А теперь чуть больше по делу и чуть более тезисно:</h2>
          <ul className="footnote">
             <li>
@@ -66,7 +66,7 @@ const LoreMagicPage = () => {
                <span className="white text-outline">светлые</span>, с чёткими
                гранями.
             </li>
-            <li>
+            <li className="dark">
                <span className="black">Тёмная магия</span> напоминает тягучую
                жидкость, тёплая и бурлящая, управлять ей сложнее. Заклинания{" "}
                <span className="black">тёмные</span>, с расплывчатыми гранями.
@@ -87,8 +87,8 @@ const LoreMagicPage = () => {
 
          <p>
             Все способны к телекинезу, но телепаты редки.{" "}
-            <span className="white text-outline">Магия</span> работает по
-            принципу «берем энергию – вкладываем энергию». Управлять вещами
+            <span className="dimmed-siberian-aurora-text">Магия</span> работает
+            по принципу «берем энергию – вкладываем энергию». Управлять вещами
             легче, чем мыслями. Создать огонь проще, чем питьевую воду. Вы
             можете соткать щит или меч, но, когда силы закончатся, они исчезнут.
             Чем выше мастерство, тем легче колдовать, но на первых порах даже
@@ -96,10 +96,12 @@ const LoreMagicPage = () => {
          </p>
 
          <p>
-            <span className="white text-outline">Магия</span> может облегчить
-            быт, но используется редко, так как она иссякает.{" "}
-            <span className="white text-outline">Магия</span> – божественный
-            дар, и использовать её для мытья посуды считается ересью. А вот для
+            <span className="dimmed-siberian-aurora-text">Магия</span> может
+            облегчить быт, но используется редко, так как она иссякает.{" "}
+            <span className="dimmed-siberian-aurora-text">
+               Магия – божественный дар
+            </span>
+            , и использовать её для мытья посуды считается ересью. А вот для
             дуэлей – это святое дело.
          </p>
 
@@ -107,42 +109,42 @@ const LoreMagicPage = () => {
             Можно ли умереть, израсходовав всю магию? Можно, но только с чужой
             помощью. Самому это сделать невозможно.
          </p>
-
+         <p></p>
          <h2>Маной будем по классике называть запас магической энергии</h2>
-         <p>
-            <span className="white text-outline">Маги</span> делятся на уровни
-            по запасу маны:
+         <p className="l bold">
+            <span className="dimmed-siberian-aurora-text">Маги</span> делятся на
+            уровни по запасу маны:
          </p>
          <ol>
             <li>
-               <span className="white text-outline">Компакт</span> – слабый маг,
-               может создать щит или использовать телекинез.
+               <span className="goddess bold">Компакт</span> – слабый маг, может
+               создать щит или использовать телекинез.
             </li>
             <li>
-               <span className="white text-outline">Субкор</span>
+               <span className="goddess bold">Субкор</span>
             </li>
             <li>
-               <span className="white text-outline">Майнтайн</span>
+               <span className="goddess bold">Майнтайн</span>
             </li>
             <li>
-               <span className="white text-outline">Сантай</span>
+               <span className="goddess bold">Сантай</span>
             </li>
             <li>
-               <span className="white text-outline">Субджай</span>
+               <span className="goddess bold">Субджай</span>
             </li>
             <li>
-               <span className="white text-outline">Джай</span>
+               <span className="goddess bold">Джай</span>
             </li>
             <li>
-               <span className="white text-outline">Браджай</span>
+               <span className="goddess bold">Браджай</span>
             </li>
             <li>
-               <span className="white text-outline">Мега</span> – уровень
-               аристократии и святого синода.
+               <span className="goddess bold">Мега</span> – уровень аристократии
+               и святого синода.
             </li>
             <li>
-               <span className="white text-outline">МегаТрон</span> – старейшие
-               маги и высшая аристократия.
+               <span className="goddess bold">МегаТрон</span> – старейшие маги и
+               высшая аристократия.
             </li>
             <li>
                <span className="white text-outline">Нова</span> и{" "}
@@ -153,7 +155,7 @@ const LoreMagicPage = () => {
             </li>
          </ol>
 
-         <p>Детали:</p>
+         <p className="bold l">Детали:</p>
          <ul className="footnote">
             <li>
                Дети до 13 лет редко показывают магические способности выше
@@ -167,17 +169,16 @@ const LoreMagicPage = () => {
             </li>
             <li>
                Считается, что <span className="black">тёмные маги</span> не
-               могут достичь уровня{" "}
-               <span className="white text-outline">МегаТрон</span>.
+               могут достичь уровня <span className="goddess">МегаТрон</span>.
             </li>
          </ul>
 
          <p>
-            Маг уровня <span className="white text-outline">Сантай</span> или
-            выше может окончить дуэль заклинанием демонстрации силы, показав
-            свой уровень магии.
+            Маг уровня <span className="goddess">Сантай</span> или выше может
+            окончить дуэль заклинанием демонстрации силы, показав свой уровень
+            магии.
          </p>
-
+         <p></p>
          <h2>Как стать сильнее?</h2>
          <p>
             Можно купить мага, но это дорого и ненадёжно. Лучше использовать
@@ -192,7 +193,7 @@ const LoreMagicPage = () => {
             Единственная известная печать – Альтерии, доступна только высшей
             знати и Императору.
          </p>
-
+         <p></p>
          <h2>Лечение</h2>
          <p>
             Исцелять других – сложно и затратное дело. Лечение требует много
