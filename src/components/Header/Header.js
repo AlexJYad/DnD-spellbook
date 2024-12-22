@@ -92,7 +92,7 @@ const Header = React.memo(() => {
                      <Link to="/lore/magic" onClick={toggleMenu}>
                         Магия
                      </Link>
-                     <Link to="*" onClick={toggleMenu}>
+                     <Link to="/lore/religion" onClick={toggleMenu}>
                         Религия
                      </Link>
                      <Link to="/lore/history" onClick={toggleMenu}>

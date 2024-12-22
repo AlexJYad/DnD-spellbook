@@ -9,6 +9,7 @@ import ProtectedRoute from "../ProtectedRoute";
 import HistoryPage from "../../pages/Lore/LoreHistoryPage";
 import LoreMagicPage from "../../pages/Lore/LoreMagicPage";
 import ProfileStoryPage from "../../pages/Profile/ProfileStoryPage";
+import LoreReligionPage from "../../pages/Lore/LoreReligionPage";
 import { Route, Routes } from "react-router-dom";
 
 const MainFrame = () => {
@@ -67,6 +68,7 @@ const MainFrame = () => {
                   <Route path="/spell" element={<SpellPage />} />
                   <Route path="/lore/history" element={<HistoryPage />} />
                   <Route path="/lore/magic" element={<LoreMagicPage />} />
+                  <Route path="/lore/religion" element={<LoreReligionPage />} />
                   <Route
                      path="/sheet"
                      element={<ProtectedRoute component={ChSheetPage} />}
