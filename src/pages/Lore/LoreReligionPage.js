@@ -34,6 +34,7 @@ const LoreReligionPage = () => {
             жизни <span className="white text-outline">Альтер</span> —
             альтерианство. Оно включает в свой пантеон:
          </p>
+         <hr data-symbol="BREAK" />
          <details>
             <summary>
                <span className="bold white text-outline">Альтер</span> — творец
@@ -176,8 +177,9 @@ const LoreReligionPage = () => {
                </div>
             </details>
          )}
-
+         <hr data-symbol="BREAK" />
          <p className="l">Также выделяют предбожественных сущностей:</p>
+         <p></p>
          <ul className="footnote">
             <li>
                <span className="white text-outline">Сути-я-тумы</span> —
@@ -190,6 +192,7 @@ const LoreReligionPage = () => {
                порождения тьмы (по-нашему демоны)
             </li>
          </ul>
+         <hr data-symbol="BREAK" />
          <p>
             Ну и во всяких деревушках бывают свои темные боги топей, светлые
             боги озер и рек, лешие да домовые, и прочее, прочее, прочее… Тут уже

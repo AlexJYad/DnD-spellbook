@@ -115,7 +115,7 @@ const LoreMagicPage = () => {
             <span className="dimmed-siberian-aurora-text">Маги</span> делятся на
             уровни по запасу маны:
          </p>
-         <ol>
+         <ol className="star">
             <li>
                <span className="goddess bold">Компакт</span> – слабый маг, может
                создать щит или использовать телекинез.

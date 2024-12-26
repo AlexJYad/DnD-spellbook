@@ -312,6 +312,9 @@ hr:before {
 }
 
 ul.footnote {
+   margin: 10px 0px;
+   text-align: left;
+   align-self: start;
    li {
       margin-left: 10px;
       margin-right: 30px;
@@ -335,6 +338,20 @@ ul.footnote {
    li.dark::before {
       color: black;
    }
+   ul {
+      margin-top: 5px;
+      li::before {
+         margin-left: -20px;
+         font-size: 1.6em;
+         padding-right: 10px;
+         content: "\261E";
+         display: inline-block;
+         transform: translateY(16%);
+         line-height: 1;
+         color: white;
+         -webkit-text-stroke: 1px black; /* Обводка текста */
+      }
+   }
 }
 
 .login {
@@ -342,12 +359,12 @@ ul.footnote {
    height: 100vh;
 }
 
-ol li:last-child {
+ol.star li:last-child {
    list-style-type: none; /* Убираем стандартную нумерацию */
    position: relative;
 }
 
-ol li:last-child::before {
+ol.star li:last-child::before {
    content: "\22C8"; /* Добавляем звёздочку */
    position: absolute;
    font-size: 1.6em;

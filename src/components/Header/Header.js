@@ -61,14 +61,11 @@ const Header = React.memo(() => {
                      <Link to="/rules" onClick={toggleMenu}>
                         Основные
                      </Link>
-                     <Link to="*" onClick={toggleMenu}>
-                        Магия
+                     <Link to="/rules/fight" onClick={toggleMenu}>
+                        Боевка
                      </Link>
-                     <Link to="*" onClick={toggleMenu}>
-                        Хронология
-                     </Link>
-                     <Link to="*" onClick={toggleMenu}>
-                        D&D
+                     <Link to="/rules/additional" onClick={toggleMenu}>
+                        Дополнительные
                      </Link>
                   </div>
                </div>
@@ -98,10 +95,10 @@ const Header = React.memo(() => {
                      <Link to="/lore/history" onClick={toggleMenu}>
                         История
                      </Link>
-                     <Link to="*" onClick={toggleMenu}>
+                     <Link to="/lore/economy" onClick={toggleMenu}>
                         Экономика
                      </Link>
-                     <Link to="*" onClick={toggleMenu}>
+                     <Link to="/lore/caravan" onClick={toggleMenu}>
                         Караваны
                      </Link>
                      <Link to="*" onClick={toggleMenu}>

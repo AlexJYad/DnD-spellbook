@@ -1,15 +1,25 @@
 import React, { useEffect } from "react";
 import "./MainFrame.css";
+import ProtectedRoute from "../ProtectedRoute";
+
 import HomePage from "../../pages/HomePage";
-import RulesPage from "../../pages/Rules/RulesMainPage";
 import SpellPage from "../../pages/Profile/ProfileSpellPage";
 import ChSheetPage from "../../pages/Profile/ProfileSheetPage";
 import NotFoundPage from "../../pages/NotFoundPage";
-import ProtectedRoute from "../ProtectedRoute";
-import HistoryPage from "../../pages/Lore/LoreHistoryPage";
+
+import RulesMainPage from "../../pages/Rules/RulesMainPage";
+import RulesFightPage from "../../pages/Rules/RulesFightPage";
+import RulesAdditionalPage from "../../pages/Rules/RulesAdditionalPage";
+
+import LoreMainPage from "../../pages/Lore/LoreMainPage";
 import LoreMagicPage from "../../pages/Lore/LoreMagicPage";
-import ProfileStoryPage from "../../pages/Profile/ProfileStoryPage";
 import LoreReligionPage from "../../pages/Lore/LoreReligionPage";
+import LoreHistoryPage from "../../pages/Lore/LoreHistoryPage";
+import LoreEconomyPage from "../../pages/Lore/LoreEconomyPage";
+import LoreCaravanPage from "../../pages/Lore/LoreCaravanPage";
+
+import ProfileStoryPage from "../../pages/Profile/ProfileStoryPage";
+
 import { Route, Routes } from "react-router-dom";
 
 const MainFrame = () => {
@@ -64,19 +74,31 @@ const MainFrame = () => {
             {
                <Routes>
                   <Route path="/" element={<HomePage />} />
-                  <Route path="/rules" element={<RulesPage />} />
-                  <Route path="/spell" element={<SpellPage />} />
-                  <Route path="/lore/history" element={<HistoryPage />} />
+
+                  <Route path="/rules" element={<RulesMainPage />} />
+                  <Route path="/rules/fight" element={<RulesFightPage />} />
+                  <Route
+                     path="/rules/additional"
+                     element={<RulesAdditionalPage />}
+                  />
+
+                  <Route path="/lore" element={<LoreMainPage />} />
+                  <Route path="/lore/history" element={<LoreHistoryPage />} />
                   <Route path="/lore/magic" element={<LoreMagicPage />} />
                   <Route path="/lore/religion" element={<LoreReligionPage />} />
+                  <Route path="/lore/economy" element={<LoreEconomyPage />} />
+                  <Route path="/lore/caravan" element={<LoreCaravanPage />} />
+
                   <Route
                      path="/sheet"
                      element={<ProtectedRoute component={ChSheetPage} />}
                   />
+                  <Route path="/spell" element={<SpellPage />} />
                   <Route
                      path="/character"
                      element={<ProtectedRoute component={ProfileStoryPage} />}
                   />
+
                   <Route path="*" element={<NotFoundPage />} />
                </Routes>
             }
