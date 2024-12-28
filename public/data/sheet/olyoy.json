@@ -2,7 +2,7 @@
    {  
       "name" : "Олёй",
       "age": 17,
-      "experience": 200,
+      "experience": 250,
       "ACbonus": 2,
       "HP": 10,
       "main": "Мудрость"
