@@ -1,5 +1,8 @@
 import React from "react";
 
+import img from "../../img/main/main_5.png";
+import img2 from "../../img/main/main_4.png";
+
 const LoreHistoryPage = () => {
    return (
       <div className="container">
@@ -57,6 +60,7 @@ const LoreHistoryPage = () => {
             <span className="de-Alto text-outline">де-Альто</span>) принесет мир
             и единство на континент.
          </p>
+         <img className="page" src={img} alt="" />
          <p>
             Но через <em>две дюжины</em> лет зерна{" "}
             <span className="black">тьмы</span>, посеянные той войной, взойдут с
@@ -98,6 +102,7 @@ const LoreHistoryPage = () => {
             пролилось больше, чем за все прошлые войны вместе взятые. Казалось,
             мир рухнет в бездну, будет стерт до основания и обратится в пепел...
          </p>
+         <img className="page" src={img2} alt="" />
          <p className="l">
             Но даже самым страшным событиям суждено закончиться и стать
             страницами истории.

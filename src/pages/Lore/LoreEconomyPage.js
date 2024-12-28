@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../img/main/main_3.png";
 
 const LoreEconomyPage = () => {
    return (
@@ -14,6 +15,8 @@ const LoreEconomyPage = () => {
             чаще всего состоит из торговцев или тех, кто может предложить редкие
             навыки.
          </p>
+         <img className="page" src={img} alt="" />
+         <p></p>
          <h2>Валюта</h2>
          <p>
             Экономика основана на пяти типах монет: медных (

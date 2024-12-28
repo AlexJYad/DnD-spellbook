@@ -504,6 +504,11 @@ p.r {
    width: 100%;
 }
 
+.page {
+   margin-top: 5px;
+   max-width: 30%;
+}
+
 @media (max-width: 1000px) {
    .scroll-to-top {
       right: calc(10px);

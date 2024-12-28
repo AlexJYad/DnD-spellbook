@@ -8,6 +8,8 @@ import RotasImage from "../../img/gods/Rotas.jpg";
 import TomnitusImage from "../../img/gods/Tomnitus.jpg";
 import GoglanoriumImage from "../../img/gods/Goglanorium.jpg";
 
+import img from "../../img/main/main_8.png";
+
 const LoreReligionPage = () => {
    const token = localStorage.getItem("token");
    return (
@@ -192,6 +194,7 @@ const LoreReligionPage = () => {
                порождения тьмы (по-нашему демоны)
             </li>
          </ul>
+         <img className="page" src={img} alt="" />
          <hr data-symbol="BREAK" />
          <p>
             Ну и во всяких деревушках бывают свои темные боги топей, светлые

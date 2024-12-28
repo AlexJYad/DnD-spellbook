@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../img/main/main_2.png";
 
 const LoreMagicPage = () => {
    return (
@@ -44,7 +45,7 @@ const LoreMagicPage = () => {
             <span className="white text-outline">светлые</span> заклинания,
             придётся учиться заново, если вообще захотите продолжить колдовать.
          </p>
-
+         <img className="page" src={img} alt="" />
          <p>
             Иногда выбора нет, иногда его делают за вас. Но если вас заставили
             стать <span className="black">тёмным магом</span>, выхода нет.{" "}

@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../img/main/main_6.png";
 
 const LoreCaravanPage = () => {
    return (
@@ -10,6 +11,7 @@ const LoreCaravanPage = () => {
             повозками, чтобы обеспечивать безопасность и оптимизировать
             перевозку товаров.
          </p>
+         <img className="page" src={img} alt="" />
          <p></p>
          <h2>Большой коронный круг</h2>
          <p>
