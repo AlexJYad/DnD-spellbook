@@ -509,6 +509,11 @@ p.r {
    max-width: 30%;
 }
 
+.maps,
+.maps-page {
+   width: 100%;
+}
+
 @media (max-width: 1000px) {
    .scroll-to-top {
       right: calc(10px);

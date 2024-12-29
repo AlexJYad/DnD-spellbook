@@ -99,10 +99,10 @@ const Header = React.memo(() => {
                         Экономика
                      </Link>
                      <Link to="/lore/caravan" onClick={toggleMenu}>
-                        Караваны
+                        Политика
                      </Link>
-                     <Link to="*" onClick={toggleMenu}>
-                        Города
+                     <Link to="/lore/culture" onClick={toggleMenu}>
+                        Культура
                      </Link>
                   </div>
                </div>
@@ -120,10 +120,10 @@ const Header = React.memo(() => {
                         openDropdown === 3 ? "active" : ""
                      }`}
                   >
-                     <Link to="*" onClick={toggleMenu}>
+                     <Link to="/maps/world" onClick={toggleMenu}>
                         Мира
                      </Link>
-                     <Link to="*" onClick={toggleMenu}>
+                     <Link to="/maps/townes" onClick={toggleMenu}>
                         Городов
                      </Link>
                   </div>

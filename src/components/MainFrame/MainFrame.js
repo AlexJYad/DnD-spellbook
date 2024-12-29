@@ -17,6 +17,10 @@ import LoreReligionPage from "../../pages/Lore/LoreReligionPage";
 import LoreHistoryPage from "../../pages/Lore/LoreHistoryPage";
 import LoreEconomyPage from "../../pages/Lore/LoreEconomyPage";
 import LoreCaravanPage from "../../pages/Lore/LoreCaravanPage";
+import LoreCulturePage from "../../pages/Lore/LoreCulturePage";
+
+import MapsWorldPage from "../../pages/Maps/MapsWorldPage";
+import MapsTownesPage from "../../pages/Maps/MapsTownsPage";
 
 import ProfileStoryPage from "../../pages/Profile/ProfileStoryPage";
 
@@ -88,6 +92,10 @@ const MainFrame = () => {
                   <Route path="/lore/religion" element={<LoreReligionPage />} />
                   <Route path="/lore/economy" element={<LoreEconomyPage />} />
                   <Route path="/lore/caravan" element={<LoreCaravanPage />} />
+                  <Route path="/lore/culture" element={<LoreCulturePage />} />
+
+                  <Route path="/maps/world" element={<MapsWorldPage />} />
+                  <Route path="/maps/townes" element={<MapsTownesPage />} />
 
                   <Route
                      path="/sheet"
