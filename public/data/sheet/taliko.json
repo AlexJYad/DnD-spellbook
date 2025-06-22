@@ -30,14 +30,14 @@
       "constitution" : {
          "id": "strength",
          "name": "Телосложение",
-         "level": 12,
+         "level": 14,
          "safebox": false,
          "skills": []
       },
       "intelligence" : {
          "id": "intelligence",
          "name": "Интеллект",
-         "level": 12,
+         "level": 14,
          "safebox": false,
          "skills": [
                {"name": "История", "isSafebox": false},
@@ -64,7 +64,7 @@
          "id": "wisdom",
          "name": "Харизма",
          "num": "+5",
-         "level": 16,
+         "level": 17,
          "safebox": true,
          "skills": [
                {"name": "Выступление", "isSafebox": false},

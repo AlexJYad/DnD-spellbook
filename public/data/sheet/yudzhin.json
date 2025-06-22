@@ -19,7 +19,7 @@
       "dexterity" : {
          "id": "dexterity",
          "name": "Ловкость",
-         "level": 13,
+         "level": 14,
          "safebox": false,
          "skills": [
             {"name": "Акробатика", "isSafebox": false},
@@ -30,7 +30,7 @@
       "constitution" : {
          "id": "strength",
          "name": "Телосложение",
-         "level": 11,
+         "level": 12,
          "safebox": false,
          "skills": []
       },
@@ -38,7 +38,7 @@
          "id": "intelligence",
          "name": "Интеллект",
          "num": "+5",
-         "level": 17,
+         "level": 18,
          "safebox": true,
          "skills": [
             {"name": "История", "isSafebox": true},
@@ -52,7 +52,7 @@
          "id": "wisdom",
          "name": "Мудрость",
          "num": "+1",
-         "level": 13,
+         "level": 14,
          "safebox": false,
          "skills": [
             {"name": "Бдительность", "isSafebox": false},
@@ -66,7 +66,7 @@
          "id": "wisdom",
          "name": "Харизма",
          "num": "+4",
-         "level": 15,
+         "level": 16,
          "safebox": true,
          "skills": [
             {"name": "Выступление", "isSafebox": false},
