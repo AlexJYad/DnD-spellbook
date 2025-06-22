@@ -21,7 +21,7 @@
          "id": "dexterity",
          "name": "Ловкость",
          "num": "+2",
-         "level": 14,
+         "level": 15,
          "safebox": false,
          "skills": [
             {"name": "Акробатика", "isSafebox": false},
@@ -41,7 +41,7 @@
          "id": "intelligence",
          "name": "Интеллект",
          "num": "0",
-         "level": 11,
+         "level": 12,
          "safebox": false,
          "skills": [
             {"name": "История", "isSafebox": false},
@@ -55,7 +55,7 @@
          "id": "wisdom",
          "name": "Мудрость",
          "num": "+5",
-         "level": 16,
+         "level": 18,
          "safebox": true,
          "skills": [
             {"name": "Бдительность", "isSafebox": false},
@@ -69,7 +69,7 @@
          "id": "wisdom",
          "name": "Харизма",
          "num": "-1",
-         "level": 9,
+         "level": 10,
          "safebox": false,
          "skills": [
             {"name": "Выступление", "isSafebox": false},
