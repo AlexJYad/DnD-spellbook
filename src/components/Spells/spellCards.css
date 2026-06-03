@@ -280,7 +280,7 @@ p::selection {
 }
 
 .tips::after {
-   color: brown;
+   color: #a52a2a;
    content: "!!";
    white-space: nowrap;
    padding-left: 3px;
